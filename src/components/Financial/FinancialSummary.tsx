@@ -1,5 +1,6 @@
 import type { UrbanDevelopment } from "../../types/development";
 import { TrendingUp, DollarSign, Calculator, Plus, ExternalLink, FileText, UploadCloud, X, Trash2 } from "lucide-react";
+import { calculateDynamicValues } from "../../utils/financials";
 
 interface Props {
   development: UrbanDevelopment;
@@ -13,6 +14,8 @@ interface Props {
 export function FinancialSummary({ development, marketPoints = [], isAddingMarketPoint, onToggleAddMarketPoint, onDeleteComparable, onDeleteOffer }: Props) {
   const { financials } = development;
   
+  const dynamicVals = calculateDynamicValues(development, marketPoints);
+  
   return (
     <div className="space-y-6">
       <div>
@@ -23,17 +26,19 @@ export function FinancialSummary({ development, marketPoints = [], isAddingMarke
       </div>
 
       <div className="grid grid-cols-2 gap-3">
-        <div className="bg-white dark:bg-gray-800 p-3 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+        <div className="bg-white dark:bg-gray-800 p-3 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm relative overflow-hidden">
           <span className="text-[10px] text-gray-500 uppercase font-semibold">Valor Irregular</span>
           <p className="text-lg font-bold text-gray-900 dark:text-gray-100 mt-1">
-            USD {financials.marketValueIrregularUsd.toLocaleString()}
+            USD {dynamicVals.actual.toLocaleString()}
           </p>
+          {dynamicVals.isDynamic && <div className="absolute top-0 right-0 px-1.5 py-0.5 bg-blue-100 text-blue-700 text-[8px] font-bold rounded-bl">DINÁMICO</div>}
         </div>
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30 shadow-sm">
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/30 shadow-sm relative overflow-hidden">
           <span className="text-[10px] text-indigo-600 dark:text-indigo-400 uppercase font-bold">Valor Regularizado</span>
           <p className="text-lg font-bold text-indigo-700 dark:text-indigo-300 mt-1">
-            USD {financials.marketValueRegularizedUsd.toLocaleString()}
+            USD {dynamicVals.final.toLocaleString()}
           </p>
+          {dynamicVals.isDynamic && <div className="absolute top-0 right-0 px-1.5 py-0.5 bg-blue-100 text-blue-700 text-[8px] font-bold rounded-bl">DINÁMICO</div>}
         </div>
       </div>
 

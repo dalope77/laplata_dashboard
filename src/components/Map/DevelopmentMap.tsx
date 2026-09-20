@@ -17,6 +17,7 @@ const WMS_URBASIG = "https://urbasig.mgob.gba.gob.ar/geoserver/urbasig/wms";
 const WMS_ARBA = "https://geo.arba.gov.ar/geoserver/idera/wms";
 
 import { useEffect, useRef } from 'react';
+import { calculateDynamicValues } from '../../utils/financials';
 
 function MapEventHandler({ isDrawingMode, onAddPoint, selectedDevelopment }: { isDrawingMode?: boolean, onAddPoint?: (lat: number, lng: number) => void, selectedDevelopment?: UrbanDevelopment | null }) {
   const map = useMapEvents({
@@ -114,6 +115,9 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
         const isSelected = selectedDevelopment?.id === dev.id;
         const color = getColor(dev.complianceStatus);
         
+        const devMarketPoints = marketPointsToRender.filter((mp: any) => mp.development_id === dev.id);
+        const dynamicVals = calculateDynamicValues(dev, devMarketPoints);
+        
         return (
           <Polygon
             key={dev.id}
@@ -146,11 +150,11 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
                 <div className="space-y-1 mb-3">
                   <div className="flex justify-between text-xs">
                     <span className="text-gray-500">Valor Actual:</span>
-                    <span className="font-medium">USD {dev.financials.marketValueIrregularUsd.toLocaleString()}</span>
+                    <span className="font-medium">USD {dynamicVals.actual.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between text-xs">
                     <span className="text-gray-500">Valor Final:</span>
-                    <span className="font-bold text-green-700">USD {dev.financials.marketValueRegularizedUsd.toLocaleString()}</span>
+                    <span className="font-bold text-green-700">USD {dynamicVals.final.toLocaleString()}</span>
                   </div>
                 </div>
 

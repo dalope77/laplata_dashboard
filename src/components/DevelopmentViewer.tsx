@@ -151,6 +151,23 @@ export function DevelopmentViewer() {
     }
   };
 
+  const handleDeleteMarketPoint = async (id: string) => {
+    if (!supabase) return;
+    try {
+      const { error } = await supabase
+        .from('market_comparables')
+        .delete()
+        .eq('id', id);
+        
+      if (error) throw error;
+      
+      setMarketPoints(prev => prev.filter(mp => mp.id !== id));
+    } catch (e) {
+      console.error("Error deleting market point", e);
+      alert("Hubo un error al borrar la publicación.");
+    }
+  };
+
   return (
     <div className="relative w-full h-screen flex flex-col md:flex-row overflow-hidden bg-gray-50 dark:bg-gray-900">
       
@@ -266,6 +283,7 @@ export function DevelopmentViewer() {
                   marketPoints={marketPoints.filter(mp => mp.development_id === selectedDevelopment.id)}
                   isAddingMarketPoint={isAddingMarketPoint}
                   onToggleAddMarketPoint={() => setIsAddingMarketPoint(!isAddingMarketPoint)}
+                  onDeleteComparable={handleDeleteMarketPoint}
                 />
               )}
             </div>

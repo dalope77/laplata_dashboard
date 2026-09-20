@@ -1,14 +1,15 @@
 import type { UrbanDevelopment } from "../../types/development";
-import { TrendingUp, DollarSign, Calculator, Plus, ExternalLink, FileText, UploadCloud, X } from "lucide-react";
+import { TrendingUp, DollarSign, Calculator, Plus, ExternalLink, FileText, UploadCloud, X, Trash2 } from "lucide-react";
 
 interface Props {
   development: UrbanDevelopment;
   marketPoints?: any[];
   isAddingMarketPoint?: boolean;
   onToggleAddMarketPoint?: () => void;
+  onDeleteComparable?: (id: string) => void;
 }
 
-export function FinancialSummary({ development, marketPoints = [], isAddingMarketPoint, onToggleAddMarketPoint }: Props) {
+export function FinancialSummary({ development, marketPoints = [], isAddingMarketPoint, onToggleAddMarketPoint, onDeleteComparable }: Props) {
   const { financials } = development;
   
   return (
@@ -75,8 +76,17 @@ export function FinancialSummary({ development, marketPoints = [], isAddingMarke
         <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1 custom-scrollbar">
           {marketPoints.map((comp) => (
             <div key={comp.id} className="flex justify-between items-center p-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded shadow-sm text-xs">
-              <div>
-                <p className="font-semibold text-gray-800 dark:text-gray-200 line-clamp-1" title={comp.title}>{comp.title || 'Publicación'}</p>
+              <div className="flex-1 pr-2">
+                <div className="flex items-start justify-between gap-2">
+                  <p className="font-semibold text-gray-800 dark:text-gray-200 line-clamp-1 flex-1" title={comp.title}>{comp.title || 'Publicación'}</p>
+                  <button 
+                    onClick={() => onDeleteComparable && onDeleteComparable(comp.id)}
+                    className="text-red-400 hover:text-red-600 p-1 rounded hover:bg-red-50 dark:hover:bg-red-900/30 transition-colors shrink-0"
+                    title="Eliminar publicación"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                  </button>
+                </div>
                 <p className="text-gray-500 mt-0.5">{comp.sq_meters} m²</p>
               </div>
               <div className="text-right flex flex-col items-end shrink-0 ml-2">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { DevelopmentMap } from './Map/DevelopmentMap';
 import { DevelopmentDirectory } from './Directory/DevelopmentDirectory';
 import { RegularizationPanel } from './Development/RegularizationPanel';
@@ -11,12 +11,36 @@ import type { UrbanDevelopment } from '../types/development';
 import { X, ChevronRight } from 'lucide-react';
 
 export function DevelopmentViewer() {
+  const [developments, setDevelopments] = useState<UrbanDevelopment[]>(mockDevelopments);
   const [selectedDevelopment, setSelectedDevelopment] = useState<UrbanDevelopment | null>(null);
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
 
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('laplata_edits');
+      if (saved) {
+        const edits = JSON.parse(saved);
+        setDevelopments(prev => prev.map(dev => edits[dev.id] || dev));
+      }
+    } catch (e) {
+      console.error('Error loading from localStorage', e);
+    }
+  }, []);
+
   const handleUpdateDevelopment = (updatedDev: UrbanDevelopment) => {
     setSelectedDevelopment(updatedDev);
+    setDevelopments(prev => prev.map(d => d.id === updatedDev.id ? updatedDev : d));
+
+    try {
+      const saved = localStorage.getItem('laplata_edits');
+      const edits = saved ? JSON.parse(saved) : {};
+      edits[updatedDev.id] = updatedDev;
+      localStorage.setItem('laplata_edits', JSON.stringify(edits));
+    } catch (e) {
+      console.error('Error saving to localStorage', e);
+    }
+
     const idx = mockDevelopments.findIndex(d => d.id === updatedDev.id);
     if (idx !== -1) {
       mockDevelopments[idx] = updatedDev;
@@ -59,7 +83,7 @@ export function DevelopmentViewer() {
       {/* Left Panel: Directory */}
       <div className="w-full md:w-[350px] shrink-0 z-10 shadow-lg">
         <DevelopmentDirectory 
-          developments={mockDevelopments}
+          developments={developments}
           onSelect={setSelectedDevelopment}
           selectedId={selectedDevelopment?.id}
         />

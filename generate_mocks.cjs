@@ -150,7 +150,7 @@ async function generateMocks() {
     }
 
     developments.push({
-      id: f.id || 'dev-lp-' + i,
+      id: String(f.id || 'dev-lp-' + i),
       name: name,
       type: 'loteo_abierto',
       polygon: coords,

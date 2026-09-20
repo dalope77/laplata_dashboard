@@ -1,7 +1,6 @@
 import { MapContainer, TileLayer, WMSTileLayer, Polygon, Popup, LayersControl, CircleMarker, useMapEvents, Tooltip, LayerGroup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { UrbanDevelopment } from '../../types/development';
-import { mockDevelopments } from '../../data/mockDevelopments';
 import type { LeafletMouseEvent } from 'leaflet';
 
 interface DevelopmentMapProps {

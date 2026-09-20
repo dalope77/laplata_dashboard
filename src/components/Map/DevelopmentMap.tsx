@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, WMSTileLayer, Polygon, Popup, LayersControl, CircleMarker, useMapEvents, Tooltip } from 'react-leaflet';
+import { MapContainer, TileLayer, WMSTileLayer, Polygon, Popup, LayersControl, CircleMarker, useMapEvents, Tooltip, LayerGroup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { UrbanDevelopment } from '../../types/development';
 import { mockDevelopments } from '../../data/mockDevelopments';
@@ -10,6 +10,7 @@ interface DevelopmentMapProps {
   isDrawingMode?: boolean;
   onAddPoint?: (lat: number, lng: number) => void;
   onRemovePoint?: (index: number) => void;
+  marketPoints?: any[];
 }
 
 const WMS_URBASIG = "https://urbasig.mgob.gba.gob.ar/geoserver/urbasig/wms";
@@ -58,6 +59,9 @@ export function DevelopmentMap({ onSelectDevelopment, selectedDevelopment, isDra
   // Use the first development's first coordinate as center, or default to La Plata
   const centerCoord = mockDevelopments[0]?.polygon[0] || { lat: -34.9205, lng: -57.9536 };
   const position: [number, number] = [centerCoord.lat, centerCoord.lng];
+
+  // Group market points by development id for efficient rendering inside popups? No, just render them globally as a layer.
+  const marketPointsToRender = marketPoints || [];
 
   const getColor = (status: string) => {
     switch (status) {
@@ -183,6 +187,35 @@ export function DevelopmentMap({ onSelectDevelopment, selectedDevelopment, isDra
           {isDrawingMode && <Tooltip>Clic para eliminar</Tooltip>}
         </CircleMarker>
       ))}
+
+      {/* Render Market Comparables from Supabase */}
+      <LayersControl.Overlay checked name="Publicaciones Mercado">
+        <LayerGroup>
+          {marketPointsToRender.map((mp, idx) => (
+            <CircleMarker
+              key={`mp-${mp.id || idx}`}
+              center={[mp.lat, mp.lng]}
+              radius={5}
+              pathOptions={{ color: '#ffffff', fillColor: '#2563eb', fillOpacity: 0.9, weight: 1.5 }}
+              eventHandlers={{
+                click: (e) => {
+                  e.originalEvent.stopPropagation();
+                  if (mp.source_url) {
+                    window.open(mp.source_url, '_blank');
+                  }
+                }
+              }}
+            >
+              <Tooltip className="text-xs">
+                <div className="font-bold">{mp.title}</div>
+                <div>USD {mp.price_usd?.toLocaleString()}</div>
+                <div>{mp.sq_meters} m²</div>
+                <div className="text-[9px] text-blue-500 mt-1">Clic para abrir link</div>
+              </Tooltip>
+            </CircleMarker>
+          ))}
+        </LayerGroup>
+      </LayersControl.Overlay>
     </MapContainer>
   );
 }

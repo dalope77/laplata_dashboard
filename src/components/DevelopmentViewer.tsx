@@ -16,24 +16,36 @@ export function DevelopmentViewer() {
   const [selectedDevelopment, setSelectedDevelopment] = useState<UrbanDevelopment | null>(null);
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
+  const [marketPoints, setMarketPoints] = useState<any[]>([]);
 
   useEffect(() => {
     async function loadEdits() {
       if (!supabase) return;
       try {
-        const { data, error } = await supabase
+        const { data: editsData, error: editsError } = await supabase
           .from('development_edits')
-          .select('development_id, data');
-          
-        if (error) throw error;
+          .select('*');
         
-        if (data && data.length > 0) {
-          const edits: Record<string, UrbanDevelopment> = {};
-          data.forEach(row => {
-            edits[row.development_id] = row.data as UrbanDevelopment;
-          });
-          setDevelopments(prev => prev.map(dev => edits[dev.id] || dev));
+        if (editsError) throw editsError;
+
+        if (editsData) {
+          const editsMap = new Map(editsData.map(e => [e.development_id, e.edits]));
+          setDevelopments(mockDevelopments.map(dev => {
+            const edit = editsMap.get(dev.id);
+            return edit ? { ...dev, ...edit } : dev;
+          }));
         }
+
+        const { data: marketData, error: marketError } = await supabase
+          .from('market_comparables')
+          .select('*');
+          
+        if (marketError) throw marketError;
+        
+        if (marketData) {
+          setMarketPoints(marketData);
+        }
+
       } catch (e) {
         console.error('Error loading from Supabase', e);
       }
@@ -117,6 +129,7 @@ export function DevelopmentViewer() {
           isDrawingMode={isDrawingMode}
           onAddPoint={handleAddPoint}
           onRemovePoint={handleRemovePoint}
+          marketPoints={marketPoints}
         />
       </div>
 
@@ -199,7 +212,12 @@ export function DevelopmentViewer() {
                 />
               )}
               {activeTab === 'normativa' && <NormativeEngine development={selectedDevelopment} />}
-              {activeTab === 'finanzas' && <FinancialSummary development={selectedDevelopment} />}
+              {activeTab === 'finanzas' && (
+                <FinancialSummary 
+                  development={selectedDevelopment} 
+                  marketPoints={marketPoints.filter(mp => mp.development_id === selectedDevelopment.id)}
+                />
+              )}
             </div>
             
             {/* Footer CTA */}

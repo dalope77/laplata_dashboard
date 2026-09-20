@@ -3,9 +3,10 @@ import { TrendingUp, DollarSign, Calculator, Plus, ExternalLink, FileText, Uploa
 
 interface Props {
   development: UrbanDevelopment;
+  marketPoints?: any[];
 }
 
-export function FinancialSummary({ development }: Props) {
+export function FinancialSummary({ development, marketPoints = [] }: Props) {
   const { financials } = development;
   
   return (
@@ -62,24 +63,24 @@ export function FinancialSummary({ development }: Props) {
           </button>
         </div>
         
-        <div className="space-y-2">
-          {financials.comparables.map((comp) => (
+        <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1 custom-scrollbar">
+          {marketPoints.map((comp) => (
             <div key={comp.id} className="flex justify-between items-center p-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded shadow-sm text-xs">
               <div>
-                <p className="font-semibold text-gray-800 dark:text-gray-200">{comp.address}</p>
-                <p className="text-gray-500 mt-0.5">{comp.sqMeters} m²</p>
+                <p className="font-semibold text-gray-800 dark:text-gray-200 line-clamp-1" title={comp.title}>{comp.title || 'Publicación'}</p>
+                <p className="text-gray-500 mt-0.5">{comp.sq_meters} m²</p>
               </div>
-              <div className="text-right flex flex-col items-end">
-                <p className="font-bold text-gray-900 dark:text-gray-100">USD {comp.priceUsd.toLocaleString()}</p>
-                {comp.sourceUrl && (
-                  <a href={comp.sourceUrl} target="_blank" rel="noreferrer" className="text-[9px] text-blue-500 flex items-center gap-1 mt-0.5 hover:underline">
+              <div className="text-right flex flex-col items-end shrink-0 ml-2">
+                <p className="font-bold text-gray-900 dark:text-gray-100">USD {comp.price_usd?.toLocaleString()}</p>
+                {comp.source_url && (
+                  <a href={comp.source_url} target="_blank" rel="noreferrer" className="text-[9px] text-blue-500 flex items-center gap-1 mt-0.5 hover:underline">
                     Ver fuente <ExternalLink className="w-2.5 h-2.5" />
                   </a>
                 )}
               </div>
             </div>
           ))}
-          {financials.comparables.length === 0 && (
+          {marketPoints.length === 0 && (
             <p className="text-xs text-center text-gray-400 py-4 bg-gray-50 dark:bg-gray-800/50 rounded border border-dashed">
               No hay inmuebles testigo cargados.
             </p>

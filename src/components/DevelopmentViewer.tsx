@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { DevelopmentMap } from './Map/DevelopmentMap';
 import { DevelopmentDirectory } from './Directory/DevelopmentDirectory';
 import { RegularizationPanel } from './Development/RegularizationPanel';
@@ -7,6 +7,7 @@ import { FinancialSummary } from './Financial/FinancialSummary';
 import { TechnicalSheet } from './Development/TechnicalSheet';
 import { mockDevelopments } from '../data/mockDevelopments';
 import { generateDevelopmentReport } from '../utils/pdfExport';
+import { supabase } from '../lib/supabase';
 import type { UrbanDevelopment } from '../types/development';
 import { X, ChevronRight } from 'lucide-react';
 
@@ -17,28 +18,44 @@ export function DevelopmentViewer() {
   const [isDrawingMode, setIsDrawingMode] = useState(false);
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('laplata_edits');
-      if (saved) {
-        const edits = JSON.parse(saved);
-        setDevelopments(prev => prev.map(dev => edits[dev.id] || dev));
+    async function loadEdits() {
+      try {
+        const { data, error } = await supabase
+          .from('development_edits')
+          .select('development_id, data');
+          
+        if (error) throw error;
+        
+        if (data && data.length > 0) {
+          const edits: Record<string, UrbanDevelopment> = {};
+          data.forEach(row => {
+            edits[row.development_id] = row.data as UrbanDevelopment;
+          });
+          setDevelopments(prev => prev.map(dev => edits[dev.id] || dev));
+        }
+      } catch (e) {
+        console.error('Error loading from Supabase', e);
       }
-    } catch (e) {
-      console.error('Error loading from localStorage', e);
     }
+    loadEdits();
   }, []);
 
-  const handleUpdateDevelopment = (updatedDev: UrbanDevelopment) => {
+  const handleUpdateDevelopment = async (updatedDev: UrbanDevelopment) => {
     setSelectedDevelopment(updatedDev);
     setDevelopments(prev => prev.map(d => d.id === updatedDev.id ? updatedDev : d));
 
     try {
-      const saved = localStorage.getItem('laplata_edits');
-      const edits = saved ? JSON.parse(saved) : {};
-      edits[updatedDev.id] = updatedDev;
-      localStorage.setItem('laplata_edits', JSON.stringify(edits));
+      const { error } = await supabase
+        .from('development_edits')
+        .upsert({
+          development_id: updatedDev.id,
+          data: updatedDev,
+          updated_at: new Date().toISOString()
+        });
+        
+      if (error) throw error;
     } catch (e) {
-      console.error('Error saving to localStorage', e);
+      console.error('Error saving to Supabase', e);
     }
 
     const idx = mockDevelopments.findIndex(d => d.id === updatedDev.id);

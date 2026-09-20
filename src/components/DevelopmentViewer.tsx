@@ -19,6 +19,7 @@ export function DevelopmentViewer() {
 
   useEffect(() => {
     async function loadEdits() {
+      if (!supabase) return;
       try {
         const { data, error } = await supabase
           .from('development_edits')
@@ -43,6 +44,8 @@ export function DevelopmentViewer() {
   const handleUpdateDevelopment = async (updatedDev: UrbanDevelopment) => {
     setSelectedDevelopment(updatedDev);
     setDevelopments(prev => prev.map(d => d.id === updatedDev.id ? updatedDev : d));
+
+    if (!supabase) return;
 
     try {
       const { error } = await supabase

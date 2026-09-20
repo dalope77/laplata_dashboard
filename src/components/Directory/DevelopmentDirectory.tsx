@@ -27,13 +27,13 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId }: Pro
       if (filterDpout !== null && dev.technicalData.inDpoutRegistry !== filterDpout) return false;
       
       // Status
-      if (filterStatus !== 'todos' && dev.complianceStatus !== filterStatus) return false;
+      if (filterStatus !== 'all' && dev.complianceStatus !== filterStatus) return false;
 
       // Type
       if (filterType !== 'all' && dev.type !== filterType) return false;
 
       // Territory
-      if (filterTerritory !== 'todos' && dev.technicalData.zonaTerritorialidad !== filterTerritory) return false;
+      if (filterTerritory !== 'all' && dev.technicalData.zonaTerritorialidad !== filterTerritory) return false;
 
       // Ley 14449
       if (filterLey14449 !== null && dev.technicalData.ley14449 !== filterLey14449) return false;

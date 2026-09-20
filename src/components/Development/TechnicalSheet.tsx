@@ -1,0 +1,402 @@
+import type { UrbanDevelopment, DevelopmentType } from "../../types/development";
+import { Layers, Maximize, MapPin, Home, Save, RefreshCw, Loader2, MousePointerClick } from "lucide-react";
+import { useState } from "react";
+import { getProceduresForType } from "../../data/procedureTemplates";
+
+interface Props {
+  development: UrbanDevelopment;
+  onUpdateDevelopment?: (dev: UrbanDevelopment) => void;
+  isDrawingMode?: boolean;
+  onToggleDrawingMode?: () => void;
+}
+
+export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode, onToggleDrawingMode }: Props) {
+  const data = development.technicalData;
+
+  const handleChange = (field: keyof typeof data, value: any) => {
+    if (!onUpdateDevelopment) return;
+    onUpdateDevelopment({
+      ...development,
+      technicalData: {
+        ...data,
+        [field]: value
+      }
+    });
+  };
+
+  const handleIndicatorChange = (field: keyof typeof data.indicators, value: any) => {
+    if (!onUpdateDevelopment) return;
+    onUpdateDevelopment({
+      ...development,
+      technicalData: {
+        ...data,
+        indicators: {
+          ...data.indicators,
+          [field]: value
+        }
+      }
+    });
+  };
+
+
+  return (
+    <div className="space-y-6">
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Ficha Técnica</h3>
+          <p className="text-xs text-gray-400 mb-4">Información catastral, urbanística y constructiva (Pre-cargada desde UrbaSIG).</p>
+        </div>
+      </div>
+
+      {/* Encuadre Normativo */}
+      <div className="bg-indigo-50 dark:bg-indigo-900/10 border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 shadow-sm">
+        <label className="flex flex-col gap-1">
+          <span className="text-xs font-bold text-indigo-700 dark:text-indigo-400 uppercase">Encuadre Normativo</span>
+          <select 
+            value={development.type}
+            onChange={(e) => {
+              if (!onUpdateDevelopment) return;
+              const newType = e.target.value as DevelopmentType;
+              const newProcedures = getProceduresForType(newType, development.procedures);
+              onUpdateDevelopment({
+                ...development,
+                type: newType,
+                procedures: newProcedures,
+                technicalData: {
+                  ...development.technicalData,
+                  ley14449: newType === 'loteo_social' ? true : development.technicalData.ley14449
+                }
+              });
+            }}
+            className="mt-1 bg-white dark:bg-gray-800 border border-indigo-300 dark:border-indigo-700 rounded p-2 text-sm font-bold text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            <option value="loteo_abierto">Loteo Abierto (Ley 8912)</option>
+            <option value="club_campo">Club de Campo</option>
+            <option value="barrio_cerrado">Barrio Cerrado</option>
+            <option value="condominio">Condominio (PH)</option>
+            <option value="loteo_social">Hábitat (Ley 14.449)</option>
+          </select>
+          <p className="text-[10px] text-gray-500 mt-1">Al cambiar el encuadre, la lista de Gestión/Trámites se actualizará automáticamente a los requisitos correspondientes.</p>
+        </label>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        {/* Superficie Total */}
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-3 shadow-sm">
+          <div className="bg-indigo-50 dark:bg-indigo-900/30 p-2 rounded-lg text-indigo-600 dark:text-indigo-400">
+            <Maximize className="w-5 h-5" />
+          </div>
+          <div>
+            <p className="text-xs text-gray-500 font-medium">Superficie Terreno (m²)</p>
+            <input 
+              type="number" 
+              value={data.totalAreaSqM} 
+              onChange={(e) => handleChange('totalAreaSqM', Number(e.target.value))}
+              className="mt-1 w-full text-lg font-bold text-gray-900 dark:text-gray-100 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+        </div>
+
+        {/* Viviendas Ejecutadas */}
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-3 shadow-sm">
+          <div className="bg-emerald-50 dark:bg-emerald-900/30 p-2 rounded-lg text-emerald-600 dark:text-emerald-400">
+            <Home className="w-5 h-5" />
+          </div>
+          <div>
+            <p className="text-xs text-gray-500 font-medium">Viviendas Ejecutadas</p>
+            <div className="flex items-center gap-3 mt-1">
+              <span className="text-lg font-bold text-gray-900 dark:text-gray-100">{data.executedUnitsPoints?.length || 0}</span>
+              <button 
+                onClick={onToggleDrawingMode}
+                className={`flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-bold transition-colors ${
+                  isDrawingMode 
+                    ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 hover:bg-red-200' 
+                    : 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400 hover:bg-indigo-200'
+                }`}
+              >
+                <MousePointerClick className="w-3.5 h-3.5" />
+                {isDrawingMode ? 'Terminar Edición' : '📍 Marcar en Mapa'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Parcelas */}
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
+        <div className="flex items-center justify-between mb-3">
+          <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-indigo-500" /> Nomenclaturas Catastrales
+          </h4>
+          <button 
+            onClick={() => {
+              const newParcels = [...data.parcels, 'Nueva Parcela'];
+              handleChange('parcels', newParcels);
+            }}
+            className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded hover:bg-indigo-100"
+          >
+            + Añadir Parcela
+          </button>
+        </div>
+        <div className="flex flex-col gap-2">
+          {data.parcels.map((parcel, idx) => (
+            <div key={idx} className="flex items-center gap-2">
+              <input 
+                type="text"
+                value={parcel}
+                onChange={(e) => {
+                  const newParcels = [...data.parcels];
+                  newParcels[idx] = e.target.value;
+                  handleChange('parcels', newParcels);
+                }}
+                className="flex-1 bg-gray-50 dark:bg-gray-900/50 text-gray-900 dark:text-gray-100 px-3 py-1.5 rounded text-xs font-mono border border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+              />
+              <button 
+                onClick={() => {
+                  const newParcels = data.parcels.filter((_, i) => i !== idx);
+                  handleChange('parcels', newParcels);
+                }}
+                className="text-red-500 hover:text-red-700 p-1"
+                title="Eliminar"
+              >
+                ×
+              </button>
+            </div>
+          ))}
+          {data.parcels.length === 0 && (
+            <p className="text-xs text-gray-400 italic">No hay parcelas registradas.</p>
+          )}
+        </div>
+      </div>
+
+      {/* Indicadores Urbanísticos */}
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
+        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2 mb-4">
+          <Layers className="w-4 h-4 text-indigo-500" /> Indicadores Urbanísticos (Proyectados)
+        </h4>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="text-center p-3 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700">
+            <p className="text-xs text-gray-500 mb-1">FOS</p>
+            <input 
+              type="number" 
+              step="0.1"
+              value={data.indicators.fos} 
+              onChange={(e) => handleIndicatorChange('fos', Number(e.target.value))}
+              className="w-full text-center text-lg font-bold text-indigo-600 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+          <div className="text-center p-3 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700">
+            <p className="text-xs text-gray-500 mb-1">FOT</p>
+            <input 
+              type="number" 
+              step="0.1"
+              value={data.indicators.fot} 
+              onChange={(e) => handleIndicatorChange('fot', Number(e.target.value))}
+              className="w-full text-center text-lg font-bold text-indigo-600 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+          <div className="text-center p-3 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700">
+            <p className="text-xs text-gray-500 mb-1">Densidad (hab/Ha)</p>
+            <input 
+              type="number" 
+              value={data.indicators.density} 
+              onChange={(e) => handleIndicatorChange('density', Number(e.target.value))}
+              className="w-full text-center text-lg font-bold text-indigo-600 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+          <div className="text-center p-3 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700">
+            <p className="text-xs text-gray-500 mb-1">Frente Mín. (m)</p>
+            <input 
+              type="number" 
+              value={data.indicators.minFront || 0} 
+              onChange={(e) => handleIndicatorChange('minFront', Number(e.target.value))}
+              className="w-full text-center text-lg font-bold text-indigo-600 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+          <div className="text-center p-3 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700">
+            <p className="text-xs text-gray-500 mb-1">Sup. Mínima (m²)</p>
+            <input 
+              type="number" 
+              value={data.indicators.minArea || 0} 
+              onChange={(e) => handleIndicatorChange('minArea', Number(e.target.value))}
+              className="w-full text-center text-lg font-bold text-indigo-600 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+          <div className="text-center p-3 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700">
+            <p className="text-xs text-gray-500 mb-1">Altura Máxima</p>
+            <input 
+              type="text" 
+              value={data.indicators.maxHeight || ''} 
+              onChange={(e) => handleIndicatorChange('maxHeight', e.target.value)}
+              className="w-full text-center text-sm font-bold text-indigo-600 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+        </div>
+
+        <div className="mt-4 grid grid-cols-2 gap-4">
+          <div>
+            <p className="text-xs text-gray-500 mb-1 font-bold">Zonificación</p>
+            <input 
+              type="text" 
+              value={data.indicators.zoning || ''} 
+              onChange={(e) => handleIndicatorChange('zoning', e.target.value)}
+              className="w-full text-sm font-bold text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+          <div>
+            <p className="text-xs text-gray-500 mb-1 font-bold">Descripción de Zona</p>
+            <input 
+              type="text" 
+              value={data.indicators.description || ''} 
+              onChange={(e) => handleIndicatorChange('description', e.target.value)}
+              className="w-full text-sm font-bold text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 focus:outline-none focus:border-indigo-500"
+            />
+          </div>
+        </div>
+
+        <div className="mt-4 space-y-3">
+          <div>
+            <p className="text-xs text-gray-500 mb-1 font-bold">Usos Admitidos / Dominantes</p>
+            <textarea 
+              value={data.indicators.allowedUses || ''} 
+              onChange={(e) => handleIndicatorChange('allowedUses', e.target.value)}
+              className="w-full text-sm text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 focus:outline-none focus:border-indigo-500"
+              rows={2}
+            />
+          </div>
+          <div>
+            <p className="text-xs text-gray-500 mb-1 font-bold">Usos Complementarios</p>
+            <textarea 
+              value={data.indicators.complementaryUses || ''} 
+              onChange={(e) => handleIndicatorChange('complementaryUses', e.target.value)}
+              className="w-full text-sm text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 focus:outline-none focus:border-indigo-500"
+              rows={2}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Riesgo Hídrico */}
+      <div className={`border rounded-lg p-4 shadow-sm flex items-start gap-3 ${
+        data.hydroRisk 
+          ? 'bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-900/30' 
+          : 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-900/30'
+      }`}>
+        <div className={`p-2 rounded-lg ${data.hydroRisk ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'}`}>
+          <Layers className="w-5 h-5" />
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center justify-between">
+            <h4 className={`text-xs font-bold uppercase mb-1 ${data.hydroRisk ? 'text-red-800 dark:text-red-400' : 'text-green-800 dark:text-green-400'}`}>
+              Evaluación de Riesgo Hídrico (ADA)
+            </h4>
+            <button 
+              onClick={() => handleChange('hydroRisk', !data.hydroRisk)}
+              className="text-[10px] underline text-gray-500 hover:text-gray-700"
+            >
+              Forzar Cambio
+            </button>
+          </div>
+          <p className={`text-sm font-semibold ${data.hydroRisk ? 'text-red-700 dark:text-red-300' : 'text-green-700 dark:text-green-300'}`}>
+            {data.hydroRisk 
+              ? 'ATENCIÓN: El polígono intersecta con zonas de cuencas hídricas. Requiere prefactibilidad estricta de ADA.' 
+              : 'SIN RIESGO APARENTE: No se detectan cruces con cuencas hídricas principales de UrbaSIG.'}
+          </p>
+        </div>
+      </div>
+
+      {/* Evaluación de Criterios (Art 82-84) */}
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
+        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2 mb-4">
+          <Layers className="w-4 h-4 text-indigo-500" /> Atributos de Regularización
+        </h4>
+        <div className="space-y-3">
+          <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <input 
+              type="checkbox" 
+              className="mt-1"
+              checked={data.hasMaterialization} 
+              onChange={(e) => handleChange('hasMaterialization', e.target.checked)} 
+            />
+            <div>
+              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Materialización de Uso (Cat. 1)</p>
+              <p className="text-xs text-gray-500">Subdivisión o vivienda ocupada entre Dic 2013 y Oct 2024.</p>
+            </div>
+          </label>
+          <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <input 
+              type="checkbox" 
+              className="mt-1"
+              checked={data.hasPartialViability} 
+              onChange={(e) => handleChange('hasPartialViability', e.target.checked)} 
+            />
+            <div>
+              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Viabilidad Administrativa Parcial (Cat. 2)</p>
+              <p className="text-xs text-gray-500">Posee factibilidad municipal, faz geométrica, planos o pagos de plusvalía.</p>
+            </div>
+          </label>
+        </div>
+        <div className="space-y-3 mt-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+          <label className="flex flex-col gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Ubicación (Zona de Territorialidad)</span>
+            <select 
+              value={data.zonaTerritorialidad || 'fuera'} 
+              onChange={(e) => handleChange('zonaTerritorialidad', e.target.value)}
+              className="mt-1 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-1.5 text-sm"
+            >
+              <option value="urbana">Zona Urbana (Caso A)</option>
+              <option value="periferica">Zona Urbana Periférica (Caso B)</option>
+              <option value="periurbana_rural">Zona Periurbana y Rural (Casos C y D)</option>
+              <option value="fuera">Fuera de Zonas Especiales</option>
+            </select>
+          </label>
+          <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <input 
+              type="checkbox" 
+              className="mt-1"
+              checked={data.ley14449} 
+              onChange={(e) => handleChange('ley14449', e.target.checked)} 
+            />
+            <div>
+              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Ley 14.449 (Hábitat)</p>
+              <p className="text-xs text-gray-500">Loteos sociales con requerimientos mínimos reducidos.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      {/* Condiciones Ambientales */}
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
+        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2 mb-4">
+          <Layers className="w-4 h-4 text-emerald-500" /> Condiciones Ambientales (Art. 87-90)
+        </h4>
+        <div className="space-y-3">
+          <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <input 
+              type="checkbox" 
+              className="mt-1"
+              checked={data.nearIndustry} 
+              onChange={(e) => handleChange('nearIndustry', e.target.checked)} 
+            />
+            <div>
+              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Próximo a Industrias</p>
+              <p className="text-xs text-gray-500">Requiere evaluación de impacto industrial.</p>
+            </div>
+          </label>
+          <label className="flex flex-col gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Pasivos Ambientales / Cavas</span>
+            <select 
+              value={data.pasivosAmbientales || 'ninguno'} 
+              onChange={(e) => handleChange('pasivosAmbientales', e.target.value)}
+              className="mt-1 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-1.5 text-sm"
+            >
+              <option value="ninguno">Ninguno</option>
+              <option value="proximo">Próximo al loteo (evaluación individualizada)</option>
+              <option value="dentro">Dentro del loteo (remediación obligatoria Ley 14.343)</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+  );
+}

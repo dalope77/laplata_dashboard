@@ -1,0 +1,80 @@
+export type DevelopmentType = 
+  | "barrio_cerrado" 
+  | "condominio" 
+  | "club_campo" 
+  | "loteo_abierto" 
+  | "loteo_social" 
+  | "ph_horizontal";
+
+export interface ProcedureStep {
+  id: string;
+  name: string;
+  category: "fase1" | "fase2" | "fase3";
+  status: "faltante" | "documentacion_subida" | "aprobado" | "observado";
+  documentUrl?: string;
+  mandatory: boolean;
+}
+
+export interface MarketComparable {
+  id: string;
+  address: string;
+  priceUsd: number;
+  sqMeters: number;
+  sourceUrl?: string;
+}
+
+export interface FinancialMetrics {
+  marketValueIrregularUsd: number;
+  marketValueRegularizedUsd: number;
+  regularizationCostUsd: number;
+  requiredCessionsSqM: number;
+  plusvaliaAmountUsd: number;
+  comparables: MarketComparable[];
+}
+
+export interface PropertyOffer {
+  id: string;
+  date: string;
+  amountUsd: number;
+  fileName?: string;
+}
+
+export interface TechnicalData {
+  parcels: string[];
+  totalAreaSqM: number;
+  executedUnits: number; // Will reflect the length of executedUnitsPoints
+  executedUnitsPoints: { lat: number; lng: number }[];
+  indicators: {
+    fos: number;
+    fot: number;
+    density: number;
+    minFront?: number;
+    minArea: number;
+    maxHeight: string;
+    zoning: string;
+    description: string;
+    allowedUses: string;
+    complementaryUses: string;
+  };
+  hydroRisk: boolean;
+  hasMaterialization: boolean;
+  hasPartialViability: boolean;
+  zonaTerritorialidad: 'urbana' | 'periferica' | 'periurbana_rural' | 'fuera';
+  ley14449: boolean;
+  nearIndustry: boolean;
+  pasivosAmbientales: 'ninguno' | 'proximo' | 'dentro';
+  inDpoutRegistry?: boolean;
+}
+
+export interface UrbanDevelopment {
+  id: string;
+  name: string;
+  type: DevelopmentType;
+  polygon: Array<{ lat: number; lng: number }>;
+  complianceStatus: "verde" | "amarillo" | "rojo";
+  procedures: ProcedureStep[];
+  financials: FinancialMetrics;
+  ordinanceViolations: string[];
+  technicalData: TechnicalData;
+  offers: PropertyOffer[];
+}

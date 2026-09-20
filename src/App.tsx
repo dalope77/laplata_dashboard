@@ -52,9 +52,6 @@ function App() {
               Ingresar
             </button>
           </form>
-          <p className="text-xs text-gray-400 text-center mt-6">
-            La contraseña por defecto es "laplata2026".
-          </p>
         </div>
       </div>
     );

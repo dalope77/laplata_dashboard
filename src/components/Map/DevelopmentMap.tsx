@@ -55,7 +55,7 @@ function MapEventHandler({ isDrawingMode, onAddPoint, selectedDevelopment }: { i
   return null;
 }
 
-export function DevelopmentMap({ onSelectDevelopment, selectedDevelopment, isDrawingMode, onAddPoint, onRemovePoint }: DevelopmentMapProps) {
+export function DevelopmentMap({ onSelectDevelopment, selectedDevelopment, isDrawingMode, onAddPoint, onRemovePoint, marketPoints = [] }: DevelopmentMapProps) {
   // Use the first development's first coordinate as center, or default to La Plata
   const centerCoord = mockDevelopments[0]?.polygon[0] || { lat: -34.9205, lng: -57.9536 };
   const position: [number, number] = [centerCoord.lat, centerCoord.lng];
@@ -191,7 +191,7 @@ export function DevelopmentMap({ onSelectDevelopment, selectedDevelopment, isDra
       {/* Render Market Comparables from Supabase */}
       <LayersControl.Overlay checked name="Publicaciones Mercado">
         <LayerGroup>
-          {marketPointsToRender.map((mp, idx) => (
+          {marketPointsToRender.map((mp: any, idx: number) => (
             <CircleMarker
               key={`mp-${mp.id || idx}`}
               center={[mp.lat, mp.lng]}

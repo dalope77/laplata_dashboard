@@ -1,12 +1,14 @@
 import type { UrbanDevelopment } from "../../types/development";
-import { TrendingUp, DollarSign, Calculator, Plus, ExternalLink, FileText, UploadCloud } from "lucide-react";
+import { TrendingUp, DollarSign, Calculator, Plus, ExternalLink, FileText, UploadCloud, X } from "lucide-react";
 
 interface Props {
   development: UrbanDevelopment;
   marketPoints?: any[];
+  isAddingMarketPoint?: boolean;
+  onToggleAddMarketPoint?: () => void;
 }
 
-export function FinancialSummary({ development, marketPoints = [] }: Props) {
+export function FinancialSummary({ development, marketPoints = [], isAddingMarketPoint, onToggleAddMarketPoint }: Props) {
   const { financials } = development;
   
   return (
@@ -58,8 +60,15 @@ export function FinancialSummary({ development, marketPoints = [] }: Props) {
       <div>
         <div className="flex items-center justify-between mb-3">
           <h4 className="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase">Casos Testigo (Mercado)</h4>
-          <button className="text-[10px] font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1 hover:underline">
-            <Plus className="w-3 h-3" /> Agregar Caso
+          <button 
+            onClick={onToggleAddMarketPoint}
+            className={`text-[10px] font-semibold px-2 py-1 rounded transition-colors flex items-center gap-1 ${
+              isAddingMarketPoint 
+                ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 hover:bg-red-200' 
+                : 'bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400 hover:bg-indigo-100'
+            }`}
+          >
+            {isAddingMarketPoint ? <span className="flex items-center gap-1"><X className="w-3 h-3" /> Cancelar Puntero</span> : <span className="flex items-center gap-1"><Plus className="w-3 h-3" /> Agregar Caso</span>}
           </button>
         </div>
         

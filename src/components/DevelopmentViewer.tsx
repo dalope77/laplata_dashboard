@@ -17,6 +17,9 @@ export function DevelopmentViewer() {
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
   const [marketPoints, setMarketPoints] = useState<any[]>([]);
+  const [isAddingMarketPoint, setIsAddingMarketPoint] = useState(false);
+  const [pendingMarketPoint, setPendingMarketPoint] = useState<{lat: number, lng: number} | null>(null);
+  const [newComparableForm, setNewComparableForm] = useState({ title: '', price: '', sqm: '', url: '' });
 
   useEffect(() => {
     async function loadEdits() {
@@ -29,7 +32,7 @@ export function DevelopmentViewer() {
         if (editsError) throw editsError;
 
         if (editsData) {
-          const editsMap = new Map(editsData.map(e => [e.development_id, e.edits]));
+          const editsMap = new Map(editsData.map(e => [e.development_id, e.data]));
           setDevelopments(mockDevelopments.map(dev => {
             const edit = editsMap.get(dev.id);
             return edit ? { ...dev, ...edit } : dev;
@@ -109,6 +112,45 @@ export function DevelopmentViewer() {
     });
   };
 
+  const handleMapClickMarket = (lat: number, lng: number) => {
+    if (!isAddingMarketPoint || !selectedDevelopment) return;
+    setPendingMarketPoint({ lat, lng });
+    setIsAddingMarketPoint(false);
+  };
+
+  const handleSaveMarketPoint = async () => {
+    if (!pendingMarketPoint || !selectedDevelopment || !supabase) return;
+    
+    const newPoint = {
+      development_id: selectedDevelopment.id,
+      lat: pendingMarketPoint.lat,
+      lng: pendingMarketPoint.lng,
+      title: newComparableForm.title,
+      price_usd: Number(newComparableForm.price) || null,
+      sq_meters: Number(newComparableForm.sqm) || null,
+      source_url: newComparableForm.url
+    };
+
+    try {
+      const { data, error } = await supabase
+        .from('market_comparables')
+        .insert([newPoint])
+        .select('*');
+
+      if (error) throw error;
+      
+      if (data && data.length > 0) {
+        setMarketPoints(prev => [...prev, data[0]]);
+      }
+      
+      setPendingMarketPoint(null);
+      setNewComparableForm({ title: '', price: '', sqm: '', url: '' });
+    } catch (e) {
+      console.error("Error saving market point", e);
+      alert("Hubo un error al guardar la publicación.");
+    }
+  };
+
   return (
     <div className="relative w-full h-screen flex flex-col md:flex-row overflow-hidden bg-gray-50 dark:bg-gray-900">
       
@@ -126,8 +168,14 @@ export function DevelopmentViewer() {
         <DevelopmentMap 
           selectedDevelopment={selectedDevelopment}
           onSelectDevelopment={setSelectedDevelopment}
-          isDrawingMode={isDrawingMode}
-          onAddPoint={handleAddPoint}
+          isDrawingMode={isDrawingMode || isAddingMarketPoint}
+          onAddPoint={(lat, lng) => {
+            if (isAddingMarketPoint) {
+              handleMapClickMarket(lat, lng);
+            } else if (isDrawingMode) {
+              handleAddPoint(lat, lng);
+            }
+          }}
           onRemovePoint={handleRemovePoint}
           marketPoints={marketPoints}
         />
@@ -216,6 +264,8 @@ export function DevelopmentViewer() {
                 <FinancialSummary 
                   development={selectedDevelopment} 
                   marketPoints={marketPoints.filter(mp => mp.development_id === selectedDevelopment.id)}
+                  isAddingMarketPoint={isAddingMarketPoint}
+                  onToggleAddMarketPoint={() => setIsAddingMarketPoint(!isAddingMarketPoint)}
                 />
               )}
             </div>
@@ -237,6 +287,72 @@ export function DevelopmentViewer() {
           </>
         )}
       </div>
+
+      {/* Modal for adding market point */}
+      {pendingMarketPoint && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center backdrop-blur-sm p-4">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-6 w-full max-w-md border border-gray-200 dark:border-gray-800">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Nueva Publicación Testigo</h3>
+              <button onClick={() => setPendingMarketPoint(null)} className="text-gray-500 hover:text-gray-700">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Título / Descripción</label>
+                <input 
+                  type="text" 
+                  value={newComparableForm.title}
+                  onChange={e => setNewComparableForm(prev => ({...prev, title: e.target.value}))}
+                  className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                  placeholder="Ej: Lote 1000m2 en Haras"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Precio (USD)</label>
+                  <input 
+                    type="number" 
+                    value={newComparableForm.price}
+                    onChange={e => setNewComparableForm(prev => ({...prev, price: e.target.value}))}
+                    className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                    placeholder="Ej: 25000"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Superficie (m²)</label>
+                  <input 
+                    type="number" 
+                    value={newComparableForm.sqm}
+                    onChange={e => setNewComparableForm(prev => ({...prev, sqm: e.target.value}))}
+                    className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                    placeholder="Ej: 1000"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Link (Zonaprop/ML)</label>
+                <input 
+                  type="url" 
+                  value={newComparableForm.url}
+                  onChange={e => setNewComparableForm(prev => ({...prev, url: e.target.value}))}
+                  className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                  placeholder="https://..."
+                />
+              </div>
+              
+              <button 
+                onClick={handleSaveMarketPoint}
+                className="w-full mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-lg transition-colors"
+              >
+                Guardar Publicación
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

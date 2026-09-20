@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import type { UrbanDevelopment } from '../../types/development';
-import { Search, Filter, MapPin, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { Search } from 'lucide-react';
 
 interface Props {
   developments: UrbanDevelopment[];
@@ -13,9 +13,9 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId }: Pro
   
   // Filters
   const [filterDpout, setFilterDpout] = useState<boolean | null>(null);
-  const [filterStatus, setFilterStatus] = useState<string>('todos');
-  const [filterType, setFilterType] = useState<string>('todos');
-  const [filterTerritory, setFilterTerritory] = useState<string>('todos');
+  const [filterStatus, setFilterStatus] = useState<string>('all');
+  const [filterType] = useState<UrbanDevelopment['type'] | 'all'>('all');
+  const [filterTerritory, setFilterTerritory] = useState<string>('all');
   const [filterLey14449, setFilterLey14449] = useState<boolean | null>(null);
 
   const filteredDevelopments = useMemo(() => {
@@ -30,7 +30,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId }: Pro
       if (filterStatus !== 'todos' && dev.complianceStatus !== filterStatus) return false;
 
       // Type
-      if (filterType !== 'todos' && dev.type !== filterType) return false;
+      if (filterType !== 'all' && dev.type !== filterType) return false;
 
       // Territory
       if (filterTerritory !== 'todos' && dev.technicalData.zonaTerritorialidad !== filterTerritory) return false;

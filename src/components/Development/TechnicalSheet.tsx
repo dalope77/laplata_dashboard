@@ -1,6 +1,5 @@
 import type { UrbanDevelopment, DevelopmentType } from "../../types/development";
-import { Layers, Maximize, MapPin, Home, Save, RefreshCw, Loader2, MousePointerClick } from "lucide-react";
-import { useState } from "react";
+import { Layers, Maximize, MapPin, Home, MousePointerClick } from "lucide-react";
 import { getProceduresForType } from "../../data/procedureTemplates";
 
 interface Props {

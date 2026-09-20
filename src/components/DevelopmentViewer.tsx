@@ -8,9 +8,9 @@ import { TechnicalSheet } from './Development/TechnicalSheet';
 import { mockDevelopments } from '../data/mockDevelopments';
 import { generateDevelopmentReport } from '../utils/pdfExport';
 import type { UrbanDevelopment } from '../types/development';
-import { X, LogOut, Map as MapIcon, ChevronRight } from 'lucide-react';
+import { X, ChevronRight } from 'lucide-react';
 
-export function DevelopmentViewer({ onLogout }: { onLogout: () => void }) {
+export function DevelopmentViewer() {
   const [selectedDevelopment, setSelectedDevelopment] = useState<UrbanDevelopment | null>(null);
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import type { UrbanDevelopment, ProcedureStep } from '../../types/development';
+import { useState } from 'react';
+import type { UrbanDevelopment } from '../../types/development';
 import { 
   CheckCircle2, 
   Clock, 
@@ -9,9 +9,7 @@ import {
   UploadCloud, 
   FileText,
   Trash2,
-  Download,
-  ChevronDown,
-  ChevronUp
+  Download
 } from 'lucide-react';
 
 interface Props {

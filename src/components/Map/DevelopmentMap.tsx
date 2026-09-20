@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, WMSTileLayer, Polygon, Popup, LayersControl, C
 import 'leaflet/dist/leaflet.css';
 import type { UrbanDevelopment } from '../../types/development';
 import { mockDevelopments } from '../../data/mockDevelopments';
-import { LeafletMouseEvent } from 'leaflet';
+import type { LeafletMouseEvent } from 'leaflet';
 
 interface DevelopmentMapProps {
   onSelectDevelopment: (dev: UrbanDevelopment) => void;

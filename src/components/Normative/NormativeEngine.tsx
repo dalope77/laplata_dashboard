@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { UrbanDevelopment } from "../../types/development";
-import { Scale, FileWarning, BookOpen, CheckCircle2, Loader2, Map as MapIcon, ChevronDown, ChevronUp, Info } from "lucide-react";
+import { Scale, FileWarning, CheckCircle2, Loader2, Map as MapIcon, ChevronDown, ChevronUp, Info } from "lucide-react";
 
 interface Props {
   development: UrbanDevelopment;

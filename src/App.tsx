@@ -60,7 +60,7 @@ function App() {
     );
   }
 
-  return <DevelopmentViewer onLogout={() => setIsAuthenticated(false)} />;
+  return <DevelopmentViewer />;
 }
 
 export default App;

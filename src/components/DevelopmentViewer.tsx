@@ -186,6 +186,7 @@ export function DevelopmentViewer() {
           developments={developments}
           onSelect={setSelectedDevelopment}
           selectedId={selectedDevelopment?.id}
+          marketPoints={marketPoints}
         />
       </div>
 

@@ -1,14 +1,16 @@
 import { useState, useMemo } from 'react';
 import type { UrbanDevelopment } from '../../types/development';
-import { Search } from 'lucide-react';
+import { Search, TrendingUp, MapPin } from 'lucide-react';
+import { calculateDynamicValues } from '../../utils/financials';
 
 interface Props {
   developments: UrbanDevelopment[];
   onSelect: (dev: UrbanDevelopment) => void;
   selectedId: string | undefined;
+  marketPoints?: any[];
 }
 
-export function DevelopmentDirectory({ developments, onSelect, selectedId }: Props) {
+export function DevelopmentDirectory({ developments, onSelect, selectedId, marketPoints = [] }: Props) {
   const [searchTerm, setSearchTerm] = useState('');
   
   // Filters
@@ -42,6 +44,22 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId }: Pro
     });
   }, [developments, searchTerm, filterDpout, filterStatus, filterType, filterTerritory, filterLey14449]);
 
+  const globalKpis = useMemo(() => {
+    let totalCessions = 0;
+    let totalPlusvalia = 0;
+    
+    filteredDevelopments.forEach(dev => {
+      if (dev.complianceStatus === 'rojo' || dev.complianceStatus === 'amarillo') {
+        const devMarketPoints = marketPoints.filter(mp => mp.development_id === dev.id);
+        const dynamicVals = calculateDynamicValues(dev, devMarketPoints);
+        totalCessions += dynamicVals.cessionsSqM;
+        totalPlusvalia += dynamicVals.plusvalia;
+      }
+    });
+
+    return { totalCessions, totalPlusvalia };
+  }, [filteredDevelopments, marketPoints]);
+
   return (
     <div className="flex flex-col h-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
       
@@ -60,6 +78,22 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId }: Pro
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
+        </div>
+
+        {/* Global KPIs */}
+        <div className="grid grid-cols-2 gap-2 mb-4">
+          <div className="bg-green-50 dark:bg-green-900/10 p-2 rounded-lg border border-green-100 dark:border-green-900/20">
+            <span className="text-[9px] text-green-800 dark:text-green-400 uppercase font-bold flex items-center gap-1"><MapPin className="w-3 h-3" /> Cesiones Global (m²)</span>
+            <p className="text-sm font-bold text-green-700 dark:text-green-300 mt-0.5">
+              {globalKpis.totalCessions.toLocaleString()}
+            </p>
+          </div>
+          <div className="bg-red-50 dark:bg-red-900/10 p-2 rounded-lg border border-red-100 dark:border-red-900/20">
+            <span className="text-[9px] text-red-800 dark:text-red-400 uppercase font-bold flex items-center gap-1"><TrendingUp className="w-3 h-3" /> Plusvalía Global (USD)</span>
+            <p className="text-sm font-bold text-red-700 dark:text-red-300 mt-0.5">
+              {globalKpis.totalPlusvalia.toLocaleString()}
+            </p>
+          </div>
         </div>
 
         {/* Filters */}

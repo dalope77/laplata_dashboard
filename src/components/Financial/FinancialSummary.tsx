@@ -43,6 +43,15 @@ export function FinancialSummary({ development, marketPoints = [], isAddingMarke
       </div>
 
       <div className="space-y-2">
+        <div className="flex justify-between items-center p-3 bg-green-50 dark:bg-green-900/10 rounded-lg border border-green-100 dark:border-green-900/20">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium text-green-800 dark:text-green-400">Sup. Cesiones (Art 56)</span>
+          </div>
+          <span className="font-bold text-green-700 dark:text-green-300">
+            {dynamicVals.cessionsSqM.toLocaleString()} m²
+          </span>
+        </div>
+
         <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
           <div className="flex items-center gap-2">
             <DollarSign className="w-4 h-4 text-gray-500" />
@@ -53,14 +62,15 @@ export function FinancialSummary({ development, marketPoints = [], isAddingMarke
           </span>
         </div>
         
-        <div className="flex justify-between items-center p-3 bg-red-50 dark:bg-red-900/10 rounded-lg border border-red-100 dark:border-red-900/20">
+        <div className="flex justify-between items-center p-3 bg-red-50 dark:bg-red-900/10 rounded-lg border border-red-100 dark:border-red-900/20 relative overflow-hidden">
           <div className="flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-red-600 dark:text-red-400" />
             <span className="text-sm font-medium text-red-800 dark:text-red-400">Plusvalía a abonar</span>
           </div>
           <span className="font-bold text-red-700 dark:text-red-300">
-            USD {financials.plusvaliaAmountUsd.toLocaleString()}
+            USD {dynamicVals.plusvalia.toLocaleString()}
           </span>
+          {dynamicVals.isDynamic && <div className="absolute top-0 right-0 px-1.5 py-0.5 bg-blue-100 text-blue-700 text-[8px] font-bold rounded-bl">DINÁMICO</div>}
         </div>
       </div>
 

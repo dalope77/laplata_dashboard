@@ -7,9 +7,10 @@ interface Props {
   isAddingMarketPoint?: boolean;
   onToggleAddMarketPoint?: () => void;
   onDeleteComparable?: (id: string) => void;
+  onDeleteOffer?: (id: string) => void;
 }
 
-export function FinancialSummary({ development, marketPoints = [], isAddingMarketPoint, onToggleAddMarketPoint, onDeleteComparable }: Props) {
+export function FinancialSummary({ development, marketPoints = [], isAddingMarketPoint, onToggleAddMarketPoint, onDeleteComparable, onDeleteOffer }: Props) {
   const { financials } = development;
   
   return (
@@ -126,8 +127,15 @@ export function FinancialSummary({ development, marketPoints = [], isAddingMarke
                   <p className="text-gray-500 mt-0.5">{offer.date}</p>
                 </div>
               </div>
-              <div className="text-right">
+              <div className="text-right flex items-center gap-2">
                 <p className="font-bold text-indigo-600 dark:text-indigo-400">USD {offer.amountUsd.toLocaleString()}</p>
+                <button 
+                  onClick={() => onDeleteOffer && onDeleteOffer(offer.id)}
+                  className="text-red-400 hover:text-red-600 p-1 rounded hover:bg-red-50 dark:hover:bg-red-900/30 transition-colors"
+                  title="Eliminar AVIS"
+                >
+                  <Trash2 className="w-3.5 h-3.5" />
+                </button>
               </div>
             </div>
           ))}

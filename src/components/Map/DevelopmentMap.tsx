@@ -5,6 +5,7 @@ import { mockDevelopments } from '../../data/mockDevelopments';
 import type { LeafletMouseEvent } from 'leaflet';
 
 interface DevelopmentMapProps {
+  developments: UrbanDevelopment[];
   onSelectDevelopment: (dev: UrbanDevelopment) => void;
   selectedDevelopment: UrbanDevelopment | null;
   isDrawingMode?: boolean;
@@ -55,9 +56,9 @@ function MapEventHandler({ isDrawingMode, onAddPoint, selectedDevelopment }: { i
   return null;
 }
 
-export function DevelopmentMap({ onSelectDevelopment, selectedDevelopment, isDrawingMode, onAddPoint, onRemovePoint, marketPoints = [] }: DevelopmentMapProps) {
+export function DevelopmentMap({ developments, onSelectDevelopment, selectedDevelopment, isDrawingMode, onAddPoint, onRemovePoint, marketPoints = [] }: DevelopmentMapProps) {
   // Use the first development's first coordinate as center, or default to La Plata
-  const centerCoord = mockDevelopments[0]?.polygon[0] || { lat: -34.9205, lng: -57.9536 };
+  const centerCoord = developments[0]?.polygon[0] || { lat: -34.9205, lng: -57.9536 };
   const position: [number, number] = [centerCoord.lat, centerCoord.lng];
 
   // Group market points by development id for efficient rendering inside popups? No, just render them globally as a layer.
@@ -110,7 +111,7 @@ export function DevelopmentMap({ onSelectDevelopment, selectedDevelopment, isDra
 
       <MapEventHandler isDrawingMode={isDrawingMode} onAddPoint={onAddPoint} selectedDevelopment={selectedDevelopment} />
 
-      {mockDevelopments.map((dev) => {
+      {developments.map((dev) => {
         const isSelected = selectedDevelopment?.id === dev.id;
         const color = getColor(dev.complianceStatus);
         

@@ -168,6 +168,15 @@ export function DevelopmentViewer() {
     }
   };
 
+  const handleDeleteOffer = (offerId: string) => {
+    if (!selectedDevelopment) return;
+    const newOffers = selectedDevelopment.offers?.filter(o => o.id !== offerId);
+    handleUpdateDevelopment({
+      ...selectedDevelopment,
+      offers: newOffers
+    });
+  };
+
   return (
     <div className="relative w-full h-screen flex flex-col md:flex-row overflow-hidden bg-gray-50 dark:bg-gray-900">
       
@@ -183,6 +192,7 @@ export function DevelopmentViewer() {
       {/* Map Area */}
       <div className={`transition-all duration-300 ease-in-out relative z-0 flex-1`}>
         <DevelopmentMap 
+          developments={developments}
           selectedDevelopment={selectedDevelopment}
           onSelectDevelopment={setSelectedDevelopment}
           isDrawingMode={isDrawingMode || isAddingMarketPoint}
@@ -284,6 +294,7 @@ export function DevelopmentViewer() {
                   isAddingMarketPoint={isAddingMarketPoint}
                   onToggleAddMarketPoint={() => setIsAddingMarketPoint(!isAddingMarketPoint)}
                   onDeleteComparable={handleDeleteMarketPoint}
+                  onDeleteOffer={handleDeleteOffer}
                 />
               )}
             </div>

@@ -137,17 +137,14 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
           />
         </LayersControl.Overlay>
 
-        <LayersControl.Overlay checked name="Zonificación UrbaSIG">
-          {/* Ocultamos la zonificación durante la selección de parcelas para ver mejor */}
-          {!isParcelPickMode && (
-            <WMSTileLayer
-              url={WMS_URBASIG}
-              layers="urbasig:uso_del_suelo"
-              format="image/png"
-              transparent={true}
-              opacity={0.6}
-            />
-          )}
+        <LayersControl.Overlay name="Zonificación UrbaSIG">
+          <WMSTileLayer
+            url={WMS_URBASIG}
+            layers="urbasig:uso_del_suelo"
+            format="image/png"
+            transparent={true}
+            opacity={0.6}
+          />
         </LayersControl.Overlay>
       </LayersControl>
 
@@ -192,14 +189,14 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
         
         return (
           <Polygon
-            key={dev.id}
+            key={`${dev.id}-parcelMode-${isParcelPickMode}`}
             positions={dev.polygon.map(p => [p.lat, p.lng])}
             interactive={!isParcelPickMode} // No interceptar clics en modo parcela
             pathOptions={{
               color: isSelected ? "#4f46e5" : color,
               weight: isSelected ? 4 : 2,
               fillColor: color,
-              fillOpacity: (isSelected && isParcelPickMode) ? 0.05 : 0.4 // Casi transparente para ver debajo
+              fillOpacity: (isSelected && isParcelPickMode) ? 0.0 : 0.4 // Totalmente transparente para ver abajo
             }}
             eventHandlers={{
               click: () => {

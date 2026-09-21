@@ -32,7 +32,13 @@ export function NormativeEngine({ development }: Props) {
 
   const isBannedZone = zoneData?.code === "U/C" && (development.type === "barrio_cerrado" || development.type === "club_campo");
 
-  const density = development.technicalData.indicators.density;
+  const viviendas = development.technicalData.executedUnitsPoints?.length || 0;
+  const areaHa = development.technicalData.totalAreaSqM / 10000;
+  const calculatedDensity = areaHa > 0 ? Math.round((viviendas * 4) / areaHa) : 0;
+  
+  const projectedDensity = development.technicalData.indicators.density;
+  const density = calculatedDensity > 0 ? calculatedDensity : projectedDensity;
+
   const fos = development.technicalData.indicators.fos;
   const fot = development.technicalData.indicators.fot;
   const minArea = development.technicalData.indicators.minArea || 0;
@@ -164,7 +170,7 @@ export function NormativeEngine({ development }: Props) {
                       'text-red-700'
                     }`}>
                       {regStatus === 'APTO' ? "Apto: Cumple con Categoría 1 o 2." :
-                       regStatus === 'EXCEPCIÓN' ? `Excepción Art. 96: Densidad (${density} hab/ha) permite empadronamiento.` :
+                       regStatus === 'EXCEPCIÓN' ? `Excepción Art. 96: Densidad de ${density} hab/ha (${viviendas > 0 ? 'real, según viviendas marcadas' : 'proyectada'}) permite empadronamiento.` :
                        `Excluido: Sin materialización, sin viabilidad y densidad (${density} hab/ha) fuera del rango 1-30.`}
                     </p>
                   </div>
@@ -258,7 +264,7 @@ export function NormativeEngine({ development }: Props) {
                       )}
                       {zona === 'periurbana_rural' && density > 30 && (
                         <>
-                          <li>Caso C (Densidad {'>'} 30 hab/ha)</li>
+                          <li>Caso C (Densidad {'>'} 30 hab/ha) - <i>{viviendas > 0 ? `Densidad real calculada: ${density} hab/ha` : `Densidad proyectada: ${density} hab/ha`}</i></li>
                           <li>Densidad Bruta Máxima: 80 hab/ha</li>
                           <li>FOS Máximo: {ley14449 ? '0.6' : '0.2'} | FOT Máximo: {ley14449 ? '0.8' : '0.4'}</li>
                           <li>Sup. Mínima de Parcela: {ley14449 ? '200m2' : '600m2'}</li>
@@ -267,7 +273,7 @@ export function NormativeEngine({ development }: Props) {
                       )}
                       {zona === 'periurbana_rural' && density <= 30 && (
                         <>
-                          <li>Caso D (Densidad {'<='} 30 hab/ha)</li>
+                          <li>Caso D (Densidad {'<='} 30 hab/ha) - <i>{viviendas > 0 ? `Densidad real calculada: ${density} hab/ha` : `Densidad proyectada: ${density} hab/ha`}</i></li>
                           <li>FOS Máximo: {ley14449 ? '0.6' : '0.2'} | FOT Máximo: {ley14449 ? '0.8' : '0.4'}</li>
                           <li>Sup. Mínima de Parcela: {ley14449 ? '200m2' : '1200m2'}</li>
                           <li>Etapabilidad: Si supera 8 hectáreas.</li>

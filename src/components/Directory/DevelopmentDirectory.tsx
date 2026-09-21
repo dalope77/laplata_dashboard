@@ -49,7 +49,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
     let totalPlusvalia = 0;
     
     filteredDevelopments.forEach(dev => {
-      if (dev.complianceStatus === 'rojo' || dev.complianceStatus === 'amarillo') {
+      if ((dev.complianceStatus === 'rojo' || dev.complianceStatus === 'amarillo') && dev.technicalData.physicalState !== 'abandonado') {
         const devMarketPoints = marketPoints.filter(mp => mp.development_id === dev.id);
         const dynamicVals = calculateDynamicValues(dev, devMarketPoints);
         totalCessions += dynamicVals.cessionsSqM;

@@ -75,11 +75,32 @@ const GENERIC_OPEN_PROCEDURES: ProcedureTemplate[] = [
   { id: 'o-3-3', name: 'Habilitaciones ADA', category: 'fase3', mandatory: true },
   { id: 'o-3-4', name: 'Habilitación Municipal Final', category: 'fase3', mandatory: true },
 ];
+const CLUB_CAMPO_PROCEDURES: ProcedureTemplate[] = [
+  // Fase 1
+  { id: 'cc-1-1', name: 'Documentación del Titular y Estatuto', category: 'fase1', mandatory: true },
+  { id: 'cc-1-2', name: 'Consultas ARBA - Catastro', category: 'fase1', mandatory: true },
+  { id: 'cc-1-3', name: 'Prefactibilidad Municipal (Dec. 9404/86)', category: 'fase1', mandatory: true },
+  { id: 'cc-1-4', name: 'Prefactibilidad Hidráulica - ADA', category: 'fase1', mandatory: true },
+  { id: 'cc-1-5', name: 'Prefactibilidad de Servicios', category: 'fase1', mandatory: true },
+  { id: 'cc-1-6', name: 'Evaluación de Impacto Ambiental (OPDS)', category: 'fase1', mandatory: true },
+  // Fase 2
+  { id: 'cc-2-1', name: 'Proyecto de Subdivisión (Club de Campo)', category: 'fase2', mandatory: true },
+  { id: 'cc-2-2', name: 'Visado de Planos - ADA', category: 'fase2', mandatory: true },
+  { id: 'cc-2-3', name: 'Aprobación DPOUT (Dec. 9404/86)', category: 'fase2', mandatory: true },
+  { id: 'cc-2-4', name: 'Aprobación Municipal del Proyecto', category: 'fase2', mandatory: true },
+  { id: 'cc-2-5', name: 'Permisos de Recursos Hídricos - ADA', category: 'fase2', mandatory: true },
+  { id: 'cc-2-6', name: 'Infraestructura Deportiva y Recreativa', category: 'fase2', mandatory: true },
+  // Fase 3
+  { id: 'cc-3-1', name: 'Registración en Catastro - ARBA', category: 'fase3', mandatory: true },
+  { id: 'cc-3-2', name: 'Inscripción Registral', category: 'fase3', mandatory: true },
+  { id: 'cc-3-3', name: 'Habilitación Municipal Final', category: 'fase3', mandatory: true },
+  { id: 'cc-3-4', name: 'Constitución de Entidad Jurídica (Consorcio/Sociedad)', category: 'fase3', mandatory: true },
+];
 
 const TEMPLATES: Record<DevelopmentType, ProcedureTemplate[]> = {
   'loteo_social': SOCIAL_PROCEDURES,
   'barrio_cerrado': GENERIC_PRIVATE_PROCEDURES,
-  'club_campo': GENERIC_PRIVATE_PROCEDURES,
+  'club_campo': CLUB_CAMPO_PROCEDURES,
   'condominio': CONDOMINIO_PROCEDURES,
   'loteo_abierto': GENERIC_OPEN_PROCEDURES,
   'ph_horizontal': CONDOMINIO_PROCEDURES

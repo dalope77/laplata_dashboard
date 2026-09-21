@@ -130,6 +130,15 @@ export function DevelopmentViewer() {
               parcels: newParcels
             }
           });
+        } else {
+          const newParcels = currentParcels.filter(p => p !== nomenclature);
+          handleUpdateDevelopment({
+            ...selectedDevelopment,
+            technicalData: {
+              ...selectedDevelopment.technicalData,
+              parcels: newParcels
+            }
+          });
         }
       }
     } catch (e) {

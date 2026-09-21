@@ -11,19 +11,24 @@ interface DevelopmentMapProps {
   onAddPoint?: (lat: number, lng: number) => void;
   onRemovePoint?: (index: number) => void;
   marketPoints?: any[];
+  isParcelPickMode?: boolean;
+  onAddParcelFromMap?: (lat: number, lng: number) => void;
 }
 
 const WMS_URBASIG = "https://urbasig.mgob.gba.gob.ar/geoserver/urbasig/wms";
 const WMS_ARBA = "https://geo.arba.gov.ar/geoserver/idera/wms";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { calculateDynamicValues } from '../../utils/financials';
+import { GeoJSON } from 'react-leaflet';
 
-function MapEventHandler({ isDrawingMode, onAddPoint, selectedDevelopment }: { isDrawingMode?: boolean, onAddPoint?: (lat: number, lng: number) => void, selectedDevelopment?: UrbanDevelopment | null }) {
+function MapEventHandler({ isDrawingMode, onAddPoint, selectedDevelopment, isParcelPickMode, onAddParcelFromMap }: { isDrawingMode?: boolean, onAddPoint?: (lat: number, lng: number) => void, selectedDevelopment?: UrbanDevelopment | null, isParcelPickMode?: boolean, onAddParcelFromMap?: (lat: number, lng: number) => void }) {
   const map = useMapEvents({
     click(e: LeafletMouseEvent) {
       if (isDrawingMode && onAddPoint) {
         onAddPoint(e.latlng.lat, e.latlng.lng);
+      } else if (isParcelPickMode && onAddParcelFromMap) {
+        onAddParcelFromMap(e.latlng.lat, e.latlng.lng);
       }
     }
   });
@@ -56,10 +61,42 @@ function MapEventHandler({ isDrawingMode, onAddPoint, selectedDevelopment }: { i
   return null;
 }
 
-export function DevelopmentMap({ developments, onSelectDevelopment, selectedDevelopment, isDrawingMode, onAddPoint, onRemovePoint, marketPoints = [] }: DevelopmentMapProps) {
+export function DevelopmentMap({ developments, onSelectDevelopment, selectedDevelopment, isDrawingMode, onAddPoint, onRemovePoint, marketPoints = [], isParcelPickMode, onAddParcelFromMap }: DevelopmentMapProps) {
   // Use the first development's first coordinate as center, or default to La Plata
   const centerCoord = developments[0]?.polygon[0] || { lat: -34.9205, lng: -57.9536 };
   const position: [number, number] = [centerCoord.lat, centerCoord.lng];
+
+  const [parcelGeoJson, setParcelGeoJson] = useState<any>(null);
+
+  useEffect(() => {
+    async function fetchParcels() {
+      if (!selectedDevelopment || !selectedDevelopment.technicalData.parcels || selectedDevelopment.technicalData.parcels.length === 0) {
+        setParcelGeoJson(null);
+        return;
+      }
+      const validParcels = selectedDevelopment.technicalData.parcels
+        .map(p => p.replace('Nomenclatura: ', '').trim())
+        .filter(p => p.length > 5);
+      
+      if (validParcels.length === 0) {
+        setParcelGeoJson(null);
+        return;
+      }
+
+      try {
+        const featureIds = validParcels.map(p => `Parcela.${p}`).join(',');
+        const url = `https://geo.arba.gov.ar/geoserver/idera/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=idera:Parcela&featureId=${featureIds}&outputFormat=application/json&srsName=EPSG:4326`;
+        const res = await fetch(url);
+        const data = await res.json();
+        if (data && data.features) {
+          setParcelGeoJson(data);
+        }
+      } catch(e) {
+        console.error("Error fetching parcel geometries", e);
+      }
+    }
+    fetchParcels();
+  }, [selectedDevelopment?.technicalData.parcels]);
 
   // Group market points by development id for efficient rendering inside popups? No, just render them globally as a layer.
   const marketPointsToRender = marketPoints || [];
@@ -73,8 +110,10 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
     }
   };
 
+  const isCrosshair = isDrawingMode || isParcelPickMode;
+
   return (
-    <MapContainer center={position} zoom={13} className={`w-full h-full z-0 ${isDrawingMode ? 'cursor-crosshair' : ''}`}>
+    <MapContainer center={position} zoom={13} className={`w-full h-full z-0 ${isCrosshair ? 'cursor-crosshair' : ''}`}>
       <LayersControl position="topright">
         <LayersControl.BaseLayer checked name="OpenStreetMap">
           <TileLayer
@@ -109,7 +148,26 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
         </LayersControl.Overlay>
       </LayersControl>
 
-      <MapEventHandler isDrawingMode={isDrawingMode} onAddPoint={onAddPoint} selectedDevelopment={selectedDevelopment} />
+      <MapEventHandler 
+        isDrawingMode={isDrawingMode} 
+        onAddPoint={onAddPoint} 
+        selectedDevelopment={selectedDevelopment} 
+        isParcelPickMode={isParcelPickMode}
+        onAddParcelFromMap={onAddParcelFromMap}
+      />
+
+      {parcelGeoJson && (
+        <GeoJSON 
+          key={JSON.stringify(selectedDevelopment?.technicalData.parcels)} // Force re-render on data change
+          data={parcelGeoJson} 
+          pathOptions={{
+            color: '#f59e0b', // Amber 500
+            weight: 3,
+            fillColor: '#fcd34d', // Amber 300
+            fillOpacity: 0.5
+          }} 
+        />
+      )}
 
       {developments.map((dev) => {
         const isSelected = selectedDevelopment?.id === dev.id;

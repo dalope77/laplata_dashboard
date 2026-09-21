@@ -16,6 +16,7 @@ export function DevelopmentViewer() {
   const [selectedDevelopment, setSelectedDevelopment] = useState<UrbanDevelopment | null>(null);
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
+  const [isParcelPickMode, setIsParcelPickMode] = useState(false);
   const [marketPoints, setMarketPoints] = useState<any[]>([]);
   const [isAddingMarketPoint, setIsAddingMarketPoint] = useState(false);
   const [pendingMarketPoint, setPendingMarketPoint] = useState<{lat: number, lng: number} | null>(null);
@@ -101,6 +102,38 @@ export function DevelopmentViewer() {
       if (error) throw error;
     } catch (e) {
       console.error('Error saving to Supabase', e);
+    }
+  };
+
+  const handleAddParcelFromMap = async (lat: number, lng: number) => {
+    if (!selectedDevelopment || !isParcelPickMode) return;
+    
+    try {
+      // Create WMS GetFeatureInfo URL
+      const BBOX = `${lng-0.001},${lat-0.001},${lng+0.001},${lat+0.001}`;
+      const url = `https://geo.arba.gov.ar/geoserver/idera/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo&FORMAT=image/png&TRANSPARENT=true&QUERY_LAYERS=idera:Parcela&LAYERS=idera:Parcela&INFO_FORMAT=application/json&X=50&Y=50&WIDTH=101&HEIGHT=101&SRS=EPSG:4326&BBOX=${BBOX}`;
+      
+      const res = await fetch(url);
+      const data = await res.json();
+      
+      if (data.features && data.features.length > 0) {
+        const fullId = data.features[0].id; // e.g. Parcela.055...
+        const nomenclature = fullId.replace('Parcela.', '');
+        
+        const currentParcels = selectedDevelopment.technicalData.parcels || [];
+        if (!currentParcels.includes(nomenclature)) {
+          const newParcels = [...currentParcels, nomenclature];
+          handleUpdateDevelopment({
+            ...selectedDevelopment,
+            technicalData: {
+              ...selectedDevelopment.technicalData,
+              parcels: newParcels
+            }
+          });
+        }
+      }
+    } catch (e) {
+      console.error('Error fetching parcel info:', e);
     }
   };
 
@@ -228,6 +261,8 @@ export function DevelopmentViewer() {
           }}
           onRemovePoint={handleRemovePoint}
           marketPoints={marketPoints}
+          isParcelPickMode={isParcelPickMode}
+          onAddParcelFromMap={handleAddParcelFromMap}
         />
       </div>
 
@@ -300,7 +335,15 @@ export function DevelopmentViewer() {
                   development={selectedDevelopment} 
                   onUpdateDevelopment={handleUpdateDevelopment}
                   isDrawingMode={isDrawingMode}
-                  onToggleDrawingMode={() => setIsDrawingMode(!isDrawingMode)}
+                  onToggleDrawingMode={() => {
+                    setIsDrawingMode(!isDrawingMode);
+                    setIsParcelPickMode(false);
+                  }}
+                  isParcelPickMode={isParcelPickMode}
+                  onToggleParcelPickMode={() => {
+                    setIsParcelPickMode(!isParcelPickMode);
+                    setIsDrawingMode(false);
+                  }}
                 />
               )}
               {activeTab === 'tramites' && (

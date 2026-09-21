@@ -8,9 +8,11 @@ interface Props {
   onUpdateDevelopment?: (dev: UrbanDevelopment) => void;
   isDrawingMode?: boolean;
   onToggleDrawingMode?: () => void;
+  isParcelPickMode?: boolean;
+  onToggleParcelPickMode?: () => void;
 }
 
-export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode, onToggleDrawingMode }: Props) {
+export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode, onToggleDrawingMode, isParcelPickMode, onToggleParcelPickMode }: Props) {
   const data = development.technicalData;
   const [customRestriction, setCustomRestriction] = useState('');
 
@@ -168,41 +170,57 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
           <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2">
             <MapPin className="w-4 h-4 text-indigo-500" /> Nomenclaturas Catastrales
           </h4>
-          <button 
-            onClick={() => {
-              const newParcels = [...data.parcels, 'Nueva Parcela'];
-              handleChange('parcels', newParcels);
-            }}
-            className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded hover:bg-indigo-100"
-          >
-            + Añadir Parcela
-          </button>
+          <div className="flex gap-2">
+            <button 
+              onClick={onToggleParcelPickMode}
+              className={`text-[10px] flex items-center gap-1 font-bold px-2 py-1 rounded transition-colors ${
+                isParcelPickMode 
+                  ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 hover:bg-amber-200' 
+                  : 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/10 hover:bg-amber-100 dark:hover:bg-amber-900/30'
+              }`}
+            >
+              <MousePointerClick className="w-3.5 h-3.5" />
+              {isParcelPickMode ? 'Terminar Selección' : '📍 Seleccionar en Mapa'}
+            </button>
+            <button 
+              onClick={() => {
+                const newParcels = [...data.parcels, 'Nueva Parcela'];
+                handleChange('parcels', newParcels);
+              }}
+              className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded hover:bg-indigo-100"
+            >
+              + Añadir Manual
+            </button>
+          </div>
         </div>
         <div className="flex flex-col gap-2">
-          {data.parcels.map((parcel, idx) => (
-            <div key={idx} className="flex items-center gap-2">
-              <input 
-                type="text"
-                value={parcel}
-                onChange={(e) => {
-                  const newParcels = [...data.parcels];
-                  newParcels[idx] = e.target.value;
-                  handleChange('parcels', newParcels);
-                }}
-                className="flex-1 bg-gray-50 dark:bg-gray-900/50 text-gray-900 dark:text-gray-100 px-3 py-1.5 rounded text-xs font-mono border border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
-              />
-              <button 
-                onClick={() => {
-                  const newParcels = data.parcels.filter((_, i) => i !== idx);
-                  handleChange('parcels', newParcels);
-                }}
-                className="text-red-500 hover:text-red-700 p-1"
-                title="Eliminar"
-              >
-                ×
-              </button>
-            </div>
-          ))}
+          {data.parcels.map((parcel, idx) => {
+            const cleanParcel = parcel.replace('Nomenclatura: ', '').trim();
+            return (
+              <div key={idx} className="flex items-center gap-2">
+                <input 
+                  type="text"
+                  value={cleanParcel}
+                  onChange={(e) => {
+                    const newParcels = [...data.parcels];
+                    newParcels[idx] = e.target.value.replace('Nomenclatura: ', '').trim();
+                    handleChange('parcels', newParcels);
+                  }}
+                  className="flex-1 bg-gray-50 dark:bg-gray-900/50 text-gray-900 dark:text-gray-100 px-3 py-1.5 rounded text-xs font-mono border border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+                />
+                <button 
+                  onClick={() => {
+                    const newParcels = data.parcels.filter((_, i) => i !== idx);
+                    handleChange('parcels', newParcels);
+                  }}
+                  className="text-red-500 hover:text-red-700 p-1"
+                  title="Eliminar"
+                >
+                  ×
+                </button>
+              </div>
+            );
+          })}
           {data.parcels.length === 0 && (
             <p className="text-xs text-gray-400 italic">No hay parcelas registradas.</p>
           )}

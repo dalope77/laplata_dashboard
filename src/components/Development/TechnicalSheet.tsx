@@ -152,7 +152,7 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
           className="w-full bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm font-medium text-gray-800 dark:text-gray-200 focus:outline-none focus:border-indigo-500"
         >
           <option value="">Sin especificar</option>
-          <option value="abandonado">Abandonado</option>
+          <option value="abandonado_sin_desarrollo">Abandonado / Sin Desarrollo</option>
           <option value="con_apertura_calles">Con apertura de calles</option>
           <option value="con_obras_comunes">Con obras en comunes</option>
           <option value="con_movimiento_suelos">Con movimiento de suelos</option>

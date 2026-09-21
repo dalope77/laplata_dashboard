@@ -65,7 +65,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": true
@@ -776,7 +776,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -1831,7 +1831,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": true
@@ -3317,7 +3317,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -3884,7 +3884,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": true
@@ -5187,7 +5187,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -5987,7 +5987,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -7980,7 +7980,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -8766,7 +8766,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -9497,7 +9497,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -10411,7 +10411,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -11012,7 +11012,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -11536,7 +11536,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -12104,7 +12104,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": true
@@ -13039,7 +13039,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -13731,7 +13731,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -14309,7 +14309,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -14786,7 +14786,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -15252,7 +15252,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -15798,7 +15798,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -16292,7 +16292,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -16779,7 +16779,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -17740,7 +17740,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -18229,7 +18229,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -18872,7 +18872,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -19759,7 +19759,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -20303,7 +20303,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -20796,7 +20796,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -21919,7 +21919,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -22388,7 +22388,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -22891,7 +22891,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -23365,7 +23365,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -23826,7 +23826,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -24283,7 +24283,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -24750,7 +24750,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -25210,7 +25210,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -25674,7 +25674,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -26150,7 +26150,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -26620,7 +26620,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -27078,7 +27078,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -27535,7 +27535,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -27993,7 +27993,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -28450,7 +28450,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -28936,7 +28936,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -29396,7 +29396,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -29879,7 +29879,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -30338,7 +30338,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -30829,7 +30829,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -31307,7 +31307,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -31816,7 +31816,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -32281,7 +32281,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -32762,7 +32762,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -33231,7 +33231,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -33696,7 +33696,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -34152,7 +34152,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -34619,7 +34619,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -35097,7 +35097,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -35555,7 +35555,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -36031,7 +36031,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -36496,7 +36496,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -37003,7 +37003,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -37513,7 +37513,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -37986,7 +37986,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -38466,7 +38466,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -38938,7 +38938,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false
@@ -39410,7 +39410,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -39886,7 +39886,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
       "inDpoutRegistry": false
@@ -40353,7 +40353,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "periurbana_rural",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
       "inDpoutRegistry": false
@@ -40827,7 +40827,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
       "hasMaterialization": true,
       "hasPartialViability": true,
       "zonaTerritorialidad": "urbana",
-      "ley14449": true,
+      "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
       "inDpoutRegistry": false

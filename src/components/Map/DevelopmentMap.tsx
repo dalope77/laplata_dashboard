@@ -138,15 +138,29 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
         </LayersControl.Overlay>
 
         <LayersControl.Overlay checked name="Zonificación UrbaSIG">
-          <WMSTileLayer
-            url={WMS_URBASIG}
-            layers="urbasig:uso_del_suelo"
-            format="image/png"
-            transparent={true}
-            opacity={0.6}
-          />
+          {/* Ocultamos la zonificación durante la selección de parcelas para ver mejor */}
+          {!isParcelPickMode && (
+            <WMSTileLayer
+              url={WMS_URBASIG}
+              layers="urbasig:uso_del_suelo"
+              format="image/png"
+              transparent={true}
+              opacity={0.6}
+            />
+          )}
         </LayersControl.Overlay>
       </LayersControl>
+
+      {/* Forzar capa de Parcelas cuando estamos en modo selección */}
+      {isParcelPickMode && (
+        <WMSTileLayer
+          url={WMS_ARBA}
+          layers="idera:Parcela"
+          format="image/png"
+          transparent={true}
+          zIndex={10} // Asegurar que quede por encima del mapa base
+        />
+      )}
 
       <MapEventHandler 
         isDrawingMode={isDrawingMode} 
@@ -180,15 +194,16 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
           <Polygon
             key={dev.id}
             positions={dev.polygon.map(p => [p.lat, p.lng])}
+            interactive={!isParcelPickMode} // No interceptar clics en modo parcela
             pathOptions={{
               color: isSelected ? "#4f46e5" : color,
               weight: isSelected ? 4 : 2,
               fillColor: color,
-              fillOpacity: 0.4
+              fillOpacity: (isSelected && isParcelPickMode) ? 0.05 : 0.4 // Casi transparente para ver debajo
             }}
             eventHandlers={{
               click: () => {
-                if (!isDrawingMode) {
+                if (!isDrawingMode && !isParcelPickMode) {
                   onSelectDevelopment(dev);
                 }
               }

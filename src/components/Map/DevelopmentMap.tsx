@@ -131,7 +131,7 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
         <LayersControl.Overlay name="Parcelario GeoARBA">
           <WMSTileLayer
             url={WMS_ARBA}
-            layers="idera:Parcela"
+            layers="idera:Parcela,idera:Subparcela"
             format="image/png"
             transparent={true}
           />
@@ -152,7 +152,7 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
       {isParcelPickMode && (
         <WMSTileLayer
           url={WMS_ARBA}
-          layers="idera:Parcela"
+          layers="idera:Parcela,idera:Subparcela"
           format="image/png"
           transparent={true}
           zIndex={10} // Asegurar que quede por encima del mapa base

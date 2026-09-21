@@ -46,7 +46,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "Nomenclatura: 05510000000000000000000000000000000330300M",
         "Nomenclatura: 05510000000000000000000000000000000330300K"
       ],
-      "totalAreaSqM": 1469095,
+      "totalAreaSqM": 789520,
       "executedUnits": 0,
       "executedUnitsPoints": [],
       "indicators": {

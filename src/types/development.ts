@@ -6,6 +6,14 @@ export type DevelopmentType =
   | "loteo_social" 
   | "ph_horizontal";
 
+export interface ProcedureRequirement {
+  id: string;
+  name: string;
+  estimatedDays: number;
+  isCompleted: boolean;
+  documentUrl?: string;
+}
+
 export interface ProcedureStep {
   id: string;
   name: string;
@@ -13,6 +21,7 @@ export interface ProcedureStep {
   status: "faltante" | "documentacion_subida" | "aprobado" | "observado";
   documentUrl?: string;
   mandatory: boolean;
+  requirements?: ProcedureRequirement[];
 }
 
 export interface MarketComparable {

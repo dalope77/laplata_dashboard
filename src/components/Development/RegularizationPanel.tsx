@@ -37,6 +37,48 @@ export function RegularizationPanel({ development, onUpdateDevelopment }: Props)
     input.click();
   };
 
+  const handleToggleRequirement = (procId: string, reqId: string) => {
+    const updatedProcedures = development.procedures.map(p => {
+      if (p.id !== procId || !p.requirements) return p;
+      
+      const newReqs = p.requirements.map(r => 
+        r.id === reqId ? { ...r, isCompleted: !r.isCompleted } : r
+      );
+      
+      // Auto-update status if all requirements are completed
+      const allCompleted = newReqs.every(r => r.isCompleted);
+      const newStatus = allCompleted ? 'aprobado' : (newReqs.some(r => r.isCompleted) ? 'observado' : 'faltante');
+
+      return { ...p, requirements: newReqs, status: p.status === 'aprobado' ? 'aprobado' : newStatus };
+    });
+    
+    onUpdateDevelopment({
+      ...development,
+      procedures: updatedProcedures as any
+    });
+  };
+
+  const handleUploadRequirementDoc = (procId: string, reqId: string) => {
+    // Simulate uploading a doc specifically for a requirement
+    setUploadingId(`req-${reqId}`);
+    setTimeout(() => {
+      const updatedProcedures = development.procedures.map(p => {
+        if (p.id !== procId || !p.requirements) return p;
+        const newReqs = p.requirements.map(r => 
+          r.id === reqId ? { ...r, isCompleted: true, documentUrl: 'https://fake.url/doc.pdf' } : r
+        );
+        const allCompleted = newReqs.every(r => r.isCompleted);
+        const newStatus = allCompleted ? 'aprobado' : 'observado';
+        return { ...p, requirements: newReqs, status: newStatus };
+      });
+      onUpdateDevelopment({
+        ...development,
+        procedures: updatedProcedures as any
+      });
+      setUploadingId(null);
+    }, 1000);
+  };
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case "aprobado": return <CheckCircle2 className="w-5 h-5 text-green-500" />;
@@ -103,39 +145,89 @@ export function RegularizationPanel({ development, onUpdateDevelopment }: Props)
           <div key={phase.id} className="space-y-3">
             <h4 className="text-xs font-bold text-gray-700 uppercase">{phase.label}</h4>
             <div className="space-y-2">
-              {phaseTasks.map((proc) => (
-                <div key={proc.id} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3 shadow-sm flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    {getStatusIcon(proc.status)}
-                    <div>
-                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{proc.name}</p>
-                    </div>
-                  </div>
-                  
-                  {proc.status === "documentacion_subida" || proc.status === "aprobado" ? (
-                    <span className="flex items-center gap-1.5 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 rounded text-xs font-semibold text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      Completado
-                    </span>
-                  ) : (
-                    <button 
-                      onClick={() => handleUpload(proc.id)}
-                      disabled={uploadingId === proc.id}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-semibold transition-colors border ${
-                        uploadingId === proc.id 
-                          ? "bg-indigo-50 border-indigo-200 text-indigo-700 cursor-not-allowed" 
-                          : "bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600"
-                      }`}
-                    >
-                      {uploadingId === proc.id ? (
-                        <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Subiendo...</>
+              {phaseTasks.map((proc) => {
+                const totalReqs = proc.requirements?.length || 0;
+                const completedReqs = proc.requirements?.filter(r => r.isCompleted).length || 0;
+                const hasReqs = totalReqs > 0;
+
+                return (
+                  <div key={proc.id} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3 shadow-sm flex flex-col gap-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        {getStatusIcon(proc.status)}
+                        <div>
+                          <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{proc.name}</p>
+                          {hasReqs && (
+                            <p className="text-[10px] text-gray-500">{completedReqs} de {totalReqs} requisitos completados</p>
+                          )}
+                        </div>
+                      </div>
+                      
+                      {(!hasReqs) && (proc.status === "documentacion_subida" || proc.status === "aprobado" ? (
+                        <span className="flex items-center gap-1.5 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 rounded text-xs font-semibold text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          Completado
+                        </span>
                       ) : (
-                        <><UploadCloud className="w-3.5 h-3.5" /> Subir PDF</>
+                        <button 
+                          onClick={() => handleUpload(proc.id)}
+                          disabled={uploadingId === proc.id}
+                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-semibold transition-colors border ${
+                            uploadingId === proc.id 
+                              ? "bg-indigo-50 border-indigo-200 text-indigo-700 cursor-not-allowed" 
+                              : "bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600"
+                          }`}
+                        >
+                          {uploadingId === proc.id ? (
+                            <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Subiendo...</>
+                          ) : (
+                            <><UploadCloud className="w-3.5 h-3.5" /> Subir PDF</>
+                          )}
+                        </button>
+                      ))}
+                      {hasReqs && (proc.status === "aprobado") && (
+                         <span className="flex items-center gap-1.5 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 rounded text-xs font-semibold text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+                          <CheckCircle2 className="w-3.5 h-3.5" /> Aprobado
+                        </span>
                       )}
-                    </button>
-                  )}
-                </div>
-              ))}
+                    </div>
+
+                    {hasReqs && (
+                      <div className="border-t border-gray-100 dark:border-gray-700 pt-3 pl-8 flex flex-col gap-2">
+                        {proc.requirements!.map(req => (
+                          <div key={req.id} className="flex items-center justify-between group py-1">
+                            <label className="flex items-center gap-2 cursor-pointer flex-1">
+                              <input 
+                                type="checkbox" 
+                                checked={req.isCompleted} 
+                                onChange={() => handleToggleRequirement(proc.id, req.id)}
+                                className="w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500"
+                              />
+                              <span className={`text-xs ${req.isCompleted ? 'text-gray-400 dark:text-gray-500 line-through' : 'text-gray-700 dark:text-gray-300 font-medium'}`}>
+                                {req.name} <span className="text-[10px] text-gray-400">({req.estimatedDays}d)</span>
+                              </span>
+                            </label>
+                            
+                            {!req.isCompleted ? (
+                              <button 
+                                onClick={() => handleUploadRequirementDoc(proc.id, req.id)}
+                                disabled={uploadingId === `req-${req.id}`}
+                                className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded text-[10px] font-bold"
+                              >
+                                {uploadingId === `req-${req.id}` ? 'Subiendo...' : <><UploadCloud className="w-3 h-3" /> Subir doc</>}
+                              </button>
+                            ) : (
+                              <span className="text-[10px] font-bold text-green-600 dark:text-green-400 flex items-center gap-1">
+                                <FileText className="w-3 h-3" /> Doc OK
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         );

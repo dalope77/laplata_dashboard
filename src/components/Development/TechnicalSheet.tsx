@@ -1,5 +1,6 @@
+import { useState } from "react";
 import type { UrbanDevelopment, DevelopmentType } from "../../types/development";
-import { Layers, Maximize, MapPin, Home, MousePointerClick } from "lucide-react";
+import { Layers, Maximize, MapPin, Home, MousePointerClick, Activity, AlertTriangle } from "lucide-react";
 import { getProceduresForType } from "../../data/procedureTemplates";
 
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
 
 export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode, onToggleDrawingMode }: Props) {
   const data = development.technicalData;
+  const [customRestriction, setCustomRestriction] = useState('');
 
   const handleChange = (field: keyof typeof data, value: any) => {
     if (!onUpdateDevelopment) return;
@@ -21,6 +23,24 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
         [field]: value
       }
     });
+  };
+
+  const toggleRestriction = (restriction: string) => {
+    if (!onUpdateDevelopment) return;
+    const current = data.landRestrictions || [];
+    const updated = current.includes(restriction) 
+      ? current.filter(r => r !== restriction)
+      : [...current, restriction];
+    handleChange('landRestrictions', updated);
+  };
+
+  const addCustomRestriction = () => {
+    if (!customRestriction.trim() || !onUpdateDevelopment) return;
+    const current = data.landRestrictions || [];
+    if (!current.includes(customRestriction.trim())) {
+      handleChange('landRestrictions', [...current, customRestriction.trim()]);
+    }
+    setCustomRestriction('');
   };
 
   const handleIndicatorChange = (field: keyof typeof data.indicators, value: any) => {
@@ -119,6 +139,27 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Estado Físico */}
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
+        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2 mb-3">
+          <Activity className="w-4 h-4 text-orange-500" /> Estado Físico del Desarrollo
+        </h4>
+        <select
+          value={data.physicalState || ''}
+          onChange={(e) => handleChange('physicalState', e.target.value || undefined)}
+          className="w-full bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm font-medium text-gray-800 dark:text-gray-200 focus:outline-none focus:border-indigo-500"
+        >
+          <option value="">Sin especificar</option>
+          <option value="abandonado">Abandonado</option>
+          <option value="con_apertura_calles">Con apertura de calles</option>
+          <option value="con_obras_comunes">Con obras en comunes</option>
+          <option value="con_movimiento_suelos">Con movimiento de suelos</option>
+          <option value="con_viviendas_construccion">Con viviendas en construcción</option>
+          <option value="con_viviendas_terminadas">Con viviendas terminadas</option>
+          <option value="con_personas_habitando">Con personas habitando inmuebles</option>
+        </select>
       </div>
 
       {/* Parcelas */}
@@ -361,6 +402,52 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
               <p className="text-xs text-gray-500">Loteos sociales con requerimientos mínimos reducidos.</p>
             </div>
           </label>
+        </div>
+      </div>
+
+      {/* Restricciones al Dominio / Uso de Suelo */}
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
+        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2 mb-4">
+          <AlertTriangle className="w-4 h-4 text-amber-500" /> Restricciones al Dominio / Uso de Suelo
+        </h4>
+        <div className="grid grid-cols-2 gap-3 mb-4">
+          {['Electroductos', 'Arroyos', 'Canales', 'Restricciones de Vialidad', 'Reservas'].map(restriction => (
+            <label key={restriction} className="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+              <input 
+                type="checkbox" 
+                checked={(data.landRestrictions || []).includes(restriction)}
+                onChange={() => toggleRestriction(restriction)}
+              />
+              <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">{restriction}</span>
+            </label>
+          ))}
+        </div>
+        
+        {/* Custom restrictions list */}
+        <div className="space-y-2 mb-3">
+          {(data.landRestrictions || []).filter(r => !['Electroductos', 'Arroyos', 'Canales', 'Restricciones de Vialidad', 'Reservas'].includes(r)).map((customRes, idx) => (
+             <div key={idx} className="flex items-center justify-between bg-amber-50 dark:bg-amber-900/10 p-2 rounded border border-amber-100 dark:border-amber-900/30">
+               <span className="text-sm font-medium text-amber-800 dark:text-amber-400">{customRes}</span>
+               <button onClick={() => toggleRestriction(customRes)} className="text-amber-500 hover:text-amber-700">×</button>
+             </div>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2">
+          <input 
+            type="text"
+            placeholder="Agregar otra restricción..."
+            value={customRestriction}
+            onChange={(e) => setCustomRestriction(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && addCustomRestriction()}
+            className="flex-1 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-amber-500"
+          />
+          <button 
+            onClick={addCustomRestriction}
+            className="px-3 py-2 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 font-bold text-sm rounded hover:bg-amber-200 transition-colors"
+          >
+            Agregar
+          </button>
         </div>
       </div>
 

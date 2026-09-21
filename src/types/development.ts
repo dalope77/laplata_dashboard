@@ -44,6 +44,8 @@ export interface TechnicalData {
   totalAreaSqM: number;
   executedUnits: number; // Will reflect the length of executedUnitsPoints
   executedUnitsPoints: { lat: number; lng: number }[];
+  physicalState?: 'abandonado' | 'con_apertura_calles' | 'con_obras_comunes' | 'con_movimiento_suelos' | 'con_viviendas_construccion' | 'con_viviendas_terminadas' | 'con_personas_habitando';
+  landRestrictions?: string[]; // array of selected restrictions
   indicators: {
     fos: number;
     fot: number;

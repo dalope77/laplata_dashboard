@@ -54,6 +54,33 @@ export function DevelopmentViewer() {
       }
     }
     loadEdits();
+
+    if (supabase) {
+      const channel = supabase
+        .channel('public:development_edits')
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'development_edits' }, (payload: any) => {
+          if (payload.new && payload.new.data) {
+            setDevelopments(prev => prev.map(dev => {
+              if (dev.id === payload.new.development_id) {
+                return { ...dev, ...payload.new.data };
+              }
+              return dev;
+            }));
+            
+            setSelectedDevelopment(prev => {
+              if (prev && prev.id === payload.new.development_id) {
+                return { ...prev, ...payload.new.data };
+              }
+              return prev;
+            });
+          }
+        })
+        .subscribe();
+        
+      return () => {
+        supabase?.removeChannel(channel);
+      };
+    }
   }, []);
 
   const handleUpdateDevelopment = async (updatedDev: UrbanDevelopment) => {
@@ -74,11 +101,6 @@ export function DevelopmentViewer() {
       if (error) throw error;
     } catch (e) {
       console.error('Error saving to Supabase', e);
-    }
-
-    const idx = mockDevelopments.findIndex(d => d.id === updatedDev.id);
-    if (idx !== -1) {
-      mockDevelopments[idx] = updatedDev;
     }
   };
 

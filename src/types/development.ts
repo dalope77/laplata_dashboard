@@ -4,7 +4,8 @@ export type DevelopmentType =
   | "club_campo" 
   | "loteo_abierto" 
   | "loteo_social" 
-  | "ph_horizontal";
+  | "ph_horizontal"
+  | "parque_industrial";
 
 export interface ProcedureRequirement {
   id: string;
@@ -83,6 +84,7 @@ export interface UrbanDevelopment {
   type: DevelopmentType;
   polygon: Array<{ lat: number; lng: number }>;
   complianceStatus: "verde" | "amarillo" | "rojo";
+  isRegularized?: boolean;
   procedures: ProcedureStep[];
   financials: FinancialMetrics;
   ordinanceViolations: string[];

@@ -96,6 +96,7 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
             <option value="barrio_cerrado">Barrio Cerrado</option>
             <option value="condominio">Condominio (PH)</option>
             <option value="loteo_social">Hábitat (Ley 14.449)</option>
+            <option value="parque_industrial">Parque Industrial</option>
           </select>
           <p className="text-[10px] text-gray-500 mt-1">Al cambiar el encuadre, la lista de Gestión/Trámites se actualizará automáticamente a los requisitos correspondientes.</p>
         </label>

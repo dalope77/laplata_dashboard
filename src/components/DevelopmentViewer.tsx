@@ -9,10 +9,15 @@ import { mockDevelopments } from '../data/mockDevelopments';
 import { generateDevelopmentReport } from '../utils/pdfExport';
 import { supabase } from '../lib/supabase';
 import type { UrbanDevelopment } from '../types/development';
+import { getProceduresForType } from '../data/procedureTemplates';
 import { X, ChevronRight } from 'lucide-react';
 
 export function DevelopmentViewer() {
-  const [developments, setDevelopments] = useState<UrbanDevelopment[]>(mockDevelopments);
+  const initialDevelopments = mockDevelopments.map(dev => ({
+    ...dev,
+    procedures: getProceduresForType(dev.type, dev.procedures)
+  }));
+  const [developments, setDevelopments] = useState<UrbanDevelopment[]>(initialDevelopments);
   const [selectedDevelopment, setSelectedDevelopment] = useState<UrbanDevelopment | null>(null);
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
@@ -36,7 +41,9 @@ export function DevelopmentViewer() {
           const editsMap = new Map(editsData.map(e => [e.development_id, e.data]));
           setDevelopments(mockDevelopments.map(dev => {
             const edit = editsMap.get(dev.id);
-            return edit ? { ...dev, ...edit } : dev;
+            const merged = edit ? { ...dev, ...edit } : dev;
+            merged.procedures = getProceduresForType(merged.type, merged.procedures);
+            return merged;
           }));
         }
 
@@ -63,14 +70,18 @@ export function DevelopmentViewer() {
           if (payload.new && payload.new.data) {
             setDevelopments(prev => prev.map(dev => {
               if (dev.id === payload.new.development_id) {
-                return { ...dev, ...payload.new.data };
+                const merged = { ...dev, ...payload.new.data };
+                merged.procedures = getProceduresForType(merged.type, merged.procedures);
+                return merged;
               }
               return dev;
             }));
             
             setSelectedDevelopment(prev => {
               if (prev && prev.id === payload.new.development_id) {
-                return { ...prev, ...payload.new.data };
+                const merged = { ...prev, ...payload.new.data };
+                merged.procedures = getProceduresForType(merged.type, merged.procedures);
+                return merged;
               }
               return prev;
             });
@@ -290,8 +301,8 @@ export function DevelopmentViewer() {
                   {selectedDevelopment.type.replace('_', ' ')}
                 </span>
                 <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight mb-1">{selectedDevelopment.name}</h2>
-                <div className="flex items-center gap-2 text-xs">
-                  <span className="text-gray-500">Estado:</span>
+                <div className="flex flex-wrap items-center gap-2 text-xs mt-2">
+                  <span className="text-gray-500">Estado Normativo:</span>
                   <div className="flex items-center gap-1 font-semibold">
                     <div className={`w-2 h-2 rounded-full ${
                       selectedDevelopment.complianceStatus === 'rojo' ? 'bg-red-500' : 
@@ -305,6 +316,28 @@ export function DevelopmentViewer() {
                        selectedDevelopment.complianceStatus === 'amarillo' ? 'Con Adecuaciones' : 'Apto'}
                     </span>
                   </div>
+                  
+                  <span className="text-gray-300 mx-1">|</span>
+                  <span className="text-gray-500">Gestión:</span>
+                  <label className="flex items-center gap-1.5 cursor-pointer group">
+                    <div className={`w-10 h-5 flex items-center rounded-full p-1 transition-colors ${selectedDevelopment.isRegularized ? 'bg-green-500' : 'bg-gray-300 dark:bg-gray-700'}`}>
+                      <div className={`bg-white w-3 h-3 rounded-full shadow-md transform transition-transform ${selectedDevelopment.isRegularized ? 'translate-x-5' : ''}`}></div>
+                    </div>
+                    <input 
+                      type="checkbox" 
+                      className="hidden"
+                      checked={!!selectedDevelopment.isRegularized}
+                      onChange={(e) => {
+                        handleUpdateDevelopment({
+                          ...selectedDevelopment,
+                          isRegularized: e.target.checked
+                        });
+                      }}
+                    />
+                    <span className={`font-semibold ${selectedDevelopment.isRegularized ? 'text-green-600 dark:text-green-400' : 'text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300'}`}>
+                      {selectedDevelopment.isRegularized ? 'Regularizado' : 'Marcar Regularizado'}
+                    </span>
+                  </label>
                 </div>
               </div>
               <button 

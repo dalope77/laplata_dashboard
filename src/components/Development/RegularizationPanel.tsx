@@ -94,11 +94,52 @@ export function RegularizationPanel({ development, onUpdateDevelopment }: Props)
     { id: 'fase3', label: 'FASE 3 - Aprobaciones' }
   ];
 
+  const totalEstimatedDays = development.procedures.reduce((total, p) => {
+    if (p.requirements && p.status !== 'aprobado') {
+      const activeReqsDays = p.requirements.filter(r => !r.isCompleted).reduce((sum, r) => sum + (r.estimatedDays || 0), 0);
+      return total + activeReqsDays;
+    }
+    return total;
+  }, 0);
+
   return (
     <div className="space-y-6">
-      <div>
-        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Trámites y Documentación</h3>
-        <p className="text-xs text-gray-400 mb-4">Sube los documentos correspondientes a cada etapa para avanzar en la regularización.</p>
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Trámites y Documentación</h3>
+          <p className="text-xs text-gray-400 mb-4">Sube los documentos correspondientes a cada etapa para avanzar en la regularización.</p>
+        </div>
+        <div className="flex gap-3 items-start shrink-0">
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3 flex flex-col items-center">
+            <span className="text-[10px] font-bold text-gray-500 uppercase mb-2">Estado General</span>
+            <label className="flex items-center gap-2 cursor-pointer group">
+              <div className={`w-12 h-6 flex items-center rounded-full p-1 transition-colors ${development.isRegularized ? 'bg-green-500' : 'bg-gray-300 dark:bg-gray-700'}`}>
+                <div className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${development.isRegularized ? 'translate-x-6' : ''}`}></div>
+              </div>
+              <input 
+                type="checkbox" 
+                className="hidden"
+                checked={!!development.isRegularized}
+                onChange={(e) => {
+                  onUpdateDevelopment({
+                    ...development,
+                    isRegularized: e.target.checked
+                  });
+                }}
+              />
+              <span className={`text-xs font-bold ${development.isRegularized ? 'text-green-600 dark:text-green-400' : 'text-gray-500 group-hover:text-gray-700'}`}>
+                {development.isRegularized ? 'Regularizado' : 'Marcar Regularizado'}
+              </span>
+            </label>
+          </div>
+
+          {totalEstimatedDays > 0 && (
+            <div className="bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-200 dark:border-indigo-800 rounded-lg p-3 text-right">
+              <p className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 uppercase">Tiempo Estimado Restante</p>
+              <p className="text-xl font-black text-indigo-700 dark:text-indigo-300">{totalEstimatedDays} días</p>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Barra Temporal (Timeline) */}

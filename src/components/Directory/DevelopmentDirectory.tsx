@@ -19,6 +19,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
   const [filterType] = useState<UrbanDevelopment['type'] | 'all'>('all');
   const [filterTerritory, setFilterTerritory] = useState<string>('all');
   const [filterLey14449, setFilterLey14449] = useState<boolean | null>(null);
+  const [filterRegularized, setFilterRegularized] = useState<boolean | null>(null);
 
   const filteredDevelopments = useMemo(() => {
     return developments.filter(dev => {
@@ -27,6 +28,9 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
       
       // DPOUT
       if (filterDpout !== null && dev.technicalData.inDpoutRegistry !== filterDpout) return false;
+
+      // Regularized
+      if (filterRegularized !== null && !!dev.isRegularized !== filterRegularized) return false;
       
       // Status
       if (filterStatus !== 'all' && dev.complianceStatus !== filterStatus) return false;
@@ -42,7 +46,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
 
       return true;
     });
-  }, [developments, searchTerm, filterDpout, filterStatus, filterType, filterTerritory, filterLey14449]);
+  }, [developments, searchTerm, filterDpout, filterStatus, filterType, filterTerritory, filterLey14449, filterRegularized]);
 
   const globalKpis = useMemo(() => {
     let totalCessions = 0;
@@ -120,6 +124,16 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
             >
               Ley 14.449
             </button>
+            <button
+              onClick={() => setFilterRegularized(filterRegularized === true ? null : true)}
+              className={`flex-1 py-1.5 px-2 rounded text-xs font-semibold border transition-colors ${
+                filterRegularized === true 
+                  ? 'bg-green-100 border-green-300 text-green-700 dark:bg-green-900/30 dark:border-green-700 dark:text-green-300' 
+                  : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300'
+              }`}
+            >
+              Regularizados
+            </button>
           </div>
 
           <div className="grid grid-cols-2 gap-2">
@@ -181,6 +195,11 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
               {dev.technicalData.ley14449 && (
                 <span className="inline-block px-1.5 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-[10px] uppercase rounded">
                   Ley 14.449
+                </span>
+              )}
+              {dev.isRegularized && (
+                <span className="inline-block px-1.5 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase rounded">
+                  Regularizado
                 </span>
               )}
             </div>

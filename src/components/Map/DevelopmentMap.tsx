@@ -101,12 +101,26 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
   // Group market points by development id for efficient rendering inside popups? No, just render them globally as a layer.
   const marketPointsToRender = marketPoints || [];
 
-  const getColor = (status: string) => {
-    switch (status) {
+  const getBorderColor = (dev: UrbanDevelopment) => {
+    if (dev.isRegularized) return "#3b82f6"; // Azul para regularizado
+    switch (dev.complianceStatus) {
       case "verde": return "#10b981";
       case "amarillo": return "#f59e0b";
       case "rojo": return "#ef4444";
-      default: return "#3b82f6";
+      default: return "#9ca3af";
+    }
+  };
+
+  const getFillColor = (type: string) => {
+    switch (type) {
+      case "loteo_social": return "#a855f7"; // Purple
+      case "loteo_abierto": return "#0ea5e9"; // Light blue
+      case "club_campo": return "#14b8a6"; // Teal
+      case "barrio_cerrado": return "#6366f1"; // Indigo
+      case "condominio": return "#06b6d4"; // Cyan
+      case "ph_horizontal": return "#06b6d4"; // Cyan
+      case "parque_industrial": return "#6b7280"; // Gray
+      default: return "#9ca3af";
     }
   };
 
@@ -182,7 +196,8 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
 
       {developments.map((dev) => {
         const isSelected = selectedDevelopment?.id === dev.id;
-        const color = getColor(dev.complianceStatus);
+        const borderColor = getBorderColor(dev);
+        const fillColor = getFillColor(dev.type);
         
         const devMarketPoints = marketPointsToRender.filter((mp: any) => mp.development_id === dev.id);
         const dynamicVals = calculateDynamicValues(dev, devMarketPoints);
@@ -193,10 +208,10 @@ export function DevelopmentMap({ developments, onSelectDevelopment, selectedDeve
             positions={dev.polygon.map(p => [p.lat, p.lng])}
             interactive={!isParcelPickMode} // No interceptar clics en modo parcela
             pathOptions={{
-              color: isSelected ? "#4f46e5" : color,
-              weight: isSelected ? 4 : 2,
-              fillColor: color,
-              fillOpacity: (isSelected && isParcelPickMode) ? 0.0 : 0.4 // Totalmente transparente para ver abajo
+              color: isSelected ? "#ffffff" : borderColor, // Blanco si está seleccionado, sino borde de estado
+              weight: isSelected ? 4 : 3, // Borde más grueso
+              fillColor: fillColor,
+              fillOpacity: (isSelected && isParcelPickMode) ? 0.0 : 0.6 // Transparente para seleccionar parcelas
             }}
             eventHandlers={{
               click: () => {

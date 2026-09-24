@@ -184,6 +184,8 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
               <option value="B">Ord. 12638: Caso B</option>
               <option value="C">Ord. 12638: Caso C</option>
               <option value="D">Ord. 12638: Caso D</option>
+              <option value="E">Ord. 12638: Caso E</option>
+              <option value="inviable">Rechazado / Inviable</option>
               <option value="none">No aplica / Sin clasif.</option>
             </select>
 

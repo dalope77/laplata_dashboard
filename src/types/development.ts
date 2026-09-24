@@ -69,14 +69,15 @@ export interface TechnicalData {
     complementaryUses: string;
   };
   hydroRisk: boolean;
-  hasMaterialization: boolean;
-  hasPartialViability: boolean;
+  inciso1a_subdivision: boolean;
+  inciso1b_ocupacion: boolean;
+  punto2_aprobacion: boolean;
   zonaTerritorialidad: 'urbana' | 'periferica' | 'periurbana_rural' | 'fuera';
   ley14449: boolean;
   nearIndustry: boolean;
   pasivosAmbientales: 'ninguno' | 'proximo' | 'dentro';
   inDpoutRegistry?: boolean;
-  ordenanza12638_caso?: 'A' | 'B' | 'C' | 'D' | 'none';
+  ordenanza12638_caso?: 'A' | 'B' | 'C' | 'D' | 'E' | 'none' | 'inviable';
 }
 
 export interface UrbanDevelopment {

@@ -358,8 +358,8 @@ export function DevelopmentViewer() {
                   complementaryUses: ""
                 },
                 hydroRisk: false,
-                hasMaterialization: false,
-                hasPartialViability: false,
+                inciso1a_subdivision: false, inciso1b_ocupacion: false,
+                punto2_aprobacion: false,
                 zonaTerritorialidad: "fuera",
                 ley14449: false,
                 nearIndustry: false,
@@ -633,15 +633,17 @@ export function DevelopmentViewer() {
               </button>
             </div>
             <div className="p-6 overflow-y-auto flex-1 bg-gray-50 dark:bg-gray-900/50">
-              {['A', 'B', 'C', 'D', 'none'].map((caso) => {
+              {['A', 'B', 'C', 'D', 'E', 'inviable', 'none'].map((caso) => {
                 const devsInCase = developments.filter(d => d.inBudgetList && (d.technicalData.ordenanza12638_caso || 'none') === caso);
                 if (devsInCase.length === 0) return null;
 
                 const caseNames: Record<string, string> = {
-                  'A': 'Caso A (Zona Urbana) - Complejidad Baja',
-                  'B': 'Caso B (Zona Urbana Periférica) - Complejidad Media',
-                  'C': 'Caso C (Zona Periurbana/Rural) - Complejidad Alta',
-                  'D': 'Caso D (Parcelas sin acceso directo) - Complejidad Muy Alta',
+                  'A': 'Caso A (Zona Urbana - Ord 10703) - Complejidad Baja',
+                  'B': 'Caso B (Zona Urbana Periférica) - Complejidad Baja/Media',
+                  'C': 'Caso C (Periurbana/Rural, >30 hab/ha o >20 viv) - Complejidad Alta',
+                  'D': 'Caso D (Periurbana/Rural, <30 hab/ha con Aprob. Técnica) - Complejidad Alta',
+                  'E': 'Caso E (Periurbana/Rural, <30 hab/ha y <20 viv) - Complejidad Alta',
+                  'inviable': 'Inviable / Sancionatorio',
                   'none': 'Sin Clasificar'
                 };
 

@@ -18,12 +18,47 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
 
   const handleChange = (field: keyof typeof data, value: any) => {
     if (!onUpdateDevelopment) return;
+    
+    const updatedData = {
+      ...data,
+      [field]: value
+    };
+
+    if (['inciso1a_subdivision', 'inciso1b_ocupacion', 'punto2_aprobacion', 'zonaTerritorialidad', 'executedUnits'].includes(field as string)) {
+      const zona = updatedData.zonaTerritorialidad;
+      const i1a = updatedData.inciso1a_subdivision;
+      const i1b = updatedData.inciso1b_ocupacion;
+      const p2 = updatedData.punto2_aprobacion;
+      const density = updatedData.indicators.density || 0;
+      const houses = development.executedUnits || 0;
+
+      let newCaso = updatedData.ordenanza12638_caso;
+
+      if (!i1a && !i1b && !p2) {
+        newCaso = 'inviable';
+      } else {
+        if (zona === 'urbana') {
+          newCaso = 'A';
+        } else if (zona === 'periferica') {
+          newCaso = 'B';
+        } else if (zona === 'periurbana_rural') {
+          if (i1a || (i1b && (density > 30 || houses > 20))) {
+            newCaso = 'C';
+          } else if (i1b && density < 30 && p2) {
+            newCaso = 'D';
+          } else if (i1b && density < 30 && houses < 20) {
+            newCaso = 'E';
+          } else {
+            newCaso = 'C';
+          }
+        }
+      }
+      updatedData.ordenanza12638_caso = newCaso;
+    }
+
     onUpdateDevelopment({
       ...development,
-      technicalData: {
-        ...data,
-        [field]: value
-      }
+      technicalData: updatedData
     });
   };
 
@@ -415,40 +450,54 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
             <input 
               type="checkbox" 
               className="mt-1"
-              checked={data.hasMaterialization} 
-              onChange={(e) => handleChange('hasMaterialization', e.target.checked)} 
+              checked={data.inciso1a_subdivision} 
+              onChange={(e) => handleChange('inciso1a_subdivision', e.target.checked)} 
             />
             <div>
-              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Materialización de Uso (Cat. 1)</p>
-              <p className="text-xs text-gray-500">Subdivisión o vivienda ocupada entre Dic 2013 y Oct 2024.</p>
+              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">1.a) Subdivisión Finalizada</p>
+              <p className="text-xs text-gray-500">Materialización bajo régimen geodésico/PH entre 19/12/2013 y 09/10/2024.</p>
             </div>
           </label>
           <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
             <input 
               type="checkbox" 
               className="mt-1"
-              checked={data.hasPartialViability} 
-              onChange={(e) => handleChange('hasPartialViability', e.target.checked)} 
+              checked={data.inciso1b_ocupacion} 
+              onChange={(e) => handleChange('inciso1b_ocupacion', e.target.checked)} 
             />
             <div>
-              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Viabilidad Administrativa Parcial (Cat. 2)</p>
-              <p className="text-xs text-gray-500">Posee factibilidad municipal, faz geométrica, planos o pagos de plusvalía.</p>
+              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">1.b) Ocupación Residencial</p>
+              <p className="text-xs text-gray-500">Viviendas en construcción/iniciadas entre 19/12/2013 y 09/10/2024.</p>
+            </div>
+          </label>
+          <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <input 
+              type="checkbox" 
+              className="mt-1"
+              checked={data.punto2_aprobacion} 
+              onChange={(e) => handleChange('punto2_aprobacion', e.target.checked)} 
+            />
+            <div>
+              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">2) Aprobación Técnica Parcial</p>
+              <p className="text-xs text-gray-500">Faz geométrica y prefactibilidad hidráulica (19/12/2013 - 10/06/2023).</p>
             </div>
           </label>
         </div>
         <div className="space-y-3 mt-4 border-t border-gray-200 dark:border-gray-700 pt-4">
           <label className="flex flex-col gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
-            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Encuadre Ordenanza 12.638</span>
+            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Encuadre Art. 64 (Ord. 12.638)</span>
             <select 
               value={data.ordenanza12638_caso || 'none'} 
               onChange={(e) => handleChange('ordenanza12638_caso', e.target.value)}
-              className="mt-1 bg-slate-800 border border-slate-700 rounded p-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className={`mt-1 border rounded p-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 ${data.ordenanza12638_caso === 'inviable' ? 'bg-red-900 border-red-700 text-red-100' : 'bg-slate-800 border-slate-700 text-white'}`}
             >
               <option value="none" className="bg-slate-800 text-white">No aplica / Sin clasificar</option>
-              <option value="A" className="bg-slate-800 text-white">Caso A (Zona Urbana)</option>
-              <option value="B" className="bg-slate-800 text-white">Caso B (Zona Urbana Periférica)</option>
-              <option value="C" className="bg-slate-800 text-white">Caso C (Zona Periurbana/Rural)</option>
-              <option value="D" className="bg-slate-800 text-white">Caso D (Parcelas sin acceso directo)</option>
+              <option value="A" className="bg-slate-800 text-white">Caso A (Zona Urbana DENTRO Ord 10703)</option>
+              <option value="B" className="bg-slate-800 text-white">Caso B (Zona Urbana FUERA Ord 10703)</option>
+              <option value="C" className="bg-slate-800 text-white">Caso C (Periurbana/Rural, >30 hab/ha o >20 viv)</option>
+              <option value="D" className="bg-slate-800 text-white">Caso D (Periurbana/Rural, &lt;30 hab/ha con Aprob. Técnica)</option>
+              <option value="E" className="bg-slate-800 text-white">Caso E (Periurbana/Rural, &lt;30 hab/ha y &lt;20 viv)</option>
+              <option value="inviable" className="bg-red-900 text-red-100">Rechazado / Inviable (Sancionatorio)</option>
             </select>
           </label>
           <label className="flex flex-col gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">

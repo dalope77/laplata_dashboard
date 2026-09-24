@@ -62,7 +62,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -216,7 +216,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -304,7 +304,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -466,7 +466,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -568,7 +568,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -665,7 +665,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -773,7 +773,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -867,7 +867,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -942,7 +942,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -1552,7 +1552,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -1674,7 +1674,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -1751,7 +1751,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -1828,7 +1828,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -1965,7 +1965,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -2086,7 +2086,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -2275,7 +2275,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -2352,7 +2352,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -3165,7 +3165,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -3314,7 +3314,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -3408,7 +3408,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -3486,7 +3486,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -3572,7 +3572,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -3671,7 +3671,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -3756,7 +3756,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -3881,7 +3881,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -3962,7 +3962,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -4112,7 +4112,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -4329,7 +4329,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -4405,7 +4405,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -4725,7 +4725,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -5184,7 +5184,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -5312,7 +5312,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -5397,7 +5397,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -5516,7 +5516,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -5612,7 +5612,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -5706,7 +5706,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -5984,7 +5984,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -6562,7 +6562,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -6674,7 +6674,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -7233,7 +7233,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -7333,7 +7333,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -7416,7 +7416,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -7977,7 +7977,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -8055,7 +8055,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -8316,7 +8316,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -8474,7 +8474,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -8581,7 +8581,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -8673,7 +8673,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -8763,7 +8763,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -8839,7 +8839,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -8939,7 +8939,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -9097,7 +9097,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -9312,7 +9312,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -9396,7 +9396,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -9494,7 +9494,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -9571,7 +9571,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -9670,7 +9670,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -9746,7 +9746,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -9828,7 +9828,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -9924,7 +9924,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -10408,7 +10408,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -10580,7 +10580,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -10702,7 +10702,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -10781,7 +10781,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -10855,7 +10855,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -10933,7 +10933,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -11009,7 +11009,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -11111,7 +11111,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -11194,7 +11194,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -11283,7 +11283,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -11362,7 +11362,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -11448,7 +11448,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -11533,7 +11533,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -11659,7 +11659,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -11738,7 +11738,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -11825,7 +11825,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -11934,7 +11934,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -12025,7 +12025,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -12101,7 +12101,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -12202,7 +12202,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -12372,7 +12372,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -12461,7 +12461,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -12563,7 +12563,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -12643,7 +12643,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -13036,7 +13036,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -13265,7 +13265,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -13358,7 +13358,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -13459,7 +13459,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -13536,7 +13536,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -13645,7 +13645,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -13728,7 +13728,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -13807,7 +13807,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -13897,7 +13897,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -14055,7 +14055,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -14148,7 +14148,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -14229,7 +14229,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -14306,7 +14306,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -14385,7 +14385,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -14465,7 +14465,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -14546,7 +14546,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -14623,7 +14623,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -14701,7 +14701,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -14783,7 +14783,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -14863,7 +14863,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -14940,7 +14940,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -15017,7 +15017,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -15097,7 +15097,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -15173,7 +15173,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -15249,7 +15249,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -15325,7 +15325,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -15403,7 +15403,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -15488,7 +15488,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -15566,7 +15566,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -15642,7 +15642,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -15795,7 +15795,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -15897,7 +15897,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -15974,7 +15974,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -16056,7 +16056,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -16132,7 +16132,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -16210,7 +16210,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -16289,7 +16289,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -16380,7 +16380,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -16458,7 +16458,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -16541,7 +16541,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -16619,7 +16619,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -16697,7 +16697,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -16776,7 +16776,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -16854,7 +16854,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -16939,7 +16939,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -17494,7 +17494,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -17571,7 +17571,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -17657,7 +17657,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -17737,7 +17737,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -17824,7 +17824,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -17901,7 +17901,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -17986,7 +17986,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -18068,7 +18068,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -18147,7 +18147,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -18226,7 +18226,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -18303,7 +18303,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -18380,7 +18380,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -18457,7 +18457,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -18626,7 +18626,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -18782,7 +18782,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -18869,7 +18869,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -18948,7 +18948,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -19148,7 +19148,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -19245,7 +19245,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -19323,7 +19323,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -19675,7 +19675,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -19756,7 +19756,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -19848,7 +19848,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -19938,7 +19938,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -20030,7 +20030,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -20129,7 +20129,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -20223,7 +20223,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -20300,7 +20300,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -20391,7 +20391,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -20468,7 +20468,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -20551,7 +20551,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -20641,7 +20641,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -20717,7 +20717,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -20793,7 +20793,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -20887,7 +20887,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -20968,7 +20968,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -21046,7 +21046,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -21124,7 +21124,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -21838,7 +21838,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -21916,7 +21916,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -21996,7 +21996,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -22072,7 +22072,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -22149,7 +22149,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -22226,7 +22226,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -22304,7 +22304,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -22385,7 +22385,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -22479,7 +22479,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -22557,7 +22557,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -22636,7 +22636,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -22726,7 +22726,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -22803,7 +22803,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -22888,7 +22888,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -22974,7 +22974,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -23055,7 +23055,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -23132,7 +23132,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -23209,7 +23209,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -23286,7 +23286,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -23362,7 +23362,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -23438,7 +23438,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -23515,7 +23515,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -23592,7 +23592,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -23670,7 +23670,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -23747,7 +23747,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -23823,7 +23823,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -23899,7 +23899,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -23975,7 +23975,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -24052,7 +24052,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -24128,7 +24128,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -24204,7 +24204,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -24280,7 +24280,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -24357,7 +24357,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -24438,7 +24438,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -24517,7 +24517,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -24595,7 +24595,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -24671,7 +24671,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -24747,7 +24747,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -24823,7 +24823,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -24901,7 +24901,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -24977,7 +24977,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -25055,7 +25055,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -25131,7 +25131,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -25207,7 +25207,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -25283,7 +25283,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -25359,7 +25359,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -25435,7 +25435,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -25511,7 +25511,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -25595,7 +25595,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -25671,7 +25671,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -25759,7 +25759,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -25835,7 +25835,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -25911,7 +25911,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -25987,7 +25987,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -26071,7 +26071,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -26147,7 +26147,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -26226,7 +26226,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -26311,7 +26311,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -26387,7 +26387,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -26463,7 +26463,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -26540,7 +26540,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -26617,7 +26617,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -26694,7 +26694,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -26771,7 +26771,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -26847,7 +26847,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -26923,7 +26923,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -26999,7 +26999,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -27075,7 +27075,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -27152,7 +27152,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -27228,7 +27228,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -27304,7 +27304,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -27380,7 +27380,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -27456,7 +27456,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -27532,7 +27532,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -27608,7 +27608,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -27685,7 +27685,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -27761,7 +27761,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -27838,7 +27838,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -27914,7 +27914,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -27990,7 +27990,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -28066,7 +28066,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -28142,7 +28142,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -28218,7 +28218,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -28294,7 +28294,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -28371,7 +28371,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -28447,7 +28447,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -28532,7 +28532,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -28610,7 +28610,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -28697,7 +28697,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -28773,7 +28773,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -28857,7 +28857,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -28933,7 +28933,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -29012,7 +29012,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -29089,7 +29089,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -29165,7 +29165,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -29241,7 +29241,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -29317,7 +29317,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -29393,7 +29393,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -29477,7 +29477,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -29553,7 +29553,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -29630,7 +29630,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -29706,7 +29706,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -29782,7 +29782,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -29876,7 +29876,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -29952,7 +29952,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -30028,7 +30028,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -30106,7 +30106,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -30182,7 +30182,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -30258,7 +30258,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -30335,7 +30335,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -30411,7 +30411,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -30487,7 +30487,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -30596,7 +30596,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -30672,7 +30672,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -30750,7 +30750,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -30826,7 +30826,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -30913,7 +30913,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -30989,7 +30989,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -31065,7 +31065,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -31142,7 +31142,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -31227,7 +31227,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -31304,7 +31304,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -31388,7 +31388,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -31464,7 +31464,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -31564,7 +31564,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -31643,7 +31643,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -31734,7 +31734,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -31813,7 +31813,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -31892,7 +31892,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -31968,7 +31968,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -32044,7 +32044,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -32121,7 +32121,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -32202,7 +32202,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -32278,7 +32278,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -32355,7 +32355,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -32433,7 +32433,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -32509,7 +32509,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -32589,7 +32589,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -32682,7 +32682,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -32759,7 +32759,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -32840,7 +32840,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -32916,7 +32916,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -32993,7 +32993,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -33069,7 +33069,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -33148,7 +33148,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -33228,7 +33228,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -33304,7 +33304,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -33381,7 +33381,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -33458,7 +33458,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -33540,7 +33540,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -33617,7 +33617,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -33693,7 +33693,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -33769,7 +33769,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -33845,7 +33845,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -33921,7 +33921,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -33997,7 +33997,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -34073,7 +34073,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -34149,7 +34149,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -34225,7 +34225,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -34301,7 +34301,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -34377,7 +34377,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -34464,7 +34464,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -34540,7 +34540,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -34616,7 +34616,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -34693,7 +34693,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -34769,7 +34769,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -34845,7 +34845,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -34922,7 +34922,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -35017,7 +35017,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -35094,7 +35094,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -35170,7 +35170,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -35247,7 +35247,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -35323,7 +35323,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -35399,7 +35399,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -35475,7 +35475,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -35552,7 +35552,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -35630,7 +35630,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -35710,7 +35710,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -35794,7 +35794,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -35876,7 +35876,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -35952,7 +35952,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -36028,7 +36028,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -36109,7 +36109,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -36185,7 +36185,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -36265,7 +36265,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -36341,7 +36341,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -36417,7 +36417,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -36493,7 +36493,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -36569,7 +36569,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -36664,7 +36664,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -36746,7 +36746,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -36828,7 +36828,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -36906,7 +36906,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -37000,7 +37000,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -37076,7 +37076,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -37152,7 +37152,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -37228,7 +37228,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -37349,7 +37349,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -37425,7 +37425,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -37510,7 +37510,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -37589,7 +37589,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -37667,7 +37667,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -37747,7 +37747,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -37823,7 +37823,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -37899,7 +37899,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -37983,7 +37983,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -38059,7 +38059,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -38139,7 +38139,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -38233,7 +38233,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -38310,7 +38310,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -38387,7 +38387,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -38463,7 +38463,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -38549,7 +38549,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -38625,7 +38625,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -38702,7 +38702,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -38778,7 +38778,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -38855,7 +38855,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -38935,7 +38935,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -39014,7 +39014,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -39100,7 +39100,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -39176,7 +39176,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -39252,7 +39252,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -39331,7 +39331,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -39407,7 +39407,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -39504,7 +39504,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -39581,7 +39581,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -39659,7 +39659,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -39735,7 +39735,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -39811,7 +39811,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -39883,7 +39883,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -39959,7 +39959,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -40037,7 +40037,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -40121,7 +40121,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -40198,7 +40198,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -40274,7 +40274,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -40350,7 +40350,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -40430,7 +40430,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -40507,7 +40507,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
@@ -40586,7 +40586,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
@@ -40671,7 +40671,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
@@ -40748,7 +40748,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
@@ -40824,7 +40824,7 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision: true, inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,

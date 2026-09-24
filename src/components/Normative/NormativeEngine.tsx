@@ -43,8 +43,8 @@ export function NormativeEngine({ development }: Props) {
   const fot = development.technicalData.indicators.fot;
   const minArea = development.technicalData.indicators.minArea || 0;
   const totalArea = development.technicalData.totalAreaSqM;
-  const isCat1 = development.technicalData.hasMaterialization;
-  const isCat2 = development.technicalData.hasPartialViability;
+  const isCat1 = development.technicalData.inciso1a_subdivision || development.technicalData.inciso1b_ocupacion;
+  const isCat2 = development.technicalData.punto2_aprobacion;
   const zona = development.technicalData.zonaTerritorialidad;
   const ley14449 = development.technicalData.ley14449;
   

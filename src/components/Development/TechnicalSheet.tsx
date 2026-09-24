@@ -30,7 +30,7 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
       const i1b = updatedData.inciso1b_ocupacion;
       const p2 = updatedData.punto2_aprobacion;
       const density = updatedData.indicators.density || 0;
-      const houses = development.executedUnits || 0;
+      const houses = updatedData.executedUnits || 0;
 
       let newCaso = updatedData.ordenanza12638_caso;
 
@@ -494,7 +494,7 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
               <option value="none" className="bg-slate-800 text-white">No aplica / Sin clasificar</option>
               <option value="A" className="bg-slate-800 text-white">Caso A (Zona Urbana DENTRO Ord 10703)</option>
               <option value="B" className="bg-slate-800 text-white">Caso B (Zona Urbana FUERA Ord 10703)</option>
-              <option value="C" className="bg-slate-800 text-white">Caso C (Periurbana/Rural, >30 hab/ha o >20 viv)</option>
+              <option value="C" className="bg-slate-800 text-white">Caso C (Periurbana/Rural, &gt;30 hab/ha o &gt;20 viv)</option>
               <option value="D" className="bg-slate-800 text-white">Caso D (Periurbana/Rural, &lt;30 hab/ha con Aprob. Técnica)</option>
               <option value="E" className="bg-slate-800 text-white">Caso E (Periurbana/Rural, &lt;30 hab/ha y &lt;20 viv)</option>
               <option value="inviable" className="bg-red-900 text-red-100">Rechazado / Inviable (Sancionatorio)</option>

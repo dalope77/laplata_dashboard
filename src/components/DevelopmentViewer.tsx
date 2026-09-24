@@ -262,6 +262,53 @@ export function DevelopmentViewer() {
           onSelect={setSelectedDevelopment}
           selectedId={selectedDevelopment?.id}
           marketPoints={marketPoints}
+          onAddDevelopment={() => {
+            const newDev: UrbanDevelopment = {
+              id: crypto.randomUUID(),
+              name: "Nuevo Emprendimiento",
+              type: "loteo_abierto",
+              polygon: [],
+              complianceStatus: "amarillo",
+              isRegularized: false,
+              procedures: getProceduresForType("loteo_abierto", []),
+              financials: {
+                marketValueIrregularUsd: 0,
+                marketValueRegularizedUsd: 0,
+                regularizationCostUsd: 0,
+                requiredCessionsSqM: 0,
+                plusvaliaAmountUsd: 0,
+                comparables: []
+              },
+              ordinanceViolations: [],
+              technicalData: {
+                parcels: [],
+                totalAreaSqM: 0,
+                executedUnits: 0,
+                executedUnitsPoints: [],
+                indicators: {
+                  fos: 0,
+                  fot: 0,
+                  density: 0,
+                  minArea: 0,
+                  maxHeight: "",
+                  zoning: "",
+                  description: "",
+                  allowedUses: "",
+                  complementaryUses: ""
+                },
+                hydroRisk: false,
+                hasMaterialization: false,
+                hasPartialViability: false,
+                zonaTerritorialidad: "fuera",
+                ley14449: false,
+                nearIndustry: false,
+                pasivosAmbientales: "ninguno"
+              },
+              offers: []
+            };
+            setDevelopments([newDev, ...developments]);
+            setSelectedDevelopment(newDev);
+          }}
         />
       </div>
 
@@ -300,7 +347,12 @@ export function DevelopmentViewer() {
                 <span className="inline-block px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-[10px] font-bold uppercase tracking-wider rounded mb-2">
                   {selectedDevelopment.type.replace('_', ' ')}
                 </span>
-                <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight mb-1">{selectedDevelopment.name}</h2>
+                <input 
+                  type="text"
+                  value={selectedDevelopment.name}
+                  onChange={(e) => handleUpdateDevelopment({ ...selectedDevelopment, name: e.target.value })}
+                  className="w-full text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight mb-1 bg-transparent border-b border-transparent hover:border-gray-300 focus:border-indigo-500 focus:outline-none transition-colors"
+                />
                 <div className="flex flex-wrap items-center gap-2 text-xs mt-2">
                   <span className="text-gray-500">Estado Normativo:</span>
                   <div className="flex items-center gap-1 font-semibold">

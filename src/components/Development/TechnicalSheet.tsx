@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { UrbanDevelopment, DevelopmentType } from "../../types/development";
 import { Layers, Maximize, MapPin, Home, MousePointerClick, Activity, AlertTriangle } from "lucide-react";
 import { getProceduresForType } from "../../data/procedureTemplates";
@@ -58,6 +58,47 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
       }
     });
   };
+
+  useEffect(() => {
+    async function calculateTotalArea() {
+      if (!data.parcels || data.parcels.length === 0) {
+        if (data.totalAreaSqM !== 0) {
+          handleChange('totalAreaSqM', 0);
+        }
+        return;
+      }
+      
+      const validParcels = data.parcels
+        .map(p => p.replace('Nomenclatura: ', '').trim())
+        .filter(p => p.length > 5);
+
+      if (validParcels.length === 0) return;
+
+      try {
+        const featureIds = validParcels.map(p => `Parcela.${p}`).join(',');
+        const url = `https://geo.arba.gov.ar/geoserver/idera/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=idera:Parcela&featureId=${featureIds}&outputFormat=application/json&srsName=EPSG:4326`;
+        const res = await fetch(url);
+        const geojson = await res.json();
+        
+        if (geojson && geojson.features) {
+          let total = 0;
+          geojson.features.forEach((f: any) => {
+            if (f.properties && f.properties.ara1) {
+              total += Number(f.properties.ara1);
+            }
+          });
+          
+          if (total > 0 && Math.round(total) !== Math.round(data.totalAreaSqM || 0)) {
+            handleChange('totalAreaSqM', Math.round(total));
+          }
+        }
+      } catch (e) {
+        console.error("Error fetching parcel areas", e);
+      }
+    }
+    
+    calculateTotalArea();
+  }, [JSON.stringify(data.parcels)]);
 
 
   return (

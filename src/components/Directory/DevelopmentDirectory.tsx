@@ -8,9 +8,10 @@ interface Props {
   onSelect: (dev: UrbanDevelopment) => void;
   selectedId: string | undefined;
   marketPoints?: any[];
+  onAddDevelopment?: () => void;
 }
 
-export function DevelopmentDirectory({ developments, onSelect, selectedId, marketPoints = [] }: Props) {
+export function DevelopmentDirectory({ developments, onSelect, selectedId, marketPoints = [], onAddDevelopment }: Props) {
   const [searchTerm, setSearchTerm] = useState('');
   
   // Filters
@@ -69,7 +70,17 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
       
       {/* Header & Search */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-800">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">Directorio de Loteos</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">Directorio de Loteos</h2>
+          {onAddDevelopment && (
+            <button 
+              onClick={onAddDevelopment}
+              className="px-2 py-1 bg-indigo-600 text-white text-xs font-bold rounded hover:bg-indigo-700 transition-colors"
+            >
+              + Nuevo
+            </button>
+          )}
+        </div>
         
         <div className="relative mb-4">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

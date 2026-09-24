@@ -146,6 +146,9 @@ export function DevelopmentViewer() {
           const newParcels = [...currentParcels, nomenclature];
           
           let urbasigIndicators = { ...selectedDevelopment.technicalData.indicators };
+          let newCaso = selectedDevelopment.technicalData.ordenanza12638_caso;
+          let newZona = selectedDevelopment.technicalData.zonaTerritorialidad;
+
           try {
             const urbUrl = `https://urbasig.mgob.gba.gob.ar/geoserver/urbasig/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo&FORMAT=image/png&TRANSPARENT=true&QUERY_LAYERS=urbasig:uso_del_suelo&LAYERS=urbasig:uso_del_suelo&INFO_FORMAT=application/json&X=50&Y=50&WIDTH=101&HEIGHT=101&SRS=EPSG:4326&BBOX=${BBOX}`;
             const urbRes = await fetch(urbUrl);
@@ -165,6 +168,23 @@ export function DevelopmentViewer() {
                   allowedUses: props.ud || urbasigIndicators.allowedUses,
                   complementaryUses: props.uc || urbasigIndicators.complementaryUses,
                 };
+
+                const desc = (props.descripcio || '').toUpperCase();
+                const ucr = (props.u_c_r || '').toUpperCase();
+                const desig = (props.designacio || '').toUpperCase();
+
+                if (ucr.includes('URBANA') || desc.includes('URBANA')) {
+                  if (desc.includes('PERIFERICA') || desig.includes('UP')) {
+                    newCaso = 'B';
+                    newZona = 'periferica';
+                  } else {
+                    newCaso = 'A';
+                    newZona = 'urbana';
+                  }
+                } else if (ucr.includes('RURAL') || desc.includes('RURAL') || ucr.includes('COMPLEMENTARIA') || desc.includes('PERIURBANA')) {
+                  newCaso = 'C';
+                  newZona = 'periurbana_rural';
+                }
               }
             }
           } catch(e) {
@@ -176,7 +196,9 @@ export function DevelopmentViewer() {
             technicalData: {
               ...selectedDevelopment.technicalData,
               parcels: newParcels,
-              indicators: urbasigIndicators
+              indicators: urbasigIndicators,
+              ordenanza12638_caso: newCaso,
+              zonaTerritorialidad: newZona
             }
           });
         } else {

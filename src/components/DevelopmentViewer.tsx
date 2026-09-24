@@ -134,11 +134,39 @@ export function DevelopmentViewer() {
         const currentParcels = selectedDevelopment.technicalData.parcels || [];
         if (!currentParcels.includes(nomenclature)) {
           const newParcels = [...currentParcels, nomenclature];
+          
+          let urbasigIndicators = { ...selectedDevelopment.technicalData.indicators };
+          try {
+            const urbUrl = `https://urbasig.mgob.gba.gob.ar/geoserver/urbasig/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo&FORMAT=image/png&TRANSPARENT=true&QUERY_LAYERS=urbasig:uso_del_suelo&LAYERS=urbasig:uso_del_suelo&INFO_FORMAT=application/json&X=50&Y=50&WIDTH=101&HEIGHT=101&SRS=EPSG:4326&BBOX=${BBOX}`;
+            const urbRes = await fetch(urbUrl);
+            const urbData = await urbRes.json();
+            if (urbData.features && urbData.features.length > 0) {
+              const props = urbData.features[0].properties;
+              if (props) {
+                urbasigIndicators = {
+                  ...urbasigIndicators,
+                  fos: props.fos !== undefined && props.fos !== null ? Number(props.fos) : urbasigIndicators.fos,
+                  fot: props.fota !== undefined && props.fota !== null ? Number(props.fota) : urbasigIndicators.fot,
+                  density: props.dena !== undefined && props.dena !== null ? Number(props.dena) : urbasigIndicators.density,
+                  minArea: props.sm !== undefined && props.sm !== null ? Number(props.sm) : urbasigIndicators.minArea,
+                  maxHeight: props.hmax || urbasigIndicators.maxHeight,
+                  zoning: props.designacio || urbasigIndicators.zoning,
+                  description: props.descripcio || urbasigIndicators.description,
+                  allowedUses: props.ud || urbasigIndicators.allowedUses,
+                  complementaryUses: props.uc || urbasigIndicators.complementaryUses,
+                };
+              }
+            }
+          } catch(e) {
+            console.error("Error fetching Urbasig info", e);
+          }
+
           handleUpdateDevelopment({
             ...selectedDevelopment,
             technicalData: {
               ...selectedDevelopment.technicalData,
-              parcels: newParcels
+              parcels: newParcels,
+              indicators: urbasigIndicators
             }
           });
         } else {

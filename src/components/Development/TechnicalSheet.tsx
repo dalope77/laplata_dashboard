@@ -438,15 +438,29 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
         </div>
         <div className="space-y-3 mt-4 border-t border-gray-200 dark:border-gray-700 pt-4">
           <label className="flex flex-col gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Encuadre Ordenanza 12.638</span>
+            <select 
+              value={data.ordenanza12638_caso || 'none'} 
+              onChange={(e) => handleChange('ordenanza12638_caso', e.target.value)}
+              className="mt-1 bg-slate-800 border border-slate-700 rounded p-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="none" className="bg-slate-800 text-white">No aplica / Sin clasificar</option>
+              <option value="A" className="bg-slate-800 text-white">Caso A (Zona Urbana)</option>
+              <option value="B" className="bg-slate-800 text-white">Caso B (Zona Urbana Periférica)</option>
+              <option value="C" className="bg-slate-800 text-white">Caso C (Zona Periurbana/Rural)</option>
+              <option value="D" className="bg-slate-800 text-white">Caso D (Parcelas sin acceso directo)</option>
+            </select>
+          </label>
+          <label className="flex flex-col gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
             <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Ubicación (Zona de Territorialidad)</span>
             <select 
               value={data.zonaTerritorialidad || 'fuera'} 
               onChange={(e) => handleChange('zonaTerritorialidad', e.target.value)}
               className="mt-1 bg-slate-800 border border-slate-700 rounded p-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
-              <option value="urbana" className="bg-slate-800 text-white">Zona Urbana (Caso A)</option>
-              <option value="periferica" className="bg-slate-800 text-white">Zona Urbana Periférica (Caso B)</option>
-              <option value="periurbana_rural" className="bg-slate-800 text-white">Zona Periurbana y Rural (Casos C y D)</option>
+              <option value="urbana" className="bg-slate-800 text-white">Zona Urbana</option>
+              <option value="periferica" className="bg-slate-800 text-white">Zona Urbana Periférica</option>
+              <option value="periurbana_rural" className="bg-slate-800 text-white">Zona Periurbana y Rural</option>
               <option value="fuera" className="bg-slate-800 text-white">Fuera de Zonas Especiales</option>
             </select>
           </label>

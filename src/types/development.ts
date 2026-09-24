@@ -76,6 +76,7 @@ export interface TechnicalData {
   nearIndustry: boolean;
   pasivosAmbientales: 'ninguno' | 'proximo' | 'dentro';
   inDpoutRegistry?: boolean;
+  ordenanza12638_caso?: 'A' | 'B' | 'C' | 'D' | 'none';
 }
 
 export interface UrbanDevelopment {
@@ -90,4 +91,5 @@ export interface UrbanDevelopment {
   ordinanceViolations: string[];
   technicalData: TechnicalData;
   offers: PropertyOffer[];
+  inBudgetList?: boolean;
 }

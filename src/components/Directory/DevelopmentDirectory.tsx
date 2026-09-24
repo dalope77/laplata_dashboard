@@ -9,9 +9,10 @@ interface Props {
   selectedId: string | undefined;
   marketPoints?: any[];
   onAddDevelopment?: () => void;
+  onOpenBudgetList?: () => void;
 }
 
-export function DevelopmentDirectory({ developments, onSelect, selectedId, marketPoints = [], onAddDevelopment }: Props) {
+export function DevelopmentDirectory({ developments, onSelect, selectedId, marketPoints = [], onAddDevelopment, onOpenBudgetList }: Props) {
   const [searchTerm, setSearchTerm] = useState('');
   
   // Filters
@@ -21,6 +22,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
   const [filterTerritory, setFilterTerritory] = useState<string>('all');
   const [filterLey14449, setFilterLey14449] = useState<boolean | null>(null);
   const [filterRegularized, setFilterRegularized] = useState<boolean | null>(null);
+  const [filterOrdenanza12638, setFilterOrdenanza12638] = useState<string>('all');
 
   const filteredDevelopments = useMemo(() => {
     return developments.filter(dev => {
@@ -45,9 +47,12 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
       // Ley 14449
       if (filterLey14449 !== null && dev.technicalData.ley14449 !== filterLey14449) return false;
 
+      // Ordenanza 12638
+      if (filterOrdenanza12638 !== 'all' && (dev.technicalData.ordenanza12638_caso || 'none') !== filterOrdenanza12638) return false;
+
       return true;
     });
-  }, [developments, searchTerm, filterDpout, filterStatus, filterType, filterTerritory, filterLey14449, filterRegularized]);
+  }, [developments, searchTerm, filterDpout, filterStatus, filterType, filterTerritory, filterLey14449, filterRegularized, filterOrdenanza12638]);
 
   const globalKpis = useMemo(() => {
     let totalCessions = 0;
@@ -72,14 +77,25 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
       <div className="p-4 border-b border-gray-200 dark:border-gray-800">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">Directorio de Loteos</h2>
-          {onAddDevelopment && (
-            <button 
-              onClick={onAddDevelopment}
-              className="px-2 py-1 bg-indigo-600 text-white text-xs font-bold rounded hover:bg-indigo-700 transition-colors"
-            >
-              + Nuevo
-            </button>
-          )}
+          <div className="flex gap-2">
+            {onOpenBudgetList && (
+              <button 
+                onClick={onOpenBudgetList}
+                className="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 border border-amber-300 dark:border-amber-700 text-xs font-bold rounded hover:bg-amber-200 transition-colors flex items-center gap-1"
+                title="Lista a Presupuestar"
+              >
+                📋 Presupuestos
+              </button>
+            )}
+            {onAddDevelopment && (
+              <button 
+                onClick={onAddDevelopment}
+                className="px-2 py-1 bg-indigo-600 text-white text-xs font-bold rounded hover:bg-indigo-700 transition-colors"
+              >
+                + Nuevo
+              </button>
+            )}
+          </div>
         </div>
         
         <div className="relative mb-4">
@@ -157,6 +173,18 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
               <option value="verde">Apto</option>
               <option value="amarillo">Con Adecuaciones</option>
               <option value="rojo">Irregular</option>
+            </select>
+            <select
+              value={filterOrdenanza12638}
+              onChange={(e) => setFilterOrdenanza12638(e.target.value)}
+              className="block w-full py-1.5 px-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            >
+              <option value="all">Ord. 12638: Todas</option>
+              <option value="A">Ord. 12638: Caso A</option>
+              <option value="B">Ord. 12638: Caso B</option>
+              <option value="C">Ord. 12638: Caso C</option>
+              <option value="D">Ord. 12638: Caso D</option>
+              <option value="none">No aplica / Sin clasif.</option>
             </select>
 
             <select

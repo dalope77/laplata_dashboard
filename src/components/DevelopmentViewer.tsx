@@ -26,6 +26,7 @@ export function DevelopmentViewer() {
   const [isAddingMarketPoint, setIsAddingMarketPoint] = useState(false);
   const [pendingMarketPoint, setPendingMarketPoint] = useState<{lat: number, lng: number} | null>(null);
   const [newComparableForm, setNewComparableForm] = useState({ title: '', price: '', sqm: '', url: '' });
+  const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
 
   useEffect(() => {
     async function loadEdits() {
@@ -290,6 +291,7 @@ export function DevelopmentViewer() {
           onSelect={setSelectedDevelopment}
           selectedId={selectedDevelopment?.id}
           marketPoints={marketPoints}
+          onOpenBudgetList={() => setIsBudgetModalOpen(true)}
           onAddDevelopment={() => {
             const newDev: UrbanDevelopment = {
               id: crypto.randomUUID(),
@@ -417,6 +419,23 @@ export function DevelopmentViewer() {
                     <span className={`font-semibold ${selectedDevelopment.isRegularized ? 'text-green-600 dark:text-green-400' : 'text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300'}`}>
                       {selectedDevelopment.isRegularized ? 'Regularizado' : 'Marcar Regularizado'}
                     </span>
+                  </label>
+                  <span className="text-gray-300 mx-1">|</span>
+                  <label className="flex items-center gap-1.5 cursor-pointer group">
+                    <input 
+                      type="checkbox" 
+                      className="hidden"
+                      checked={!!selectedDevelopment.inBudgetList}
+                      onChange={(e) => {
+                        handleUpdateDevelopment({
+                          ...selectedDevelopment,
+                          inBudgetList: e.target.checked
+                        });
+                      }}
+                    />
+                    <div className={`px-2 py-0.5 rounded text-xs font-bold border transition-colors ${selectedDevelopment.inBudgetList ? 'bg-amber-100 border-amber-300 text-amber-700 dark:bg-amber-900/30 dark:border-amber-700 dark:text-amber-400' : 'bg-gray-100 border-gray-200 text-gray-500 hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700'}`}>
+                      {selectedDevelopment.inBudgetList ? 'En Presupuestos' : 'A Presupuestar'}
+                    </div>
                   </label>
                 </div>
               </div>
@@ -566,6 +585,67 @@ export function DevelopmentViewer() {
               >
                 Guardar Publicación
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {isBudgetModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
+            <div className="p-5 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center bg-amber-50 dark:bg-amber-900/10">
+              <h2 className="text-xl font-bold text-amber-800 dark:text-amber-400 flex items-center gap-2">
+                📋 Listado a Presupuestar (Ordenanza 12.638)
+              </h2>
+              <button onClick={() => setIsBudgetModalOpen(false)} className="text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-lg">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto flex-1 bg-gray-50 dark:bg-gray-900/50">
+              {['A', 'B', 'C', 'D', 'none'].map((caso) => {
+                const devsInCase = developments.filter(d => d.inBudgetList && (d.technicalData.ordenanza12638_caso || 'none') === caso);
+                if (devsInCase.length === 0) return null;
+
+                const caseNames: Record<string, string> = {
+                  'A': 'Caso A (Zona Urbana) - Complejidad Baja',
+                  'B': 'Caso B (Zona Urbana Periférica) - Complejidad Media',
+                  'C': 'Caso C (Zona Periurbana/Rural) - Complejidad Alta',
+                  'D': 'Caso D (Parcelas sin acceso directo) - Complejidad Muy Alta',
+                  'none': 'Sin Clasificar'
+                };
+
+                return (
+                  <div key={caso} className="mb-6">
+                    <h3 className="text-md font-bold text-gray-800 dark:text-gray-200 mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">
+                      {caseNames[caso]}
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {devsInCase.map(dev => (
+                        <div key={dev.id} className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm flex justify-between items-center">
+                          <div>
+                            <p className="font-bold text-sm text-gray-900 dark:text-gray-100">{dev.name}</p>
+                            <p className="text-xs text-gray-500">{dev.technicalData.totalAreaSqM.toLocaleString('es-AR')} m² • {dev.technicalData.parcels.length} parcelas</p>
+                          </div>
+                          <button 
+                            onClick={() => {
+                              handleUpdateDevelopment({ ...dev, inBudgetList: false });
+                            }}
+                            className="text-xs text-red-500 hover:text-red-700 bg-red-50 dark:bg-red-900/10 px-2 py-1 rounded"
+                          >
+                            Quitar
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+              {developments.filter(d => d.inBudgetList).length === 0 && (
+                <div className="text-center p-8 text-gray-500 dark:text-gray-400">
+                  <p>No hay emprendimientos en la lista a presupuestar.</p>
+                  <p className="text-sm mt-2">Agrega emprendimientos desde el panel derecho usando el botón "A Presupuestar".</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

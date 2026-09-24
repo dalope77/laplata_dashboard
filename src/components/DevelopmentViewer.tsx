@@ -40,12 +40,21 @@ export function DevelopmentViewer() {
 
         if (editsData) {
           const editsMap = new Map(editsData.map(e => [e.development_id, e.data]));
-          setDevelopments(mockDevelopments.map(dev => {
+          
+          const baseDevelopments = mockDevelopments.map(dev => {
             const edit = editsMap.get(dev.id);
+            if (edit) editsMap.delete(dev.id);
             const merged = edit ? { ...dev, ...edit } : dev;
             merged.procedures = getProceduresForType(merged.type, merged.procedures);
             return merged;
-          }));
+          });
+
+          const newDevelopments = Array.from(editsMap.values()).map((dev: any) => {
+            dev.procedures = getProceduresForType(dev.type, dev.procedures || []);
+            return dev as UrbanDevelopment;
+          });
+
+          setDevelopments([...newDevelopments, ...baseDevelopments]);
         }
 
         const { data: marketData, error: marketError } = await supabase

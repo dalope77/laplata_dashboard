@@ -141,6 +141,15 @@ export function DevelopmentViewer() {
       if (data.features && data.features.length > 0) {
         const fullId = data.features[0].id; // e.g. Parcela.055...
         const nomenclature = fullId.replace('Parcela.', '');
+        const geom = data.features[0].geometry;
+        
+        let newPolygon = selectedDevelopment.polygon || [];
+        if (geom && newPolygon.length === 0) {
+          const coords = geom.type === 'MultiPolygon' ? geom.coordinates[0][0] : (geom.type === 'Polygon' ? geom.coordinates[0] : null);
+          if (coords) {
+            newPolygon = coords.map((c: any[]) => ({ lat: c[1], lng: c[0] }));
+          }
+        }
         
         const currentParcels = selectedDevelopment.technicalData.parcels || [];
         if (!currentParcels.includes(nomenclature)) {
@@ -194,6 +203,7 @@ export function DevelopmentViewer() {
 
           handleUpdateDevelopment({
             ...selectedDevelopment,
+            polygon: newPolygon,
             technicalData: {
               ...selectedDevelopment.technicalData,
               parcels: newParcels,

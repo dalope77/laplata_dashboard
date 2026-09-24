@@ -89,7 +89,7 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
                 }
               });
             }}
-            className="mt-1 bg-white dark:bg-gray-800 border border-indigo-300 dark:border-indigo-700 rounded p-2 text-sm font-bold text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="mt-1 bg-slate-800 border border-slate-700 rounded p-2 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="loteo_abierto">Loteo Abierto (Ley 8912)</option>
             <option value="club_campo">Club de Campo</option>
@@ -152,7 +152,7 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
         <select
           value={data.physicalState || ''}
           onChange={(e) => handleChange('physicalState', e.target.value || undefined)}
-          className="w-full bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm font-medium text-gray-800 dark:text-gray-200 focus:outline-none focus:border-indigo-500"
+          className="w-full bg-slate-800 border border-slate-700 rounded p-2 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
         >
           <option value="">Sin especificar</option>
           <option value="abandonado_sin_desarrollo">Abandonado / Sin Desarrollo</option>
@@ -401,12 +401,12 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
             <select 
               value={data.zonaTerritorialidad || 'fuera'} 
               onChange={(e) => handleChange('zonaTerritorialidad', e.target.value)}
-              className="mt-1 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-1.5 text-sm"
+              className="mt-1 bg-slate-800 border border-slate-700 rounded p-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
-              <option value="urbana">Zona Urbana (Caso A)</option>
-              <option value="periferica">Zona Urbana Periférica (Caso B)</option>
-              <option value="periurbana_rural">Zona Periurbana y Rural (Casos C y D)</option>
-              <option value="fuera">Fuera de Zonas Especiales</option>
+              <option value="urbana" className="bg-slate-800 text-white">Zona Urbana (Caso A)</option>
+              <option value="periferica" className="bg-slate-800 text-white">Zona Urbana Periférica (Caso B)</option>
+              <option value="periurbana_rural" className="bg-slate-800 text-white">Zona Periurbana y Rural (Casos C y D)</option>
+              <option value="fuera" className="bg-slate-800 text-white">Fuera de Zonas Especiales</option>
             </select>
           </label>
           <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
@@ -425,19 +425,19 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
       </div>
 
       {/* Restricciones al Dominio / Uso de Suelo */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
-        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2 mb-4">
+      <div className="bg-slate-800 border border-slate-700 rounded-lg p-4 shadow-sm">
+        <h4 className="text-xs font-bold text-white uppercase flex items-center gap-2 mb-4">
           <AlertTriangle className="w-4 h-4 text-amber-500" /> Restricciones al Dominio / Uso de Suelo
         </h4>
         <div className="grid grid-cols-2 gap-3 mb-4">
           {['Electroductos', 'Arroyos', 'Canales', 'Restricciones de Vialidad', 'Reservas'].map(restriction => (
-            <label key={restriction} className="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+            <label key={restriction} className="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-700">
               <input 
                 type="checkbox" 
                 checked={(data.landRestrictions || []).includes(restriction)}
                 onChange={() => toggleRestriction(restriction)}
               />
-              <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">{restriction}</span>
+              <span className="text-sm font-semibold text-white">{restriction}</span>
             </label>
           ))}
         </div>
@@ -445,9 +445,9 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
         {/* Custom restrictions list */}
         <div className="space-y-2 mb-3">
           {(data.landRestrictions || []).filter(r => !['Electroductos', 'Arroyos', 'Canales', 'Restricciones de Vialidad', 'Reservas'].includes(r)).map((customRes, idx) => (
-             <div key={idx} className="flex items-center justify-between bg-amber-50 dark:bg-amber-900/10 p-2 rounded border border-amber-100 dark:border-amber-900/30">
-               <span className="text-sm font-medium text-amber-800 dark:text-amber-400">{customRes}</span>
-               <button onClick={() => toggleRestriction(customRes)} className="text-amber-500 hover:text-amber-700">×</button>
+             <div key={idx} className="flex items-center justify-between bg-slate-700 p-2 rounded border border-slate-600">
+               <span className="text-sm font-medium text-white">{customRes}</span>
+               <button onClick={() => toggleRestriction(customRes)} className="text-slate-400 hover:text-white">×</button>
              </div>
           ))}
         </div>
@@ -459,11 +459,11 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
             value={customRestriction}
             onChange={(e) => setCustomRestriction(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && addCustomRestriction()}
-            className="flex-1 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-amber-500"
+            className="flex-1 bg-slate-700 border border-slate-600 rounded p-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500"
           />
           <button 
             onClick={addCustomRestriction}
-            className="px-3 py-2 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 font-bold text-sm rounded hover:bg-amber-200 transition-colors"
+            className="px-3 py-2 bg-indigo-600 text-white font-bold text-sm rounded hover:bg-indigo-500 transition-colors"
           >
             Agregar
           </button>
@@ -471,12 +471,12 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
       </div>
 
       {/* Condiciones Ambientales */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
-        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2 mb-4">
+      <div className="bg-slate-800 border border-slate-700 rounded-lg p-4 shadow-sm">
+        <h4 className="text-xs font-bold text-white uppercase flex items-center gap-2 mb-4">
           <Layers className="w-4 h-4 text-emerald-500" /> Condiciones Ambientales (Art. 87-90)
         </h4>
         <div className="space-y-3">
-          <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
+          <label className="flex items-start gap-3 cursor-pointer p-2 rounded hover:bg-slate-700">
             <input 
               type="checkbox" 
               className="mt-1"
@@ -484,20 +484,20 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
               onChange={(e) => handleChange('nearIndustry', e.target.checked)} 
             />
             <div>
-              <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Próximo a Industrias</p>
-              <p className="text-xs text-gray-500">Requiere evaluación de impacto industrial.</p>
+              <p className="text-sm font-semibold text-white">Próximo a Industrias</p>
+              <p className="text-xs text-slate-400">Requiere evaluación de impacto industrial.</p>
             </div>
           </label>
-          <label className="flex flex-col gap-1 p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-900/50">
-            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Pasivos Ambientales / Cavas</span>
+          <label className="flex flex-col gap-1 p-2 rounded hover:bg-slate-700">
+            <span className="text-sm font-semibold text-white">Pasivos Ambientales / Cavas</span>
             <select 
               value={data.pasivosAmbientales || 'ninguno'} 
               onChange={(e) => handleChange('pasivosAmbientales', e.target.value)}
-              className="mt-1 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded p-1.5 text-sm"
+              className="mt-1 bg-slate-800 border border-slate-700 rounded p-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
-              <option value="ninguno">Ninguno</option>
-              <option value="proximo">Próximo al loteo (evaluación individualizada)</option>
-              <option value="dentro">Dentro del loteo (remediación obligatoria Ley 14.343)</option>
+              <option value="ninguno" className="bg-slate-800 text-white">Ninguno</option>
+              <option value="proximo" className="bg-slate-800 text-white">Próximo al loteo (evaluación individualizada)</option>
+              <option value="dentro" className="bg-slate-800 text-white">Dentro del loteo (remediación obligatoria Ley 14.343)</option>
             </select>
           </label>
         </div>

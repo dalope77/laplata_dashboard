@@ -10,6 +10,7 @@ import { generateDevelopmentReport } from '../utils/pdfExport';
 import { supabase } from '../lib/supabase';
 import type { UrbanDevelopment } from '../types/development';
 import { getProceduresForType } from '../data/procedureTemplates';
+import { calculateDynamicValues } from '../utils/financials';
 import { X, ChevronRight } from 'lucide-react';
 
 export function DevelopmentViewer() {
@@ -628,9 +629,25 @@ export function DevelopmentViewer() {
               <h2 className="text-xl font-bold text-amber-800 dark:text-amber-400 flex items-center gap-2">
                 📋 Listado a Presupuestar (Ordenanza 12.638)
               </h2>
-              <button onClick={() => setIsBudgetModalOpen(false)} className="text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-lg">
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-4">
+                <div className="text-right flex gap-3 text-xs hidden sm:flex">
+                  <div className="bg-white dark:bg-gray-800 px-3 py-1.5 rounded shadow-sm border border-amber-200 dark:border-amber-900/50">
+                    <span className="text-gray-500 font-semibold block text-[9px] uppercase">Total Cesiones</span>
+                    <span className="text-indigo-700 dark:text-indigo-400 font-bold">
+                      {developments.filter(d => d.inBudgetList).reduce((acc, dev) => acc + calculateDynamicValues(dev, marketPoints).cessionsSqM, 0).toLocaleString('es-AR')} m²
+                    </span>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 px-3 py-1.5 rounded shadow-sm border border-amber-200 dark:border-amber-900/50">
+                    <span className="text-gray-500 font-semibold block text-[9px] uppercase">Total Plusvalía</span>
+                    <span className="text-emerald-700 dark:text-emerald-400 font-bold">
+                      USD {developments.filter(d => d.inBudgetList).reduce((acc, dev) => acc + calculateDynamicValues(dev, marketPoints).plusvalia, 0).toLocaleString('es-AR')}
+                    </span>
+                  </div>
+                </div>
+                <button onClick={() => setIsBudgetModalOpen(false)} className="text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-lg">
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
             <div className="p-6 overflow-y-auto flex-1 bg-gray-50 dark:bg-gray-900/50">
               {['A', 'B', 'C', 'D', 'E', 'inviable', 'none'].map((caso) => {
@@ -649,26 +666,45 @@ export function DevelopmentViewer() {
 
                 return (
                   <div key={caso} className="mb-6">
-                    <h3 className="text-md font-bold text-gray-800 dark:text-gray-200 mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">
-                      {caseNames[caso]}
-                    </h3>
+                    <div className="flex justify-between items-end mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">
+                      <h3 className="text-md font-bold text-gray-800 dark:text-gray-200">
+                        {caseNames[caso]}
+                      </h3>
+                      <div className="text-right flex gap-2 text-[11px]">
+                        <span className="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 px-2 py-1 rounded font-bold border border-indigo-100 dark:border-indigo-800">
+                          Total Cesiones: {devsInCase.reduce((acc, dev) => acc + calculateDynamicValues(dev, marketPoints).cessionsSqM, 0).toLocaleString('es-AR')} m²
+                        </span>
+                        <span className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 px-2 py-1 rounded font-bold border border-emerald-100 dark:border-emerald-800">
+                          Total Plusvalía: USD {devsInCase.reduce((acc, dev) => acc + calculateDynamicValues(dev, marketPoints).plusvalia, 0).toLocaleString('es-AR')}
+                        </span>
+                      </div>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {devsInCase.map(dev => (
-                        <div key={dev.id} className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm flex justify-between items-center">
-                          <div>
-                            <p className="font-bold text-sm text-gray-900 dark:text-gray-100">{dev.name}</p>
-                            <p className="text-xs text-gray-500">{dev.technicalData.totalAreaSqM.toLocaleString('es-AR')} m² • {dev.technicalData.parcels.length} parcelas</p>
+                      {devsInCase.map(dev => {
+                        const fin = calculateDynamicValues(dev, marketPoints);
+                        return (
+                          <div key={dev.id} className="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col gap-2">
+                            <div className="flex justify-between items-start">
+                              <div>
+                                <p className="font-bold text-sm text-gray-900 dark:text-gray-100">{dev.name}</p>
+                                <p className="text-xs text-gray-500">{dev.technicalData.totalAreaSqM.toLocaleString('es-AR')} m² • {dev.technicalData.parcels.length} parcelas</p>
+                              </div>
+                              <button 
+                                onClick={() => {
+                                  handleUpdateDevelopment({ ...dev, inBudgetList: false });
+                                }}
+                                className="text-xs text-red-500 hover:text-red-700 bg-red-50 dark:bg-red-900/10 px-2 py-1 rounded transition-colors"
+                              >
+                                Quitar
+                              </button>
+                            </div>
+                            <div className="flex justify-between text-[11px] mt-1 pt-2 border-t border-gray-100 dark:border-gray-700">
+                              <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Cesiones: {fin.cessionsSqM.toLocaleString('es-AR')} m²</span>
+                              <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Plusvalía: USD {fin.plusvalia.toLocaleString('es-AR')}</span>
+                            </div>
                           </div>
-                          <button 
-                            onClick={() => {
-                              handleUpdateDevelopment({ ...dev, inBudgetList: false });
-                            }}
-                            className="text-xs text-red-500 hover:text-red-700 bg-red-50 dark:bg-red-900/10 px-2 py-1 rounded"
-                          >
-                            Quitar
-                          </button>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { UrbanDevelopment } from "../../types/development";
-import { Scale, FileWarning, CheckCircle2, Loader2, Map as MapIcon, ChevronDown, ChevronUp, Info } from "lucide-react";
+import { Scale, FileWarning, CheckCircle2, Loader2, Map as MapIcon, ChevronDown, ChevronUp, Info, ExternalLink } from "lucide-react";
 
 interface Props {
   development: UrbanDevelopment;
@@ -356,12 +356,32 @@ export function NormativeEngine({ development }: Props) {
               {expandedRule === '12692' && (
                 <div className={`mt-3 pt-3 border-t text-xs ${isBannedZone ? 'border-red-200/50 text-red-800' : 'border-green-200/50 text-green-800'}`}>
                   <h5 className="font-bold mb-2 flex items-center gap-1.5"><Info className="w-3.5 h-3.5" /> Criterios y Reglas a cumplir:</h5>
-                  <ul className="list-disc pl-5 space-y-1">
+                  <ul className="list-disc pl-5 space-y-1 mb-3">
                     <li><strong>Prohibición en Casco Urbano:</strong> No se autorizan nuevos barrios cerrados dentro del perímetro urbano consolidado.</li>
                     <li><strong>Áreas Permitidas:</strong> Solo se permiten en áreas periurbanas o rurales con parcelas mayores a determinados m2.</li>
                     <li><strong>Cesiones Obligatorias:</strong> Se requiere cesión de tierras para espacios verdes y equipamiento comunitario (mín. 10%).</li>
                     <li><strong>Plusvalía Urbana:</strong> Todo loteo que requiera re-zonificación abonará un porcentaje del diferencial de valor (Plusvalía).</li>
                   </ul>
+                  
+                  <h5 className="font-bold mb-2 flex items-center gap-1.5 pt-2 border-t border-black/10"><ExternalLink className="w-3.5 h-3.5" /> Documentación Oficial:</h5>
+                  <div className="grid grid-cols-1 gap-2 pl-1">
+                    <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/1_Ordenanza_12692.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">Ordenanza N.° 12.692/25</a>
+                    <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/anexo_1cartografia.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">Anexo 1 - Cartografía núcleo normativo y estratégico</a>
+                    <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/anexo_2.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">Anexo 2 - Operaciones estructurales</a>
+                    <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/anexo_3_codigo.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">Anexo 3 - Código de ordenamiento territorial</a>
+                    <div className="pl-4 space-y-1 mt-1 border-l-2 border-black/10 ml-1">
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/1_plano_de_delimitacion_de_areas.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline block">1. Plano de delimitación de áreas</a>
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/2_plano_de_zonificacion.pdf?v=02" target="_blank" rel="noopener noreferrer" className="hover:underline block">2. Plano de zonificación</a>
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/3_fichas_de_zona_del_area_urbana.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline block">3. Fichas de zonas de área urbana</a>
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/4_fichas_de_zona_aerea_complementaria.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline block">4. Fichas de zonas de área complementaria</a>
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/5_fichas_de_zona_area_rural.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline block">5. Fichas de zonas de área rural</a>
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/6_tabla_sintesis_de_indicadores.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline block">6. Tabla síntesis de indicadores</a>
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/7_tabla_sintesis_usos_del_suelo.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline block">7. Tabla síntesis de usos del suelo</a>
+                      <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/8_plano_de_determinacion_de_distritos.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline block">8. Planos de determinación de distritos</a>
+                    </div>
+                    <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/anexo_4.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1 mt-1">Anexo 4 - Instrumentos de gestión, financiamiento y participación</a>
+                    <a href="https://cam.laplata.gob.ar/plan-ordenamiento-territorial/anexo_5.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">Anexo 5 - Régimen de fiscalización, control y sanción</a>
+                  </div>
                 </div>
               )}
             </div>

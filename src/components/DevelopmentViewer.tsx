@@ -8,7 +8,7 @@ import { TechnicalSheet } from './Development/TechnicalSheet';
 import { mockDevelopments } from '../data/mockDevelopments';
 import { generateDevelopmentReport } from '../utils/pdfExport';
 import { supabase } from '../lib/supabase';
-import type { UrbanDevelopment } from '../types/development';
+import type { UrbanDevelopment, PropertyOffer } from '../types/development';
 import { getProceduresForType } from '../data/procedureTemplates';
 import { calculateDynamicValues } from '../utils/financials';
 import { X, ChevronRight } from 'lucide-react';
@@ -23,6 +23,7 @@ export function DevelopmentViewer() {
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
   const [isParcelPickMode, setIsParcelPickMode] = useState(false);
+  const [showIncludedParcels, setShowIncludedParcels] = useState(false);
   const [marketPoints, setMarketPoints] = useState<any[]>([]);
   const [isAddingMarketPoint, setIsAddingMarketPoint] = useState(false);
   const [pendingMarketPoint, setPendingMarketPoint] = useState<{lat: number, lng: number} | null>(null);
@@ -258,6 +259,50 @@ export function DevelopmentViewer() {
     });
   };
 
+  const handleRemoveLastPoint = () => {
+    if (!selectedDevelopment) return;
+    const currentPoints = selectedDevelopment.technicalData.executedUnitsPoints || [];
+    if (currentPoints.length === 0) return;
+    const newPoints = currentPoints.slice(0, -1);
+    
+    handleUpdateDevelopment({
+      ...selectedDevelopment,
+      technicalData: {
+        ...selectedDevelopment.technicalData,
+        executedUnitsPoints: newPoints,
+        executedUnits: newPoints.length
+      }
+    });
+  };
+
+  const handleClearAllPoints = () => {
+    if (!selectedDevelopment) return;
+    handleUpdateDevelopment({
+      ...selectedDevelopment,
+      technicalData: {
+        ...selectedDevelopment.technicalData,
+        executedUnitsPoints: [],
+        executedUnits: 0
+      }
+    });
+  };
+
+  const handleAddOffer = (newOffer: PropertyOffer) => {
+    if (!selectedDevelopment) return;
+    const currentOffers = selectedDevelopment.offers || [];
+    handleUpdateDevelopment({
+      ...selectedDevelopment,
+      offers: [newOffer, ...currentOffers]
+    });
+  };
+
+  const handleSelectDevelopment = (dev: UrbanDevelopment | null) => {
+    setSelectedDevelopment(dev);
+    setIsDrawingMode(false);
+    setIsParcelPickMode(false);
+    setShowIncludedParcels(false);
+  };
+
   const handleMapClickMarket = (lat: number, lng: number) => {
     if (!isAddingMarketPoint || !selectedDevelopment) return;
     setPendingMarketPoint({ lat, lng });
@@ -330,7 +375,7 @@ export function DevelopmentViewer() {
       <div className="w-full md:w-[350px] shrink-0 z-10 shadow-lg">
         <DevelopmentDirectory 
           developments={developments}
-          onSelect={setSelectedDevelopment}
+          onSelect={handleSelectDevelopment}
           selectedId={selectedDevelopment?.id}
           marketPoints={marketPoints}
           onOpenBudgetList={() => setIsBudgetModalOpen(true)}
@@ -379,7 +424,7 @@ export function DevelopmentViewer() {
               offers: []
             };
             setDevelopments([newDev, ...developments]);
-            setSelectedDevelopment(newDev);
+            handleSelectDevelopment(newDev);
           }}
         />
       </div>
@@ -389,7 +434,7 @@ export function DevelopmentViewer() {
         <DevelopmentMap 
           developments={developments}
           selectedDevelopment={selectedDevelopment}
-          onSelectDevelopment={setSelectedDevelopment}
+          onSelectDevelopment={handleSelectDevelopment}
           isDrawingMode={isDrawingMode || isAddingMarketPoint}
           onAddPoint={(lat, lng) => {
             if (isAddingMarketPoint) {
@@ -399,9 +444,14 @@ export function DevelopmentViewer() {
             }
           }}
           onRemovePoint={handleRemovePoint}
+          onRemoveLastPoint={handleRemoveLastPoint}
+          onClearAllPoints={handleClearAllPoints}
+          onToggleDrawingMode={() => setIsDrawingMode(false)}
           marketPoints={marketPoints}
           isParcelPickMode={isParcelPickMode}
           onAddParcelFromMap={handleAddParcelFromMap}
+          showIncludedParcels={showIncludedParcels}
+          onToggleShowIncludedParcels={() => setShowIncludedParcels(!showIncludedParcels)}
         />
       </div>
 
@@ -522,11 +572,20 @@ export function DevelopmentViewer() {
                     setIsDrawingMode(!isDrawingMode);
                     setIsParcelPickMode(false);
                   }}
+                  onRemoveLastPoint={handleRemoveLastPoint}
+                  onClearAllPoints={handleClearAllPoints}
                   isParcelPickMode={isParcelPickMode}
                   onToggleParcelPickMode={() => {
-                    setIsParcelPickMode(!isParcelPickMode);
+                    const nextMode = !isParcelPickMode;
+                    setIsParcelPickMode(nextMode);
                     setIsDrawingMode(false);
+                    if (nextMode) {
+                      setShowIncludedParcels(true);
+                    }
                   }}
+                  showIncludedParcels={showIncludedParcels}
+                  onToggleShowIncludedParcels={() => setShowIncludedParcels(!showIncludedParcels)}
+                  onEnableIncludedParcels={() => setShowIncludedParcels(true)}
                 />
               )}
               {activeTab === 'tramites' && (
@@ -544,6 +603,7 @@ export function DevelopmentViewer() {
                   onToggleAddMarketPoint={() => setIsAddingMarketPoint(!isAddingMarketPoint)}
                   onDeleteComparable={handleDeleteMarketPoint}
                   onDeleteOffer={handleDeleteOffer}
+                  onAddOffer={handleAddOffer}
                 />
               )}
             </div>
@@ -566,66 +626,66 @@ export function DevelopmentViewer() {
         )}
       </div>
 
-      {/* Modal for adding market point */}
+      {/* Modal for adding market point / aviso de oferta (todas las letras en blanco) */}
       {pendingMarketPoint && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center backdrop-blur-sm p-4">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-6 w-full max-w-md border border-gray-200 dark:border-gray-800">
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center backdrop-blur-sm p-4">
+          <div className="bg-slate-900 text-white rounded-2xl shadow-2xl p-6 w-full max-w-md border border-slate-700">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Nueva Publicación Testigo</h3>
-              <button onClick={() => setPendingMarketPoint(null)} className="text-gray-500 hover:text-gray-700">
+              <h3 className="text-lg font-bold text-white">Nuevo Aviso de Oferta / Publicación Testigo</h3>
+              <button onClick={() => setPendingMarketPoint(null)} className="text-white/70 hover:text-white transition-colors">
                 <X className="w-5 h-5" />
               </button>
             </div>
             
             <div className="space-y-4">
               <div>
-                <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Título / Descripción</label>
+                <label className="text-xs font-bold text-white block mb-1">Título / Descripción</label>
                 <input 
                   type="text" 
                   value={newComparableForm.title}
                   onChange={e => setNewComparableForm(prev => ({...prev, title: e.target.value}))}
-                  className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                  className="w-full bg-slate-800 text-white placeholder-slate-400 border border-slate-600 rounded-lg p-2.5 text-sm focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   placeholder="Ej: Lote 1000m2 en Haras"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Precio (USD)</label>
+                  <label className="text-xs font-bold text-white block mb-1">Precio (USD)</label>
                   <input 
                     type="number" 
                     value={newComparableForm.price}
                     onChange={e => setNewComparableForm(prev => ({...prev, price: e.target.value}))}
-                    className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                    className="w-full bg-slate-800 text-white placeholder-slate-400 border border-slate-600 rounded-lg p-2.5 text-sm focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                     placeholder="Ej: 25000"
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Superficie (m²)</label>
+                  <label className="text-xs font-bold text-white block mb-1">Superficie (m²)</label>
                   <input 
                     type="number" 
                     value={newComparableForm.sqm}
                     onChange={e => setNewComparableForm(prev => ({...prev, sqm: e.target.value}))}
-                    className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                    className="w-full bg-slate-800 text-white placeholder-slate-400 border border-slate-600 rounded-lg p-2.5 text-sm focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                     placeholder="Ej: 1000"
                   />
                 </div>
               </div>
               <div>
-                <label className="text-xs font-bold text-gray-700 dark:text-gray-300">Link (Zonaprop/ML)</label>
+                <label className="text-xs font-bold text-white block mb-1">Link (Zonaprop/ML)</label>
                 <input 
                   type="url" 
                   value={newComparableForm.url}
                   onChange={e => setNewComparableForm(prev => ({...prev, url: e.target.value}))}
-                  className="w-full mt-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-indigo-500"
+                  className="w-full bg-slate-800 text-white placeholder-slate-400 border border-slate-600 rounded-lg p-2.5 text-sm focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   placeholder="https://..."
                 />
               </div>
               
               <button 
                 onClick={handleSaveMarketPoint}
-                className="w-full mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-lg transition-colors"
+                className="w-full mt-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-lg transition-colors shadow-lg"
               >
-                Guardar Publicación
+                Guardar Publicación de Oferta
               </button>
             </div>
           </div>

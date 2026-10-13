@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { UrbanDevelopment, DevelopmentType } from "../../types/development";
-import { Layers, Maximize, MapPin, Home, MousePointerClick, Activity, AlertTriangle } from "lucide-react";
+import { Layers, Maximize, MapPin, Home, MousePointerClick, Activity, AlertTriangle, Undo2, Trash2, Eye, EyeOff } from "lucide-react";
 import { getProceduresForType } from "../../data/procedureTemplates";
 
 interface Props {
@@ -8,11 +8,28 @@ interface Props {
   onUpdateDevelopment?: (dev: UrbanDevelopment) => void;
   isDrawingMode?: boolean;
   onToggleDrawingMode?: () => void;
+  onRemoveLastPoint?: () => void;
+  onClearAllPoints?: () => void;
   isParcelPickMode?: boolean;
   onToggleParcelPickMode?: () => void;
+  showIncludedParcels?: boolean;
+  onToggleShowIncludedParcels?: () => void;
+  onEnableIncludedParcels?: () => void;
 }
 
-export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode, onToggleDrawingMode, isParcelPickMode, onToggleParcelPickMode }: Props) {
+export function TechnicalSheet({ 
+  development, 
+  onUpdateDevelopment, 
+  isDrawingMode, 
+  onToggleDrawingMode, 
+  onRemoveLastPoint,
+  onClearAllPoints,
+  isParcelPickMode, 
+  onToggleParcelPickMode,
+  showIncludedParcels,
+  onToggleShowIncludedParcels,
+  onEnableIncludedParcels
+}: Props) {
   const data = development.technicalData;
   const [customRestriction, setCustomRestriction] = useState('');
 
@@ -200,13 +217,13 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
           <div className="bg-emerald-50 dark:bg-emerald-900/30 p-2 rounded-lg text-emerald-600 dark:text-emerald-400">
             <Home className="w-5 h-5" />
           </div>
-          <div>
+          <div className="flex-1">
             <p className="text-xs text-gray-500 font-medium">Viviendas Ejecutadas</p>
-            <div className="flex items-center gap-3 mt-1">
+            <div className="flex flex-wrap items-center gap-2 mt-1.5">
               <span className="text-lg font-bold text-gray-900 dark:text-gray-100">{data.executedUnitsPoints?.length || 0}</span>
               <button 
                 onClick={onToggleDrawingMode}
-                className={`flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-bold transition-colors ${
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-[10px] font-bold transition-colors ${
                   isDrawingMode 
                     ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 hover:bg-red-200' 
                     : 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400 hover:bg-indigo-200'
@@ -215,6 +232,28 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
                 <MousePointerClick className="w-3.5 h-3.5" />
                 {isDrawingMode ? 'Terminar Edición' : '📍 Marcar en Mapa'}
               </button>
+              {(data.executedUnitsPoints?.length || 0) > 0 && (
+                <>
+                  <button
+                    onClick={onRemoveLastPoint}
+                    className="flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400 hover:bg-amber-100 border border-amber-200 dark:border-amber-800 transition-colors"
+                    title="Borrar último punto de vivienda"
+                  >
+                    <Undo2 className="w-3 h-3" /> Borrar última
+                  </button>
+                  <button
+                    onClick={() => {
+                      if (window.confirm("¿Seguro que deseas borrar todas las viviendas marcadas de este barrio?")) {
+                        if (onClearAllPoints) onClearAllPoints();
+                      }
+                    }}
+                    className="flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-400 hover:bg-red-100 border border-red-200 dark:border-red-800 transition-colors"
+                    title="Borrar todas las viviendas marcadas"
+                  >
+                    <Trash2 className="w-3 h-3" /> Borrar todas
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -243,12 +282,26 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
 
       {/* Parcelas */}
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
           <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2">
             <MapPin className="w-4 h-4 text-indigo-500" /> Nomenclaturas Catastrales
           </h4>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap items-center gap-1.5">
             <button 
+              type="button"
+              onClick={onToggleShowIncludedParcels}
+              className={`text-[10px] flex items-center gap-1 font-bold px-2 py-1 rounded transition-colors ${
+                showIncludedParcels 
+                  ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 hover:bg-blue-200' 
+                  : 'text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+              title={showIncludedParcels ? "Apagar capa de parcelas incluidas en el mapa" : "Prender capa de parcelas incluidas en el mapa"}
+            >
+              {showIncludedParcels ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+              {showIncludedParcels ? 'Capa Parcelas ON' : 'Capa Parcelas OFF'}
+            </button>
+            <button 
+              type="button"
               onClick={onToggleParcelPickMode}
               className={`text-[10px] flex items-center gap-1 font-bold px-2 py-1 rounded transition-colors ${
                 isParcelPickMode 
@@ -260,9 +313,11 @@ export function TechnicalSheet({ development, onUpdateDevelopment, isDrawingMode
               {isParcelPickMode ? 'Terminar Selección' : '📍 Seleccionar en Mapa'}
             </button>
             <button 
+              type="button"
               onClick={() => {
                 const newParcels = [...data.parcels, 'Nueva Parcela'];
                 handleChange('parcels', newParcels);
+                if (onEnableIncludedParcels) onEnableIncludedParcels();
               }}
               className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded hover:bg-indigo-100"
             >

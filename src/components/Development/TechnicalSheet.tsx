@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { UrbanDevelopment, DevelopmentType } from "../../types/development";
-import { Layers, Maximize, MapPin, Home, MousePointerClick, Activity, AlertTriangle, Undo2, Trash2, Eye, EyeOff } from "lucide-react";
+import { Layers, Maximize, MapPin, Home, MousePointerClick, Activity, AlertTriangle, Undo2, Trash2, Eye, EyeOff, Edit3 } from "lucide-react";
 import { getProceduresForType } from "../../data/procedureTemplates";
 
 interface Props {
@@ -15,6 +15,9 @@ interface Props {
   showIncludedParcels?: boolean;
   onToggleShowIncludedParcels?: () => void;
   onEnableIncludedParcels?: () => void;
+  isEditingPolygon?: boolean;
+  onToggleEditingPolygon?: () => void;
+  onRecalculateAreaFromPolygon?: () => void;
 }
 
 export function TechnicalSheet({ 
@@ -22,13 +25,16 @@ export function TechnicalSheet({
   onUpdateDevelopment, 
   isDrawingMode, 
   onToggleDrawingMode, 
-  onRemoveLastPoint,
+  onRemoveLastPoint, 
   onClearAllPoints,
   isParcelPickMode, 
   onToggleParcelPickMode,
   showIncludedParcels,
   onToggleShowIncludedParcels,
-  onEnableIncludedParcels
+  onEnableIncludedParcels,
+  isEditingPolygon,
+  onToggleEditingPolygon,
+  onRecalculateAreaFromPolygon
 }: Props) {
   const data = development.technicalData;
   const [customRestriction, setCustomRestriction] = useState('');
@@ -201,19 +207,49 @@ export function TechnicalSheet({
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        {/* Superficie Total */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex items-start gap-3 shadow-sm">
-          <div className="bg-indigo-50 dark:bg-indigo-900/30 p-2 rounded-lg text-indigo-600 dark:text-indigo-400">
-            <Maximize className="w-5 h-5" />
+        {/* Superficie Total & Polígono */}
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col justify-between shadow-sm">
+          <div className="flex items-start gap-3">
+            <div className="bg-indigo-50 dark:bg-indigo-900/30 p-2 rounded-lg text-indigo-600 dark:text-indigo-400 shrink-0">
+              <Maximize className="w-5 h-5" />
+            </div>
+            <div className="flex-1">
+              <div className="flex justify-between items-baseline">
+                <p className="text-xs text-gray-500 font-medium">Superficie Terreno (m²)</p>
+                <span className="text-[10px] font-semibold text-gray-400">
+                  {development.polygon?.length || 0} vértices
+                </span>
+              </div>
+              <input 
+                type="number" 
+                value={data.totalAreaSqM} 
+                onChange={(e) => handleChange('totalAreaSqM', Number(e.target.value))}
+                className="mt-1 w-full text-lg font-bold text-gray-900 dark:text-gray-100 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
+              />
+            </div>
           </div>
-          <div>
-            <p className="text-xs text-gray-500 font-medium">Superficie Terreno (m²)</p>
-            <input 
-              type="number" 
-              value={data.totalAreaSqM} 
-              onChange={(e) => handleChange('totalAreaSqM', Number(e.target.value))}
-              className="mt-1 w-full text-lg font-bold text-gray-900 dark:text-gray-100 bg-transparent border-b border-dashed border-gray-300 dark:border-gray-600 focus:outline-none focus:border-indigo-500"
-            />
+
+          <div className="flex flex-wrap items-center gap-1.5 mt-3 pt-2 border-t border-gray-100 dark:border-gray-700/60">
+            <button 
+              onClick={onToggleEditingPolygon}
+              className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-[10px] font-bold transition-colors ${
+                isEditingPolygon 
+                  ? 'bg-emerald-600 text-white hover:bg-emerald-500 shadow-sm' 
+                  : 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 hover:bg-indigo-200'
+              }`}
+            >
+              <Edit3 className="w-3.5 h-3.5" />
+              {isEditingPolygon ? 'Listo (guardar)' : ((development.polygon?.length || 0) >= 3 ? 'Modificar Polígono' : '✏️ Trazar en Mapa')}
+            </button>
+            {onRecalculateAreaFromPolygon && (development.polygon?.length || 0) >= 3 && (
+              <button
+                onClick={onRecalculateAreaFromPolygon}
+                className="flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600 border border-slate-300 dark:border-slate-600 transition-colors"
+                title="Recalcular superficie exacta en m² a partir del polígono"
+              >
+                📐 Recalcular m²
+              </button>
+            )}
           </div>
         </div>
 

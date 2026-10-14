@@ -11,6 +11,7 @@ import { supabase } from '../lib/supabase';
 import type { UrbanDevelopment, PropertyOffer } from '../types/development';
 import { getProceduresForType } from '../data/procedureTemplates';
 import { calculateDynamicValues } from '../utils/financials';
+import { calculatePolygonAreaSqM } from '../utils/geometry';
 import { X, ChevronRight } from 'lucide-react';
 
 export function DevelopmentViewer() {
@@ -23,6 +24,7 @@ export function DevelopmentViewer() {
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
   const [isParcelPickMode, setIsParcelPickMode] = useState(false);
+  const [isEditingPolygon, setIsEditingPolygon] = useState(false);
   const [showIncludedParcels, setShowIncludedParcels] = useState(false);
   const [marketPoints, setMarketPoints] = useState<any[]>([]);
   const [isAddingMarketPoint, setIsAddingMarketPoint] = useState(false);
@@ -296,11 +298,48 @@ export function DevelopmentViewer() {
     });
   };
 
+  const handleUpdatePolygon = (newPoly: Array<{ lat: number; lng: number }>) => {
+    if (!selectedDevelopment) return;
+    const calculatedArea = calculatePolygonAreaSqM(newPoly);
+    handleUpdateDevelopment({
+      ...selectedDevelopment,
+      polygon: newPoly,
+      technicalData: {
+        ...selectedDevelopment.technicalData,
+        totalAreaSqM: calculatedArea > 0 ? calculatedArea : selectedDevelopment.technicalData.totalAreaSqM
+      }
+    });
+  };
+
+  const handleRecalculateAreaFromPolygon = () => {
+    if (!selectedDevelopment || !selectedDevelopment.polygon || selectedDevelopment.polygon.length < 3) return;
+    const calculatedArea = calculatePolygonAreaSqM(selectedDevelopment.polygon);
+    if (calculatedArea > 0) {
+      handleUpdateDevelopment({
+        ...selectedDevelopment,
+        technicalData: {
+          ...selectedDevelopment.technicalData,
+          totalAreaSqM: calculatedArea
+        }
+      });
+    }
+  };
+
+  const handleToggleEditingPolygon = () => {
+    const next = !isEditingPolygon;
+    setIsEditingPolygon(next);
+    if (next) {
+      setIsDrawingMode(false);
+      setIsParcelPickMode(false);
+    }
+  };
+
   const handleSelectDevelopment = (dev: UrbanDevelopment | null) => {
     setSelectedDevelopment(dev);
     setIsDrawingMode(false);
     setIsParcelPickMode(false);
     setShowIncludedParcels(false);
+    setIsEditingPolygon(false);
   };
 
   const handleMapClickMarket = (lat: number, lng: number) => {
@@ -425,6 +464,7 @@ export function DevelopmentViewer() {
             };
             setDevelopments([newDev, ...developments]);
             handleSelectDevelopment(newDev);
+            setIsEditingPolygon(true);
           }}
         />
       </div>
@@ -452,6 +492,13 @@ export function DevelopmentViewer() {
           onAddParcelFromMap={handleAddParcelFromMap}
           showIncludedParcels={showIncludedParcels}
           onToggleShowIncludedParcels={() => setShowIncludedParcels(!showIncludedParcels)}
+          isEditingPolygon={isEditingPolygon}
+          onToggleEditingPolygon={handleToggleEditingPolygon}
+          onUpdatePolygon={handleUpdatePolygon}
+          onStartEditingPolygon={(dev) => {
+            handleSelectDevelopment(dev);
+            setIsEditingPolygon(true);
+          }}
         />
       </div>
 
@@ -571,6 +618,7 @@ export function DevelopmentViewer() {
                   onToggleDrawingMode={() => {
                     setIsDrawingMode(!isDrawingMode);
                     setIsParcelPickMode(false);
+                    setIsEditingPolygon(false);
                   }}
                   onRemoveLastPoint={handleRemoveLastPoint}
                   onClearAllPoints={handleClearAllPoints}
@@ -579,6 +627,7 @@ export function DevelopmentViewer() {
                     const nextMode = !isParcelPickMode;
                     setIsParcelPickMode(nextMode);
                     setIsDrawingMode(false);
+                    setIsEditingPolygon(false);
                     if (nextMode) {
                       setShowIncludedParcels(true);
                     }
@@ -586,6 +635,9 @@ export function DevelopmentViewer() {
                   showIncludedParcels={showIncludedParcels}
                   onToggleShowIncludedParcels={() => setShowIncludedParcels(!showIncludedParcels)}
                   onEnableIncludedParcels={() => setShowIncludedParcels(true)}
+                  isEditingPolygon={isEditingPolygon}
+                  onToggleEditingPolygon={handleToggleEditingPolygon}
+                  onRecalculateAreaFromPolygon={handleRecalculateAreaFromPolygon}
                 />
               )}
               {activeTab === 'tramites' && (

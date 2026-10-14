@@ -32,6 +32,11 @@ export function TechnicalSheet({
 }: Props) {
   const data = development.technicalData;
   const [customRestriction, setCustomRestriction] = useState('');
+  const [selectedParcelIndices, setSelectedParcelIndices] = useState<number[]>([]);
+
+  useEffect(() => {
+    setSelectedParcelIndices([]);
+  }, [development.id]);
 
   const handleChange = (field: keyof typeof data, value: any) => {
     if (!onUpdateDevelopment) return;
@@ -283,9 +288,14 @@ export function TechnicalSheet({
       {/* Parcelas */}
       <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-          <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-indigo-500" /> Nomenclaturas Catastrales
-          </h4>
+          <div className="flex items-center gap-2">
+            <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-indigo-500" /> Nomenclaturas Catastrales
+            </h4>
+            <span className="text-[10px] font-bold text-gray-500 bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded-full">
+              {data.parcels.length}
+            </span>
+          </div>
           <div className="flex flex-wrap items-center gap-1.5">
             <button 
               type="button"
@@ -325,11 +335,84 @@ export function TechnicalSheet({
             </button>
           </div>
         </div>
+
+        {/* Barra de Selección para Eliminar en Lote */}
+        {data.parcels.length > 0 && (
+          <div className="flex items-center justify-between bg-gray-50 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-700/60 rounded px-2.5 py-1.5 mb-2.5 text-xs">
+            <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-300 font-medium select-none">
+              <input 
+                type="checkbox"
+                checked={selectedParcelIndices.length === data.parcels.length && data.parcels.length > 0}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setSelectedParcelIndices(data.parcels.map((_, i) => i));
+                  } else {
+                    setSelectedParcelIndices([]);
+                  }
+                }}
+                className="w-3.5 h-3.5 text-indigo-600 rounded border-gray-300 dark:border-gray-600 focus:ring-indigo-500 cursor-pointer"
+              />
+              <span className="text-[11px] font-semibold">
+                {selectedParcelIndices.length === data.parcels.length ? 'Deseleccionar todas' : 'Seleccionar todas'}
+              </span>
+            </label>
+
+            <div className="flex items-center gap-1.5">
+              {selectedParcelIndices.length > 0 ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    const count = selectedParcelIndices.length;
+                    if (window.confirm(`¿Seguro que deseas eliminar ${count === data.parcels.length ? 'TODAS las' : count} parcela(s) seleccionada(s)?`)) {
+                      const newParcels = data.parcels.filter((_, i) => !selectedParcelIndices.includes(i));
+                      handleChange('parcels', newParcels);
+                      setSelectedParcelIndices([]);
+                    }
+                  }}
+                  className="flex items-center gap-1 px-2.5 py-1 bg-red-100 hover:bg-red-200 dark:bg-red-900/40 dark:hover:bg-red-900/60 text-red-700 dark:text-red-300 rounded text-[11px] font-bold transition-colors shadow-sm"
+                >
+                  <Trash2 className="w-3 h-3" />
+                  Eliminar seleccionadas ({selectedParcelIndices.length})
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (window.confirm("¿Seguro que deseas eliminar todas las nomenclaturas catastrales de este barrio?")) {
+                      handleChange('parcels', []);
+                      setSelectedParcelIndices([]);
+                    }
+                  }}
+                  className="flex items-center gap-1 px-2 py-0.5 text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 text-[10px] font-semibold hover:bg-red-50 dark:hover:bg-red-900/20 rounded transition-colors"
+                  title="Eliminar todas las parcelas registradas"
+                >
+                  <Trash2 className="w-3 h-3" />
+                  Eliminar todas
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className="flex flex-col gap-2">
           {data.parcels.map((parcel, idx) => {
             const cleanParcel = parcel.replace('Nomenclatura: ', '').trim();
+            const isSelected = selectedParcelIndices.includes(idx);
             return (
-              <div key={idx} className="flex items-center gap-2">
+              <div key={idx} className={`flex items-center gap-2 p-1 rounded transition-colors ${isSelected ? 'bg-indigo-50/70 dark:bg-indigo-950/30 ring-1 ring-indigo-200 dark:ring-indigo-800' : ''}`}>
+                <input 
+                  type="checkbox"
+                  checked={isSelected}
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setSelectedParcelIndices(prev => [...prev, idx]);
+                    } else {
+                      setSelectedParcelIndices(prev => prev.filter(i => i !== idx));
+                    }
+                  }}
+                  className="w-3.5 h-3.5 text-indigo-600 rounded border-gray-300 dark:border-gray-600 focus:ring-indigo-500 cursor-pointer"
+                  title="Seleccionar parcela"
+                />
                 <input 
                   type="text"
                   value={cleanParcel}
@@ -344,9 +427,10 @@ export function TechnicalSheet({
                   onClick={() => {
                     const newParcels = data.parcels.filter((_, i) => i !== idx);
                     handleChange('parcels', newParcels);
+                    setSelectedParcelIndices(prev => prev.filter(i => i !== idx).map(i => i > idx ? i - 1 : i));
                   }}
                   className="text-red-500 hover:text-red-700 p-1"
-                  title="Eliminar"
+                  title="Eliminar esta parcela"
                 >
                   ×
                 </button>

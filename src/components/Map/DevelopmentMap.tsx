@@ -26,6 +26,7 @@ interface DevelopmentMapProps {
   onToggleEditingPolygon?: () => void;
   onUpdatePolygon?: (newPolygon: Array<{ lat: number; lng: number }>) => void;
   onStartEditingPolygon?: (dev: UrbanDevelopment) => void;
+  onDeleteDevelopment?: (id: string, name: string) => void;
 }
 
 const WMS_URBASIG = "https://urbasig.mgob.gba.gob.ar/geoserver/urbasig/wms";
@@ -121,7 +122,8 @@ export function DevelopmentMap({
   isEditingPolygon = false,
   onToggleEditingPolygon,
   onUpdatePolygon,
-  onStartEditingPolygon
+  onStartEditingPolygon,
+  onDeleteDevelopment
 }: DevelopmentMapProps) {
   // Use the first development's first coordinate as center, or default to La Plata
   const centerCoord = developments[0]?.polygon[0] || { lat: -34.9205, lng: -57.9536 };
@@ -479,6 +481,14 @@ export function DevelopmentMap({
                     >
                       <Edit3 className="w-3 h-3" /> Modificar Polígono
                     </button>
+                    {onDeleteDevelopment && (
+                      <button 
+                        onClick={() => onDeleteDevelopment(dev.id, dev.name)}
+                        className="w-full bg-red-50 hover:bg-red-100 dark:bg-red-950/40 dark:hover:bg-red-900/50 text-red-600 dark:text-red-400 text-xs font-semibold py-1 rounded transition-colors flex items-center justify-center gap-1 border border-red-200 dark:border-red-900/50"
+                      >
+                        <Trash2 className="w-3 h-3" /> Eliminar Loteo
+                      </button>
+                    )}
                   </div>
                 </div>
               </Popup>

@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import type { UrbanDevelopment } from '../../types/development';
-import { Search, TrendingUp, MapPin } from 'lucide-react';
+import { Search, TrendingUp, MapPin, Trash2 } from 'lucide-react';
 import { calculateDynamicValues } from '../../utils/financials';
 
 interface Props {
@@ -10,9 +10,10 @@ interface Props {
   marketPoints?: any[];
   onAddDevelopment?: () => void;
   onOpenBudgetList?: () => void;
+  onDeleteDevelopment?: (id: string, name: string) => void;
 }
 
-export function DevelopmentDirectory({ developments, onSelect, selectedId, marketPoints = [], onAddDevelopment, onOpenBudgetList }: Props) {
+export function DevelopmentDirectory({ developments, onSelect, selectedId, marketPoints = [], onAddDevelopment, onOpenBudgetList, onDeleteDevelopment }: Props) {
   const [searchTerm, setSearchTerm] = useState('');
   
   // Filters
@@ -210,18 +211,32 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
           <div 
             key={dev.id}
             onClick={() => onSelect(dev)}
-            className={`p-3 rounded-lg border cursor-pointer transition-all ${
+            className={`group p-3 rounded-lg border cursor-pointer transition-all ${
               selectedId === dev.id 
                 ? 'bg-indigo-50 border-indigo-300 dark:bg-indigo-900/20 dark:border-indigo-700' 
                 : 'bg-white border-gray-200 hover:border-indigo-300 hover:shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:hover:border-indigo-600'
             }`}
           >
             <div className="flex justify-between items-start mb-1">
-              <h3 className="font-bold text-sm text-gray-900 dark:text-gray-100">{dev.name}</h3>
-              <div className={`w-2 h-2 rounded-full mt-1.5 shrink-0 ${
-                dev.complianceStatus === 'rojo' ? 'bg-red-500' : 
-                dev.complianceStatus === 'amarillo' ? 'bg-yellow-500' : 'bg-green-500'
-              }`} />
+              <h3 className="font-bold text-sm text-gray-900 dark:text-gray-100 flex-1 pr-2">{dev.name}</h3>
+              <div className="flex items-center gap-1.5 shrink-0">
+                {onDeleteDevelopment && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onDeleteDevelopment(dev.id, dev.name);
+                    }}
+                    className="opacity-0 group-hover:opacity-100 p-1 text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/40 rounded transition-all"
+                    title={`Eliminar ${dev.name}`}
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                  </button>
+                )}
+                <div className={`w-2 h-2 rounded-full ${
+                  dev.complianceStatus === 'rojo' ? 'bg-red-500' : 
+                  dev.complianceStatus === 'amarillo' ? 'bg-yellow-500' : 'bg-green-500'
+                }`} />
+              </div>
             </div>
             
             <div className="flex flex-wrap gap-1 mt-2">

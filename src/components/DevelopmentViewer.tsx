@@ -12,14 +12,24 @@ import type { UrbanDevelopment, PropertyOffer } from '../types/development';
 import { getProceduresForType } from '../data/procedureTemplates';
 import { calculateDynamicValues } from '../utils/financials';
 import { calculatePolygonAreaSqM } from '../utils/geometry';
-import { X, ChevronRight } from 'lucide-react';
+import { X, ChevronRight, Trash2 } from 'lucide-react';
 
 export function DevelopmentViewer() {
-  const initialDevelopments = mockDevelopments.map(dev => ({
-    ...dev,
-    procedures: getProceduresForType(dev.type, dev.procedures)
-  }));
-  const [developments, setDevelopments] = useState<UrbanDevelopment[]>(initialDevelopments);
+  const getInitialDevelopments = () => {
+    let localDeleted: string[] = [];
+    try {
+      const stored = localStorage.getItem('laplata_deleted_developments');
+      if (stored) localDeleted = JSON.parse(stored);
+    } catch (e) {}
+    const deletedSet = new Set(localDeleted);
+    return mockDevelopments
+      .filter(dev => !deletedSet.has(dev.id))
+      .map(dev => ({
+        ...dev,
+        procedures: getProceduresForType(dev.type, dev.procedures)
+      }));
+  };
+  const [developments, setDevelopments] = useState<UrbanDevelopment[]>(getInitialDevelopments);
   const [selectedDevelopment, setSelectedDevelopment] = useState<UrbanDevelopment | null>(null);
   const [activeTab, setActiveTab] = useState<'ficha' | 'tramites' | 'normativa' | 'finanzas'>('ficha');
   const [isDrawingMode, setIsDrawingMode] = useState(false);
@@ -43,20 +53,35 @@ export function DevelopmentViewer() {
         if (editsError) throw editsError;
 
         if (editsData) {
+          let localDeleted: string[] = [];
+          try {
+            const stored = localStorage.getItem('laplata_deleted_developments');
+            if (stored) localDeleted = JSON.parse(stored);
+          } catch (e) {}
+
+          const deletedSet = new Set([
+            ...localDeleted,
+            ...editsData.filter(e => e.data?.isDeleted).map(e => e.development_id)
+          ]);
+
           const editsMap = new Map(editsData.map(e => [e.development_id, e.data]));
           
-          const baseDevelopments = mockDevelopments.map(dev => {
-            const edit = editsMap.get(dev.id);
-            if (edit) editsMap.delete(dev.id);
-            const merged = edit ? { ...dev, ...edit } : dev;
-            merged.procedures = getProceduresForType(merged.type, merged.procedures);
-            return merged;
-          });
+          const baseDevelopments = mockDevelopments
+            .filter(dev => !deletedSet.has(dev.id))
+            .map(dev => {
+              const edit = editsMap.get(dev.id);
+              if (edit) editsMap.delete(dev.id);
+              const merged = edit ? { ...dev, ...edit } : dev;
+              merged.procedures = getProceduresForType(merged.type, merged.procedures);
+              return merged;
+            });
 
-          const newDevelopments = Array.from(editsMap.values()).map((dev: any) => {
-            dev.procedures = getProceduresForType(dev.type, dev.procedures || []);
-            return dev as UrbanDevelopment;
-          });
+          const newDevelopments = Array.from(editsMap.values())
+            .filter((dev: any) => !dev.isDeleted && !deletedSet.has(dev.id))
+            .map((dev: any) => {
+              dev.procedures = getProceduresForType(dev.type, dev.procedures || []);
+              return dev as UrbanDevelopment;
+            });
 
           setDevelopments([...newDevelopments, ...baseDevelopments]);
         }
@@ -82,6 +107,11 @@ export function DevelopmentViewer() {
         .channel('public:development_edits')
         .on('postgres_changes', { event: '*', schema: 'public', table: 'development_edits' }, (payload: any) => {
           if (payload.new && payload.new.data) {
+            if (payload.new.data.isDeleted) {
+              setDevelopments(prev => prev.filter(dev => dev.id !== payload.new.development_id));
+              setSelectedDevelopment(prev => prev?.id === payload.new.development_id ? null : prev);
+              return;
+            }
             setDevelopments(prev => prev.map(dev => {
               if (dev.id === payload.new.development_id) {
                 const merged = { ...dev, ...payload.new.data };
@@ -407,6 +437,54 @@ export function DevelopmentViewer() {
     });
   };
 
+  const handleDeleteDevelopment = async (devId: string, devName: string) => {
+    const confirmed = window.confirm(`¿Estás seguro de que deseas eliminar el loteo "${devName}"? Esta acción no se puede deshacer.`);
+    if (!confirmed) return;
+
+    // 1. Quitar de la vista inmediatamente
+    setDevelopments(prev => prev.filter(d => d.id !== devId));
+    if (selectedDevelopment?.id === devId) {
+      setSelectedDevelopment(null);
+      setIsEditingPolygon(false);
+      setIsDrawingMode(false);
+      setIsParcelPickMode(false);
+    }
+
+    // 2. Persistir en localStorage
+    try {
+      const stored = localStorage.getItem('laplata_deleted_developments');
+      const list: string[] = stored ? JSON.parse(stored) : [];
+      if (!list.includes(devId)) {
+        list.push(devId);
+        localStorage.setItem('laplata_deleted_developments', JSON.stringify(list));
+      }
+    } catch (e) {
+      console.error('Error guardando loteos eliminados en localStorage:', e);
+    }
+
+    // 3. Persistir en Supabase
+    if (supabase) {
+      try {
+        const { error } = await supabase
+          .from('development_edits')
+          .upsert({
+            development_id: devId,
+            data: { isDeleted: true, name: devName },
+            updated_at: new Date().toISOString()
+          });
+        if (error) throw error;
+
+        // Limpiar comparables de mercado asociados a este loteo
+        await supabase
+          .from('market_comparables')
+          .delete()
+          .eq('development_id', devId);
+      } catch (e) {
+        console.error('Error guardando eliminación en Supabase:', e);
+      }
+    }
+  };
+
   return (
     <div className="relative w-full h-screen flex flex-col md:flex-row overflow-hidden bg-gray-50 dark:bg-gray-900">
       
@@ -418,6 +496,7 @@ export function DevelopmentViewer() {
           selectedId={selectedDevelopment?.id}
           marketPoints={marketPoints}
           onOpenBudgetList={() => setIsBudgetModalOpen(true)}
+          onDeleteDevelopment={handleDeleteDevelopment}
           onAddDevelopment={() => {
             const newDev: UrbanDevelopment = {
               id: crypto.randomUUID(),
@@ -499,6 +578,7 @@ export function DevelopmentViewer() {
             handleSelectDevelopment(dev);
             setIsEditingPolygon(true);
           }}
+          onDeleteDevelopment={handleDeleteDevelopment}
         />
       </div>
 
@@ -578,12 +658,23 @@ export function DevelopmentViewer() {
                   </label>
                 </div>
               </div>
-              <button 
-                onClick={() => setSelectedDevelopment(null)}
-                className="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-1.5">
+                <button 
+                  onClick={() => handleDeleteDevelopment(selectedDevelopment.id, selectedDevelopment.name)}
+                  className="px-2.5 py-1.5 text-red-600 hover:text-red-700 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/40 rounded-lg transition-colors border border-red-200 dark:border-red-900/60 flex items-center gap-1.5 text-xs font-semibold shadow-sm"
+                  title="Eliminar este loteo"
+                >
+                  <Trash2 className="w-3.5 h-3.5" />
+                  <span>Eliminar</span>
+                </button>
+                <button 
+                  onClick={() => setSelectedDevelopment(null)}
+                  className="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                  title="Cerrar panel"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {/* Tabs */}

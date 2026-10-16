@@ -71,7 +71,26 @@ export function DevelopmentViewer() {
             .map(dev => {
               const edit = editsMap.get(dev.id);
               if (edit) editsMap.delete(dev.id);
-              const merged = edit ? { ...dev, ...edit } : dev;
+              const mergeDev = (base: UrbanDevelopment, editData: any): UrbanDevelopment => {
+                if (!editData) return base;
+                return {
+                  ...base,
+                  ...editData,
+                  technicalData: {
+                    ...base.technicalData,
+                    ...(editData.technicalData || {}),
+                    subdivisionState: editData.technicalData?.subdivisionState || base.technicalData?.subdivisionState,
+                    hasSubparcelas: editData.technicalData?.hasSubparcelas ?? base.technicalData?.hasSubparcelas,
+                    parcels: (editData.technicalData?.parcels && editData.technicalData.parcels.length > 0)
+                      ? (base.technicalData?.parcels && base.technicalData.parcels.length > editData.technicalData.parcels.length
+                          ? base.technicalData.parcels
+                          : editData.technicalData.parcels)
+                      : base.technicalData?.parcels || []
+                  }
+                };
+              };
+
+              const merged = edit ? mergeDev(dev, edit) : dev;
               merged.procedures = getProceduresForType(merged.type, merged.procedures);
               return merged;
             });
@@ -112,9 +131,27 @@ export function DevelopmentViewer() {
               setSelectedDevelopment(prev => prev?.id === payload.new.development_id ? null : prev);
               return;
             }
+            const mergeDev = (base: UrbanDevelopment, editData: any): UrbanDevelopment => {
+              return {
+                ...base,
+                ...editData,
+                technicalData: {
+                  ...base.technicalData,
+                  ...(editData.technicalData || {}),
+                  subdivisionState: editData.technicalData?.subdivisionState || base.technicalData?.subdivisionState,
+                  hasSubparcelas: editData.technicalData?.hasSubparcelas ?? base.technicalData?.hasSubparcelas,
+                  parcels: (editData.technicalData?.parcels && editData.technicalData.parcels.length > 0)
+                    ? (base.technicalData?.parcels && base.technicalData.parcels.length > editData.technicalData.parcels.length
+                        ? base.technicalData.parcels
+                        : editData.technicalData.parcels)
+                    : base.technicalData?.parcels || []
+                }
+              };
+            };
+
             setDevelopments(prev => prev.map(dev => {
               if (dev.id === payload.new.development_id) {
-                const merged = { ...dev, ...payload.new.data };
+                const merged = mergeDev(dev, payload.new.data);
                 merged.procedures = getProceduresForType(merged.type, merged.procedures);
                 return merged;
               }
@@ -123,7 +160,7 @@ export function DevelopmentViewer() {
             
             setSelectedDevelopment(prev => {
               if (prev && prev.id === payload.new.development_id) {
-                const merged = { ...prev, ...payload.new.data };
+                const merged = mergeDev(prev, payload.new.data);
                 merged.procedures = getProceduresForType(merged.type, merged.procedures);
                 return merged;
               }

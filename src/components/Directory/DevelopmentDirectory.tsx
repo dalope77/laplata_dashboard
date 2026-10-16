@@ -17,6 +17,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
   const [searchTerm, setSearchTerm] = useState('');
   
   // Filters
+  const [filterSubdivision, setFilterSubdivision] = useState<'all' | 'subdividido' | 'indiviso'>('all');
   const [filterDpout, setFilterDpout] = useState<boolean | null>(null);
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [filterType] = useState<UrbanDevelopment['type'] | 'all'>('all');
@@ -30,6 +31,11 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
       // Name Search
       if (searchTerm && !dev.name.toLowerCase().includes(searchTerm.toLowerCase())) return false;
       
+      // Subdivision Group (> 1 parcela = Subdividido, <= 1 = Indiviso)
+      const isSub = (dev.technicalData?.parcels?.length || 0) > 1;
+      if (filterSubdivision === 'subdividido' && !isSub) return false;
+      if (filterSubdivision === 'indiviso' && isSub) return false;
+
       // DPOUT
       if (filterDpout !== null && dev.technicalData.inDpoutRegistry !== filterDpout) return false;
 
@@ -53,7 +59,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
 
       return true;
     });
-  }, [developments, searchTerm, filterDpout, filterStatus, filterType, filterTerritory, filterLey14449, filterRegularized, filterOrdenanza12638]);
+  }, [developments, searchTerm, filterSubdivision, filterDpout, filterStatus, filterType, filterTerritory, filterLey14449, filterRegularized, filterOrdenanza12638]);
 
   const globalKpis = useMemo(() => {
     let totalCessions = 0;
@@ -130,6 +136,42 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
 
         {/* Filters */}
         <div className="space-y-3">
+          {/* Subdividido vs Indiviso Quick Filter */}
+          <div className="flex items-center gap-1.5 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+            <button
+              onClick={() => setFilterSubdivision('all')}
+              className={`flex-1 py-1 px-2 rounded-md text-xs font-bold transition-all ${
+                filterSubdivision === 'all'
+                  ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+                  : 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+              }`}
+            >
+              Todos ({developments.length})
+            </button>
+            <button
+              onClick={() => setFilterSubdivision(filterSubdivision === 'subdividido' ? 'all' : 'subdividido')}
+              className={`flex-1 py-1 px-2 rounded-md text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+                filterSubdivision === 'subdividido'
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/30'
+              }`}
+            >
+              <span className={`w-2 h-2 rounded-full ${filterSubdivision === 'subdividido' ? 'bg-white' : 'bg-blue-500'}`} />
+              Subdividido
+            </button>
+            <button
+              onClick={() => setFilterSubdivision(filterSubdivision === 'indiviso' ? 'all' : 'indiviso')}
+              className={`flex-1 py-1 px-2 rounded-md text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+                filterSubdivision === 'indiviso'
+                  ? 'bg-orange-500 text-white shadow-sm'
+                  : 'text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950/30'
+              }`}
+            >
+              <span className={`w-2 h-2 rounded-full ${filterSubdivision === 'indiviso' ? 'bg-white' : 'bg-orange-500'}`} />
+              Indiviso
+            </button>
+          </div>
+
           {/* DPOUT Toggle */}
           <div className="flex items-center gap-2">
             <button
@@ -240,6 +282,18 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
             </div>
             
             <div className="flex flex-wrap gap-1 mt-2">
+              <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold ${
+                (dev.technicalData?.parcels?.length || 0) > 1
+                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800'
+                  : 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800'
+              }`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${
+                  (dev.technicalData?.parcels?.length || 0) > 1 ? 'bg-blue-500' : 'bg-orange-500'
+                }`} />
+                {(dev.technicalData?.parcels?.length || 0) > 1 
+                  ? `Subdividido (${dev.technicalData?.parcels?.length})` 
+                  : 'Indiviso (1)'}
+              </span>
               <span className="inline-block px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-[10px] uppercase rounded">
                 {dev.type.replace('_', ' ')}
               </span>

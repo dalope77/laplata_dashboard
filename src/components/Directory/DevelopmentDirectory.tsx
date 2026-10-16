@@ -17,7 +17,7 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
   const [searchTerm, setSearchTerm] = useState('');
   
   // Filters
-  const [filterSubdivision, setFilterSubdivision] = useState<'all' | 'subdividido' | 'indiviso'>('all');
+  const [filterSubdivision, setFilterSubdivision] = useState<'all' | 'ph' | 'geodesia' | 'indiviso'>('all');
   const [filterDpout, setFilterDpout] = useState<boolean | null>(null);
   const [filterStatus, setFilterStatus] = useState<string>('all');
   const [filterType] = useState<UrbanDevelopment['type'] | 'all'>('all');
@@ -31,10 +31,12 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
       // Name Search
       if (searchTerm && !dev.name.toLowerCase().includes(searchTerm.toLowerCase())) return false;
       
-      // Subdivision Group (> 1 parcela = Subdividido, <= 1 = Indiviso)
-      const isSub = (dev.technicalData?.parcels?.length || 0) > 1;
-      if (filterSubdivision === 'subdividido' && !isSub) return false;
-      if (filterSubdivision === 'indiviso' && isSub) return false;
+      // Subdivision Group (PH, Geodesia, Indiviso)
+      const state = dev.technicalData?.subdivisionState || (
+        dev.technicalData?.hasSubparcelas ? 'ph' :
+        ((dev.technicalData?.parcels?.length || 0) >= 10 && ((dev.technicalData?.totalAreaSqM || 1) / (dev.technicalData?.parcels?.length || 1)) < 5000) ? 'geodesia' : 'indiviso'
+      );
+      if (filterSubdivision !== 'all' && state !== filterSubdivision) return false;
 
       // DPOUT
       if (filterDpout !== null && dev.technicalData.inDpoutRegistry !== filterDpout) return false;
@@ -137,37 +139,51 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
         {/* Filters */}
         <div className="space-y-3">
           {/* Subdividido vs Indiviso Quick Filter */}
-          <div className="flex items-center gap-1.5 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="grid grid-cols-4 gap-1 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
             <button
               onClick={() => setFilterSubdivision('all')}
-              className={`flex-1 py-1 px-2 rounded-md text-xs font-bold transition-all ${
+              className={`py-1 px-1 rounded-md text-[11px] font-bold transition-all ${
                 filterSubdivision === 'all'
                   ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
                   : 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
               }`}
             >
-              Todos ({developments.length})
+              Todos
             </button>
             <button
-              onClick={() => setFilterSubdivision(filterSubdivision === 'subdividido' ? 'all' : 'subdividido')}
-              className={`flex-1 py-1 px-2 rounded-md text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
-                filterSubdivision === 'subdividido'
+              onClick={() => setFilterSubdivision(filterSubdivision === 'ph' ? 'all' : 'ph')}
+              className={`py-1 px-1 rounded-md text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
+                filterSubdivision === 'ph'
+                  ? 'bg-purple-600 text-white shadow-sm'
+                  : 'text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-950/30'
+              }`}
+              title="Barrios con PH Armado (subparcelas detectadas)"
+            >
+              <span className={`w-1.5 h-1.5 rounded-full ${filterSubdivision === 'ph' ? 'bg-white' : 'bg-purple-500'}`} />
+              PH
+            </button>
+            <button
+              onClick={() => setFilterSubdivision(filterSubdivision === 'geodesia' ? 'all' : 'geodesia')}
+              className={`py-1 px-1 rounded-md text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
+                filterSubdivision === 'geodesia'
                   ? 'bg-blue-600 text-white shadow-sm'
                   : 'text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/30'
               }`}
+              title="Subdivisión Geodésica de Lotes Urbanos"
             >
-              <span className={`w-2 h-2 rounded-full ${filterSubdivision === 'subdividido' ? 'bg-white' : 'bg-blue-500'}`} />
-              Subdividido
+              <span className={`w-1.5 h-1.5 rounded-full ${filterSubdivision === 'geodesia' ? 'bg-white' : 'bg-blue-500'}`} />
+              Geodesia
             </button>
             <button
               onClick={() => setFilterSubdivision(filterSubdivision === 'indiviso' ? 'all' : 'indiviso')}
-              className={`flex-1 py-1 px-2 rounded-md text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+              className={`py-1 px-1 rounded-md text-[11px] font-bold transition-all flex items-center justify-center gap-1 ${
                 filterSubdivision === 'indiviso'
                   ? 'bg-orange-500 text-white shadow-sm'
                   : 'text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950/30'
               }`}
+              title="Parcela o macizos de origen sin subdividir"
             >
-              <span className={`w-2 h-2 rounded-full ${filterSubdivision === 'indiviso' ? 'bg-white' : 'bg-orange-500'}`} />
+              <span className={`w-1.5 h-1.5 rounded-full ${filterSubdivision === 'indiviso' ? 'bg-white' : 'bg-orange-500'}`} />
               Indiviso
             </button>
           </div>
@@ -282,18 +298,34 @@ export function DevelopmentDirectory({ developments, onSelect, selectedId, marke
             </div>
             
             <div className="flex flex-wrap gap-1 mt-2">
-              <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold ${
-                (dev.technicalData?.parcels?.length || 0) > 1
-                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800'
-                  : 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800'
-              }`}>
-                <span className={`w-1.5 h-1.5 rounded-full ${
-                  (dev.technicalData?.parcels?.length || 0) > 1 ? 'bg-blue-500' : 'bg-orange-500'
-                }`} />
-                {(dev.technicalData?.parcels?.length || 0) > 1 
-                  ? `Subdividido (${dev.technicalData?.parcels?.length})` 
-                  : 'Indiviso (1)'}
-              </span>
+              {(() => {
+                const state = dev.technicalData?.subdivisionState || (
+                  dev.technicalData?.hasSubparcelas ? 'ph' :
+                  ((dev.technicalData?.parcels?.length || 0) >= 10 && ((dev.technicalData?.totalAreaSqM || 1) / (dev.technicalData?.parcels?.length || 1)) < 5000) ? 'geodesia' : 'indiviso'
+                );
+                if (state === 'ph') {
+                  return (
+                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+                      <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                      PH Armado
+                    </span>
+                  );
+                } else if (state === 'geodesia') {
+                  return (
+                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                      Subdivisión ({dev.technicalData?.parcels?.length || 0} lotes)
+                    </span>
+                  );
+                } else {
+                  return (
+                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                      Indiviso ({dev.technicalData?.parcels?.length || 1} origen)
+                    </span>
+                  );
+                }
+              })()}
               <span className="inline-block px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-[10px] uppercase rounded">
                 {dev.type.replace('_', ' ')}
               </span>

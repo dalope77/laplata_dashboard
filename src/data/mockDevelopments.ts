@@ -62,13 +62,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -216,13 +219,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -304,13 +310,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -466,13 +475,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -568,13 +580,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -665,13 +680,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -773,13 +791,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -867,13 +888,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -942,13 +966,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -1552,13 +1579,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -1674,13 +1704,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -1751,13 +1784,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -1828,13 +1864,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -1965,13 +2004,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -2086,13 +2128,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -2275,13 +2320,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -2352,13 +2400,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -3165,13 +3216,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -3314,13 +3368,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -3408,13 +3465,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -3486,13 +3546,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -3572,13 +3635,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -3671,13 +3737,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -3756,13 +3825,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -3881,13 +3953,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -3962,13 +4037,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -4112,13 +4190,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -4329,13 +4410,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -4405,13 +4489,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -4725,13 +4812,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -5184,13 +5274,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -5312,13 +5405,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -5397,13 +5493,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -5516,13 +5615,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -5612,13 +5714,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -5706,13 +5811,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -5984,13 +6092,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -6562,13 +6673,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -6674,13 +6788,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -7233,13 +7350,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -7333,13 +7453,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -7416,13 +7539,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -7977,13 +8103,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -8055,13 +8184,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -8316,13 +8448,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -8474,13 +8609,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -8581,13 +8719,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -8673,13 +8814,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -8763,13 +8907,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -8839,13 +8986,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -8939,13 +9089,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -9097,13 +9250,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -9312,13 +9468,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -9396,13 +9555,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -9494,13 +9656,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -9571,13 +9736,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -9670,13 +9838,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -9746,13 +9917,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -9828,13 +10002,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -9924,13 +10101,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -10408,13 +10588,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -10580,13 +10763,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -10702,13 +10888,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -10781,13 +10970,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -10855,13 +11047,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -10933,13 +11128,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -11009,13 +11207,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -11111,13 +11312,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -11194,13 +11398,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -11283,13 +11490,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -11362,13 +11572,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -11448,13 +11661,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -11533,13 +11749,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -11659,13 +11878,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -11738,13 +11960,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -11825,13 +12050,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -11934,13 +12162,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -12025,13 +12256,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -12101,13 +12335,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -12202,13 +12439,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -12372,13 +12612,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -12461,13 +12704,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -12563,13 +12809,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": true
+      "inDpoutRegistry": true,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -12643,13 +12892,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -13036,13 +13288,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -13265,13 +13520,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -13358,13 +13616,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -13459,13 +13720,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -13536,13 +13800,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -13645,13 +13912,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -13728,13 +13998,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -13807,13 +14080,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -13897,13 +14173,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14055,13 +14334,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14148,13 +14430,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14229,13 +14514,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14306,13 +14594,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14385,13 +14676,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14465,13 +14759,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14546,13 +14843,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14623,13 +14923,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14701,13 +15004,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14783,13 +15089,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14863,13 +15172,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -14940,13 +15252,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15017,13 +15332,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15097,13 +15415,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15173,13 +15494,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15249,13 +15573,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15325,13 +15652,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15403,13 +15733,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15488,13 +15821,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15566,13 +15902,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15642,13 +15981,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15795,13 +16137,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15897,13 +16242,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -15974,13 +16322,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16056,13 +16407,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16132,13 +16486,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16210,13 +16567,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16289,13 +16649,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16380,13 +16743,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16458,13 +16824,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -16541,13 +16910,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16619,13 +16991,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16697,13 +17072,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -16776,13 +17154,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16854,13 +17235,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -16939,13 +17323,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -17494,13 +17881,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -17571,13 +17961,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -17657,13 +18050,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -17737,13 +18133,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -17824,13 +18223,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -17901,13 +18303,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -17986,13 +18391,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18068,13 +18476,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18147,13 +18558,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18226,13 +18640,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18303,13 +18720,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18380,13 +18800,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18457,13 +18880,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18626,13 +19052,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -18782,13 +19211,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -18869,13 +19301,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -18948,13 +19383,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -19148,13 +19586,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -19245,13 +19686,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -19323,13 +19767,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -19675,13 +20122,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -19756,13 +20206,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -19848,13 +20301,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -19938,13 +20394,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20030,13 +20489,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20129,13 +20591,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20223,13 +20688,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20300,13 +20768,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20391,13 +20862,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20468,13 +20942,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20551,13 +21028,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20641,13 +21121,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20717,13 +21200,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20793,13 +21279,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20887,13 +21376,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -20968,13 +21460,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -21046,13 +21541,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -21124,13 +21622,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -21838,13 +22339,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -21916,13 +22420,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -21996,13 +22503,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22072,13 +22582,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22149,13 +22662,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22226,13 +22742,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22304,13 +22823,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22385,13 +22907,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22479,13 +23004,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22557,13 +23085,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22636,13 +23167,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22726,13 +23260,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22803,13 +23340,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22888,13 +23428,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -22974,13 +23517,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23055,13 +23601,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23132,13 +23681,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23209,13 +23761,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23286,13 +23841,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23362,13 +23920,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23438,13 +23999,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23515,13 +24079,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23592,13 +24159,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23670,13 +24240,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23747,13 +24320,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23823,13 +24399,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23899,13 +24478,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -23975,13 +24557,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24052,13 +24637,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24128,13 +24716,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24204,13 +24795,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24280,13 +24874,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24357,13 +24954,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24438,13 +25038,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24517,13 +25120,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24595,13 +25201,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24671,13 +25280,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24747,13 +25359,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24823,13 +25438,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24901,13 +25519,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -24977,13 +25598,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25055,13 +25679,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25131,13 +25758,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25207,13 +25837,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25283,13 +25916,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25359,13 +25995,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25435,13 +26074,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25511,13 +26153,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25595,13 +26240,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25671,13 +26319,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25759,13 +26410,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25835,13 +26489,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25911,13 +26568,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -25987,13 +26647,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26071,13 +26734,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26147,13 +26813,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26226,13 +26895,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26311,13 +26983,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26387,13 +27062,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26463,13 +27141,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26540,13 +27221,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26617,13 +27301,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26694,13 +27381,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26771,13 +27461,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26847,13 +27540,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26923,13 +27619,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -26999,13 +27698,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27075,13 +27777,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27152,13 +27857,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27228,13 +27936,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27304,13 +28015,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27380,13 +28094,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27456,13 +28173,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27532,13 +28252,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27608,13 +28331,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27685,13 +28411,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27761,13 +28490,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27838,13 +28570,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -27914,13 +28649,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -27990,13 +28728,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28066,13 +28807,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "Comercial barrial"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28142,13 +28886,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28218,13 +28965,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28294,13 +29044,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28371,13 +29124,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28447,13 +29203,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28532,13 +29291,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28610,13 +29372,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28697,13 +29462,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28773,13 +29541,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28857,13 +29628,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -28933,13 +29707,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29012,13 +29789,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29089,13 +29869,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29165,13 +29948,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29241,13 +30027,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29317,13 +30106,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29393,13 +30185,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29477,13 +30272,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29553,13 +30351,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29630,13 +30431,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29706,13 +30510,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -29782,13 +30589,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -29876,13 +30686,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -29952,13 +30765,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30028,13 +30844,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30106,13 +30925,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30182,13 +31004,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30258,13 +31083,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30335,13 +31163,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30411,13 +31242,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30487,13 +31321,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30596,13 +31433,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30672,13 +31512,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30750,13 +31593,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30826,13 +31672,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -30913,13 +31762,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -30989,13 +31841,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31065,13 +31920,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31142,13 +32000,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31227,13 +32088,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31304,13 +32168,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31388,13 +32255,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31464,13 +32334,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31564,13 +32437,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31643,13 +32519,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31734,13 +32613,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31813,13 +32695,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31892,13 +32777,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -31968,13 +32856,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32044,13 +32935,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32121,13 +33015,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32202,13 +33099,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32278,13 +33178,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32355,13 +33258,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32433,13 +33339,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32509,13 +33418,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32589,13 +33501,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32682,13 +33597,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32759,13 +33677,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32840,13 +33761,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32916,13 +33840,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -32993,13 +33920,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33069,13 +33999,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33148,13 +34081,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33228,13 +34164,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33304,13 +34243,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33381,13 +34323,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33458,13 +34403,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33540,13 +34488,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33617,13 +34568,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33693,13 +34647,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33769,13 +34726,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33845,13 +34805,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33921,13 +34884,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -33997,13 +34963,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34073,13 +35042,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34149,13 +35121,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34225,13 +35200,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34301,13 +35279,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34377,13 +35358,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34464,13 +35448,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34540,13 +35527,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34616,13 +35606,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34693,13 +35686,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34769,13 +35765,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34845,13 +35844,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -34922,13 +35924,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35017,13 +36022,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35094,13 +36102,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35170,13 +36181,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35247,13 +36261,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35323,13 +36340,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35399,13 +36419,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35475,13 +36498,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35552,13 +36578,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL UNIFAMILIAR, COMERCIO, SERVICIOS, PRODUCTIVO INDUSTRIAL, EXTRACTIVO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35630,13 +36659,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35710,13 +36742,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35794,13 +36829,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35876,13 +36914,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -35952,13 +36993,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -36028,13 +37072,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -36109,13 +37156,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -36185,13 +37235,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -36265,13 +37318,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -36341,13 +37397,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -36417,13 +37476,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -36493,13 +37555,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -36569,13 +37634,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -36664,13 +37732,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "geodesia"
     },
     "offers": [
       {
@@ -36746,13 +37817,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -36828,13 +37902,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -36906,13 +37983,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37000,13 +38080,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37076,13 +38159,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37152,13 +38238,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37228,13 +38317,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37349,13 +38441,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37425,13 +38520,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37510,13 +38608,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37589,13 +38690,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37667,13 +38771,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37747,13 +38854,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37823,13 +38933,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37899,13 +39012,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -37983,13 +39099,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38059,13 +39178,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38139,13 +39261,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38233,13 +39358,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38310,13 +39438,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38387,13 +39518,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38463,13 +39597,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38549,13 +39686,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38625,13 +39765,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38702,13 +39845,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38778,13 +39924,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38855,13 +40004,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -38935,13 +40087,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39014,13 +40169,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39100,13 +40258,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39176,13 +40337,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39252,13 +40416,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39331,13 +40498,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39407,13 +40577,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39504,13 +40677,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39581,13 +40757,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39659,13 +40838,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39735,13 +40917,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39811,13 +40996,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39883,13 +41071,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "HABITACIONAL, EQUIPAMIENTO, COMERCIO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -39959,13 +41150,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40037,13 +41231,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40121,13 +41318,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40198,13 +41398,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": true,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": true,
+      "subdivisionState": "ph"
     },
     "offers": [
       {
@@ -40274,13 +41477,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40350,13 +41556,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40430,13 +41639,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40507,13 +41719,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "COMERCIO, EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40586,13 +41801,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": true,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "periferica",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "dentro",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40671,13 +41889,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "EQUIPAMIENTO, SERVICIOS"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "periurbana_rural",
       "ley14449": false,
       "nearIndustry": true,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40748,13 +41969,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": false,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": false,
       "punto2_aprobacion": false,
       "zonaTerritorialidad": "fuera",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "ninguno",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {
@@ -40824,13 +42048,16 @@ export const mockDevelopments: UrbanDevelopment[] = [
         "complementaryUses": "VIVIENDA UNIFAMILIAR, COMERCIO, EQUIPAMIENTO"
       },
       "hydroRisk": false,
-      "inciso1a_subdivision": true, "inciso1b_ocupacion": true,
+      "inciso1a_subdivision": false,
+      "inciso1b_ocupacion": true,
       "punto2_aprobacion": true,
       "zonaTerritorialidad": "urbana",
       "ley14449": false,
       "nearIndustry": false,
       "pasivosAmbientales": "proximo",
-      "inDpoutRegistry": false
+      "inDpoutRegistry": false,
+      "hasSubparcelas": false,
+      "subdivisionState": "indiviso"
     },
     "offers": [
       {

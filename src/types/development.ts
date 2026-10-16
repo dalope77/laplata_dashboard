@@ -78,6 +78,8 @@ export interface TechnicalData {
   pasivosAmbientales: 'ninguno' | 'proximo' | 'dentro';
   inDpoutRegistry?: boolean;
   ordenanza12638_caso?: 'A' | 'B' | 'C' | 'D' | 'E' | 'none' | 'inviable';
+  subdivisionState?: 'ph' | 'geodesia' | 'indiviso';
+  hasSubparcelas?: boolean;
 }
 
 export interface UrbanDevelopment {

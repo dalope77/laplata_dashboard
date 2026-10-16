@@ -181,7 +181,20 @@ export function DevelopmentMap({
   // Group market points by development id for efficient rendering inside popups? No, just render them globally as a layer.
   const marketPointsToRender = marketPoints || [];
 
-  const isSubdivided = (dev: UrbanDevelopment) => (dev.technicalData?.parcels?.length || 0) > 1;
+  const getSubdivisionCategory = (dev: UrbanDevelopment): 'ph' | 'geodesia' | 'indiviso' => {
+    if (dev.technicalData?.subdivisionState) {
+      return dev.technicalData.subdivisionState;
+    }
+    if (dev.technicalData?.hasSubparcelas) {
+      return 'ph';
+    }
+    const pCount = dev.technicalData?.parcels?.length || 0;
+    const avgArea = pCount > 0 ? (dev.technicalData?.totalAreaSqM || 0) / pCount : 0;
+    if (pCount >= 10 && avgArea < 5000) {
+      return 'geodesia';
+    }
+    return 'indiviso';
+  };
 
   const getBorderColor = (dev: UrbanDevelopment) => {
     if (dev.isRegularized) return "#22c55e"; // Verde para regularizado
@@ -194,11 +207,13 @@ export function DevelopmentMap({
   };
 
   const getFillColor = (dev: UrbanDevelopment) => {
-    // Grupo Subdividido (> 1 parcela ARBA) vs Indiviso (1 parcela / sin subdividir)
-    if (isSubdivided(dev)) {
-      return "#3b82f6"; // Azul para Subdividido
+    const cat = getSubdivisionCategory(dev);
+    if (cat === 'ph') {
+      return "#8b5cf6"; // Violeta para PH Armado (Subparcelas)
+    } else if (cat === 'geodesia') {
+      return "#3b82f6"; // Azul para Subdivisión Geodésica (Lotes urbanos)
     } else {
-      return "#f97316"; // Naranja cálido para Indiviso
+      return "#f97316"; // Naranja para Indiviso (Parcela(s) de origen sin subdividir)
     }
   };
 
@@ -398,7 +413,6 @@ export function DevelopmentMap({
           const isCurrentEditing = isSelected && isEditingPolygon;
           const borderColor = getBorderColor(dev);
           const fillColor = getFillColor(dev);
-          const devIsSubdivided = isSubdivided(dev);
           const parcelsCount = dev.technicalData?.parcels?.length || 0;
           
           const devMarketPoints = marketPointsToRender.filter((mp: any) => mp.development_id === dev.id);
@@ -453,14 +467,31 @@ export function DevelopmentMap({
                   <h3 className="font-bold text-sm leading-tight text-gray-900 mb-1">{dev.name}</h3>
                   
                   <div className="mb-2">
-                    <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold ${
-                      devIsSubdivided 
-                        ? 'bg-blue-100 text-blue-700 border border-blue-200' 
-                        : 'bg-orange-100 text-orange-700 border border-orange-200'
-                    }`}>
-                      <span className={`w-1.5 h-1.5 rounded-full ${devIsSubdivided ? 'bg-blue-500' : 'bg-orange-500'}`}></span>
-                      {devIsSubdivided ? `Subdividido (${parcelsCount} parc.)` : 'Indiviso (1 parc.)'}
-                    </span>
+                    {(() => {
+                      const cat = getSubdivisionCategory(dev);
+                      if (cat === 'ph') {
+                        return (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-700 border border-purple-200">
+                            <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            PH Armado (Subparcelas)
+                          </span>
+                        );
+                      } else if (cat === 'geodesia') {
+                        return (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-700 border border-blue-200">
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            Subdivisión Geodésica ({parcelsCount} lotes)
+                          </span>
+                        );
+                      } else {
+                        return (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-700 border border-orange-200">
+                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                            Indiviso ({parcelsCount} parc. origen)
+                          </span>
+                        );
+                      }
+                    })()}
                   </div>
                   
                   <div className="space-y-1 mb-3">
@@ -651,16 +682,21 @@ export function DevelopmentMap({
 
       {/* Leyenda Visual de Grupos: Subdividido vs Indiviso */}
       <div className="absolute bottom-6 right-6 z-[1000] bg-slate-900/90 dark:bg-gray-900/90 text-white backdrop-blur-md px-3.5 py-2.5 rounded-xl shadow-xl border border-slate-700/80 text-xs flex flex-col gap-1.5 pointer-events-auto">
-        <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Estado Parcelario</span>
+        <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Estado Parcelario ARBA</span>
+        <div className="flex items-center gap-2">
+          <span className="w-3.5 h-3.5 rounded bg-purple-500 border border-purple-300 shadow-sm shrink-0"></span>
+          <span className="font-semibold text-slate-200">PH Armado</span>
+          <span className="text-[10px] text-slate-400">(Subparcelas / UF)</span>
+        </div>
         <div className="flex items-center gap-2">
           <span className="w-3.5 h-3.5 rounded bg-blue-500 border border-blue-300 shadow-sm shrink-0"></span>
-          <span className="font-semibold text-slate-200">Subdividido</span>
-          <span className="text-[10px] text-slate-400">(&gt;1 parcela)</span>
+          <span className="font-semibold text-slate-200">Subdivisión Geodésica</span>
+          <span className="text-[10px] text-slate-400">(Lotes urbanos)</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="w-3.5 h-3.5 rounded bg-orange-500 border border-orange-300 shadow-sm shrink-0"></span>
           <span className="font-semibold text-slate-200">Indiviso</span>
-          <span className="text-[10px] text-slate-400">(1 parcela)</span>
+          <span className="text-[10px] text-slate-400">(Parcela origen)</span>
         </div>
       </div>
     </div>
